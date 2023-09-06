@@ -1164,3 +1164,10 @@ Here we will document changes in the specification as they are made.
 - Added data type [=FactorAndSource=], see [[#dt-factor-and-source]] for details.
 - Added data type [=Activity=], see [[#dt-activity]] for details.
 - Updated samples, see [[#samples]] for details.
+
+## Version 1.0.20230906 (September 6, 2023) ## {#changelog-1.0.20230906}
+
+- Moved to `CarbonCall` GitHub organization.
+- Added `ProductFootprintExtension` data type, see [[#dt-product-footprint-extension]] for details.
+- Added `Dataspaces` to definitions.
+- Placeholders for synchronization with the Pathfinder Framework and business case.
