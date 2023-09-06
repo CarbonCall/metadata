@@ -3,7 +3,7 @@ Title: DRAFT Carbon Call - Discoverable Data & Metadata
 Shortname: CC-Discoverable Data - Metadata
 Level: 1
 Status: LD
-URL: https://github.com/marleyg/cc-metadata
+URL: https://carboncall.github.io/metadata/
 Editor: Marley Gray (Microsoft), https://microsoft.com, marleyg@microsoft.com
 Editor: 
 Abstract: Data sharing is vital for the maturity of the carbon accounting ecosystem. The issue of data sharing can be broken down into 2 basic categories: 1) what to share and 2) how to share. Within each category, there are major subcategories like data discoverability and privacy that also need to be addressed. This specification helps categorize many of the existing industry efforts into the context of these two categories and their sub-categories.
