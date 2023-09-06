@@ -1,0 +1,495 @@
+syntax = "proto3";
+
+package carboncall.metadata;
+//import "google/protobuf/any.proto";
+option csharp_namespace = "CarbonCall.Metadata";
+option java_package = "org.carboncall.metadata";
+option java_multiple_files = true;
+
+message SustainabilityReport{
+    string g_r_i_d = 1;
+    Metadata metadata = 2;
+    //could be google.protobuf.Any or bytes
+    string report = 3; //xBRL-JSON or other format in base64
+}
+
+message Metadata{
+    string g_r_i_d = 1;
+    string organization_identifier = 2; //Includes a scheme prefix and the identity code used for the scheme.
+    string organization_name = 3;
+    ISO3166_CountryCode domicile = 4;
+    repeated ISO3166_CountryCode operating_countries = 5;
+    repeated Language languages = 6;
+    ReportType report_type = 7;
+    string report_issue_date = 8; //ISO 8601 date format
+    TimePeriod reporting_period = 9;
+    string report_replaces = 10; //GR.ID of the report this report replaces
+    string location = 11; //URL or URI of the report
+    Industry industry = 12;
+    string performance = 13; //xBRL-JSON snippet that provides certain performance information.
+    Goverance goverance = 14; //goverance properties of the report
+    Methodology methodology = 15; //methodology used for the report
+    ReportFormat report_format = 16; //Format of the report
+    ReportingStandard reporting_standard = 17; //Reporting standard used for the report
+    string assurance = 18; //Scheme prefix and identifier for the provider that conducted the assurance or audit.
+    string prior_report = 19; //GR.ID of the report this report is based on
+    string report_hash = 20; //SHA-256 hash of the report
+    repeated Activity activities = 21; //Activities that are reported on
+    repeated Metatag report_context = 22; //Metatags that provide additional context for the report
+    repeated PropertyContext property_contexts = 23; //Property contexts that provide additional context for the report, i.e., section metadata
+    repeated MetadataExtension metatdata_extensions = 24; //Extensions to the metadata
+    repeated string related_reports = 25; //GR.IDs of related reports
+}
+
+message Activity{
+    string activity_type = 1; //an activity (heating, cooling, & lighting a facility, travel, transportation, purchase)
+    Unit unit_of_measure = 2;
+    string activity_amount = 3;
+    TimePeriod activity_period = 4;
+    string activity_description = 5;
+    GeographicLocation activity_location = 6;
+    FactorAndSource activity_factor_and_source = 7;
+    repeated Metalink related_metadata = 8; //links to related metadata
+}
+
+message FactorAndSource{
+    enum FactorType{
+        UNKNOWN = 0;
+        ESTIMATED = 1;
+        FACTORED = 2;
+        MEASURED = 3;
+    }
+    message PrecisionMix{
+        int32 low = 1; //percentage of estimated or factored precision, 10 = 10%
+        int32 medium = 2; //percentage of indirect high quality precision, 20 = 20%
+        int32 high = 3; //percentage of direct highly accurate measurements, typically from sensors, 50 = 50%
+    }
+    FactorType factor_type = 1;
+    Unit factor_unit = 2;
+    string factor_source = 3;
+    PrecisionMix factor_precision = 4;
+}
+
+message Methodology{
+    enum MethodologyType{
+        UNKNOWN = 0;
+        GHG_PROTOCOL = 1;
+        ISO_14067 = 2;
+        OTHER = 100;
+    }
+    MethodologyType methodology_type = 1;
+    string percentage_of_total_portfolio_reported = 2; //% of total portfolio scope 1, scope 2, and scope 3 emissions reported
+    string percentage_of_estimated_calculations = 3; //% of reported scope1, scope2, & scope3 emissions calculated based on actual data vs. estimated data
+    enum BoundaryApproach{
+        OPERATIONAL_CONTROL = 0;
+        FINANCIAL_CONTROL = 1;
+        EQUITY_SHARE = 2;
+    }
+    BoundaryApproach boundary_approach = 4;
+}
+
+message Goverance{
+    string intended_use = 1; //how the report is intended to be used
+    bool restricted_access = 2; //whether the report is restricted access
+    string report_owner = 3; //Id of the report owner
+}
+
+message TimePeriod{
+    string start_date = 1; //ISO 8601 date format
+    string end_date =2; //ISO 8601 date format
+}
+
+//Includes GNSS and or GeographicArea as GeoJson, Kml as string or file
+message GeographicLocation{
+    string longitude = 1; //longitude in Decimal Degrees (DD)
+    string latitude = 2; //latitude in Decimal Degrees (DD)
+    string geo_json_or_kml = 3; //geojson or kml
+    string geographic_location_file = 4; //link to a file containing geojson, kml or other geographic area data
+}
+
+message Metatag{
+    string key = 1;
+    string value = 2;
+    repeated Metalink related_metadata = 3; //links to related metadata
+}
+
+message PropertyContext{
+    string property_name = 1;
+    repeated Metatag metatags = 2;
+    repeated Metalink related_metadata = 3; //links to related metadata
+}
+
+//TODO: add more here about linking metadata with other data in other contexts
+message Metalink{
+    string related_metadata_path = 1; //path in the metadata json tree to the related metadata
+}
+
+//A metadata extension that has a Json Schema
+message MetadataExtension{
+    string dataSchema = 1; //the URI/URL to the Json Schema for the extension
+    string documentation = 2; //optional documentation url of the extension
+    string data = 3; //the data of the extension, must be valid against the Json Schema
+}
+
+//ISO 3166-1 alpha-2 country codes
+enum ISO3166_CountryCode{
+    UNKNOWN = 0; //unknown country
+    A_F = 1; //"Afghanistan" 
+    A_X = 2; //"Åland Islands" 
+    A_L = 3; //"Albania" 
+    D_Z = 4; //"Algeria" 
+    A_S = 5; //"American Samoa" 
+    A_D = 6; //"Andorra" 
+    A_O = 7; //"Angola" 
+    A_I = 8; //"Anguilla" 
+    A_Q = 9; //"Antarctica" 
+    A_G = 10; //"Antigua and Barbuda" 
+    A_R = 11; //"Argentina" 
+    A_M = 12; //"Armenia" 
+    A_W = 13; //"Aruba" 
+    A_U = 14; //"Australia" 
+    A_T = 15; //"Austria" 
+    A_Z = 16; //"Azerbaijan" 
+    B_S = 17; //"Bahamas" 
+    B_H = 18; //"Bahrain" 
+    B_D = 19; //"Bangladesh" 
+    B_B = 20; //"Barbados" 
+    B_Y = 21; //"Belarus" 
+    B_E = 22; //"Belgium" 
+    B_Z = 23; //"Belize" 
+    B_J = 24; //"Benin" 
+    B_M = 25; //"Bermuda" 
+    B_T = 26; //"Bhutan" 
+    B_O = 27; //"Bolivia (Plurinational State of)" 
+    B_Q = 28; //"Bonaire; Sint Eustatius and Saba" 
+    B_A = 29; //"Bosnia and Herzegovina" 
+    B_W = 30; //"Botswana" 
+    B_V = 31; //"Bouvet Island" 
+    B_R = 32; //"Brazil" 
+    I_O = 33; //"British Indian Ocean Territory" 
+    B_N = 34; //"Brunei Darussalam" 
+    B_G = 35; //"Bulgaria" 
+    B_F = 36; //"Burkina Faso" 
+    B_I = 37; //"Burundi" 
+    C_V = 38; //"Cabo Verde" 
+    K_H = 39; //"Cambodia" 
+    C_M = 40; //"Cameroon" 
+    C_A = 41; //"Canada" 
+    K_Y = 42; //"Cayman Islands" 
+    C_F = 43; //"Central African Republic" 
+    T_D = 44; //"Chad" 
+    C_L = 45; //"Chile" 
+    C_N = 46; //"China" 
+    C_X = 47; //"Christmas Island" 
+    C_C = 48; //"Cocos (Keeling) Islands" 
+    C_O = 49; //"Colombia" 
+    K_M = 50; //"Comoros" 
+    C_G = 51; //"Congo" 
+    C_D = 52; //"Congo (Democratic Republic of the)" 
+    C_K = 53; //"Cook Islands" 
+    C_R = 54; //"Costa Rica" 
+    C_I = 55; //"Côte d'Ivoire" 
+    H_R = 56; //"Croatia" 
+    C_U = 57; //"Cuba" 
+    C_W = 58; //"Curaçao" 
+    C_Y = 59; //"Cyprus" 
+    C_Z = 60; //"Czechia" 
+    D_K = 61; //"Denmark" 
+    D_J = 62; //"Djibouti" 
+    D_M = 63; //"Dominica" 
+    D_O = 64; //"Dominican Republic" 
+    E_C = 65; //"Ecuador" 
+    E_G = 66; //"Egypt" 
+    S_V = 67; //"El Salvador" 
+    G_Q = 68; //"Equatorial Guinea" 
+    E_R = 69; //"Eritrea" 
+    E_E = 70; //"Estonia" 
+    E_T = 71; //"Ethiopia" 
+    F_K = 72; //"Falkland Islands (Malvinas)" 
+    F_O = 73; //"Faroe Islands" 
+    F_J = 74; //"Fiji" 
+    F_I = 75; //"Finland" 
+    F_R = 76; //"France" 
+    G_F = 77; //"French Guiana" 
+    P_F = 78; //"French Polynesia" 
+    T_F = 79; //"French Southern Territories" 
+    G_A = 80; //"Gabon" 
+    G_M = 81; //"Gambia" 
+    G_E = 82; //"Georgia" 
+    D_E = 83; //"Germany" 
+    G_H = 84; //"Ghana" 
+    G_I = 85; //"Gibraltar" 
+    G_R = 86; //"Greece" 
+    G_L = 87; //"Greenland" 
+    G_D = 88; //"Grenada" 
+    G_P = 89; //"Guadeloupe" 
+    G_U = 90; //"Guam" 
+    G_T = 91; //"Guatemala" 
+    G_G = 92; //"Guernsey" 
+    G_N = 93; //"Guinea" 
+    G_W = 94; //"Guinea-Bissau" 
+    G_Y = 95; //"Guyana" 
+    H_T = 96; //"Haiti" 
+    H_M = 97; //"Heard Island and McDonald Islands" 
+    V_A = 98; //"Holy See" 
+    H_N = 99; //"Honduras" 
+    H_K = 100; //"Hong Kong" 
+    H_U = 101; //"Hungary" 
+    I_S = 102; //"Iceland" 
+    I_N = 103; //"India" 
+    I_D = 104; //"Indonesia" 
+    I_R = 105; //"Iran (Islamic Republic of)" 
+    I_Q = 106; //"Iraq" 
+    I_E = 107; //"Ireland" 
+    I_M = 108; //"Isle of Man" 
+    I_L = 109; //"Israel" 
+    I_T = 110; //"Italy" 
+    J_M = 111; //"Jamaica" 
+    J_P = 112; //"Japan" 
+    J_E = 113; //"Jersey" 
+    J_O = 114; //"Jordan" 
+    K_Z = 115; //"Kazakhstan" 
+    K_E = 116; //"Kenya" 
+    K_I = 117; //"Kiribati" 
+    K_P = 118; //"Korea (Democratic People's Republic of)" 
+    K_R = 119; //"Korea (Republic of)" 
+    K_W = 120; //"Kuwait" 
+    K_G = 121; //"Kyrgyzstan" 
+    L_A = 122; //"Lao People's Democratic Republic" 
+    L_V = 123; //"Latvia" 
+    L_B = 124; //"Lebanon" 
+    L_S = 125; //"Lesotho" 
+    L_R = 126; //"Liberia" 
+    L_Y = 127; //"Libya" 
+    L_I = 128; //"Liechtenstein" 
+    L_T = 129; //"Lithuania" 
+    L_U = 130; //"Luxembourg" 
+    M_O = 131; //"Macao" 
+    M_K = 132; //"Macedonia (the former Yugoslav Republic of)" 
+    M_G = 133; //"Madagascar" 
+    M_W = 134; //"Malawi" 
+    M_Y = 135; //"Malaysia" 
+    M_V = 136; //"Maldives" 
+    M_L = 137; //"Mali" 
+    M_T = 138; //"Malta" 
+    M_H = 139; //"Marshall Islands" 
+    M_Q = 140; //"Martinique" 
+    M_R = 141; //"Mauritania" 
+    M_U = 142; //"Mauritius" 
+    Y_T = 143; //"Mayotte" 
+    M_X = 144; //"Mexico" 
+    F_M = 145; //"Micronesia (Federated States of)" 
+    M_D = 146; //"Moldova (Republic of)" 
+    M_C = 147; //"Monaco" 
+    M_N = 148; //"Mongolia" 
+    M_E = 149; //"Montenegro" 
+    M_S = 150; //"Montserrat" 
+    M_A = 151; //"Morocco" 
+    M_Z = 152; //"Mozambique" 
+    M_M = 153; //"Myanmar" 
+    N_A = 154; //"Namibia" 
+    N_R = 155; //"Nauru" 
+    N_P = 156; //"Nepal" 
+    N_L = 157; //"Netherlands" 
+    N_C = 158; //"New Caledonia" 
+    N_Z = 159; //"New Zealand" 
+    N_I = 160; //"Nicaragua" 
+    N_E = 161; //"Niger" 
+    N_G = 162; //"Nigeria" 
+    N_U = 163; //"Niue" 
+    N_F = 164; //"Norfolk Island" 
+    M_P = 165; //"Northern Mariana Islands" 
+    N_O = 166; //"Norway" 
+    O_M = 167; //"Oman" 
+    P_K = 168; //"Pakistan" 
+    P_W = 169; //"Palau" 
+    P_S = 170; //"Palestine; State of" 
+    P_A = 171; //"Panama" 
+    P_G = 172; //"Papua New Guinea" 
+    P_Y = 173; //"Paraguay" 
+    P_E = 174; //"Peru" 
+    P_H = 175; //"Philippines" 
+    P_N = 176; //"Pitcairn" 
+    P_L = 177; //"Poland" 
+    P_T = 178; //"Portugal" 
+    P_R = 179; //"Puerto Rico" 
+    Q_A = 180; //"Qatar" 
+    R_E = 181; //"Réunion" 
+    R_O = 182; //"Romania" 
+    R_U = 183; //"Russian Federation" 
+    R_W = 184; //"Rwanda" 
+    B_L = 185; //"Saint Barthélemy" 
+    S_H = 186; //"Saint Helena; Ascension and Tristan da Cunha" 
+    K_N = 187; //"Saint Kitts and Nevis" 
+    L_C = 188; //"Saint Lucia" 
+    M_F = 189; //"Saint Martin (French part)" 
+    P_M = 190; //"Saint Pierre and Miquelon" 
+    V_C = 191; //"Saint Vincent and the Grenadines" 
+    W_S = 192; //"Samoa" 
+    S_M = 193; //"San Marino" 
+    S_T = 194; //"Sao Tome and Principe" 
+    S_A = 195; //"Saudi Arabia" 
+    S_N = 196; //"Senegal" 
+    R_S = 197; //"Serbia" 
+    S_C = 198; //"Seychelles" 
+    S_L = 199; //"Sierra Leone" 
+    S_G = 200; //"Singapore"
+    S_X = 201; //"Sint Maarten (Dutch part)" 
+    S_K = 202; //"Slovakia" 
+    S_I = 203; //"Slovenia" 
+    S_B = 204; //"Solomon Islands" 
+    S_O = 205; //"Somalia" 
+    Z_A = 206; //"South Africa" 
+    G_S = 207; //"South Georgia and the South Sandwich Islands" 
+    S_S = 208; //"South Sudan" 
+    E_S = 209; //"Spain" 
+    L_K = 210; //"Sri Lanka" 
+    S_D = 211; //"Sudan" 
+    S_R = 212; //"Suriname" 
+    S_J = 213; //"Svalbard and Jan Mayen" 
+    S_Z = 214; //"Swaziland" 
+    S_E = 215; //"Sweden" 
+    C_H = 216; //"Switzerland" 
+    S_Y = 217; //"Syrian Arab Republic" 
+    T_W = 218; //"Taiwan; Province of China[a]" 
+    T_J = 219; //"Tajikistan" 
+    T_Z = 220; //"Tanzania; United Republic of" 
+    T_H = 221; //"Thailand" 
+    T_L = 222; //"Timor-Leste" 
+    T_G = 223; //"Togo" 
+    T_K = 224; //"Tokelau" 
+    T_O = 225; //"Tonga" 
+    T_T = 226; //"Trinidad and Tobago" 
+    T_N = 227; //"Tunisia" 
+    T_R = 228; //"Turkey" 
+    T_M = 229; //"Turkmenistan" 
+    T_C = 230; //"Turks and Caicos Islands" 
+    T_V = 231; //"Tuvalu" 
+    U_G = 232; //"Uganda" 
+    U_A = 233; //"Ukraine" 
+    A_E = 234; //"United Arab Emirates" 
+    G_B = 235; //"United Kingdom of Great Britain and Northern Ireland" 
+    U_S = 236; //"United States of America" 
+    U_M = 237; //"United States Minor Outlying Islands" 
+    U_Y = 238; //"Uruguay" 
+    U_Z = 239; //"Uzbekistan" 
+    V_U = 240; //"Vanuatu" 
+    V_E = 241; //"Venezuela (Bolivarian Republic of)" 
+    V_N = 242; //"Viet Nam" 
+    V_G = 243; //"Virgin Islands (British)" 
+    V_I = 244; //"Virgin Islands (U.S.)" 
+    W_F = 245; //"Wallis and Futuna" 
+    E_H = 246; //"Western Sahara" 
+    Y_E = 247; //"Yemen" 
+    Z_M = 248; //"Zambia" 
+    Z_W = 249; //"Zimbabwe" 
+}
+
+enum Language{
+    en = 0; //"English"
+    es = 1; //"Spanish"
+    zh = 2; //"Chinese"
+    fr = 3; //"French"
+    //TODO: add more
+}
+
+enum ReportType{
+    INTEGRATED_REPORT = 0;
+    FINANCIAL_REPORT = 1;
+    SUSTAINABILITY_REPORT = 2;
+    ANNUAL_REPORT = 3;
+    PROXY_STATEMENT = 4;
+    REGISTRATION_STATEMENT = 5;
+    QUARTERLY_REPORT = 6;
+    HALF_YEARLY_REPORT = 7;
+    OTHER = 8;
+}
+
+//Industry code prefix, i.e. ISIC
+enum IndustryCodePrefix{
+    I_S_I_C = 0;
+    N_A_I_C_S = 1;
+    G_I_C_S = 2;
+    S_I_C = 3;
+    //TODO: add more
+}
+
+message Industry{
+    IndustryCodePrefix prefix = 1;
+    string code = 2;
+}
+
+enum ReportFormat{
+    P_D_F = 0;
+    i_X_B_R_L = 1;
+    OPEN_XML = 2;
+    //TODO: add more
+}
+
+enum ReportingStandard{
+    G_A_A_P = 0;
+    I_F_R_S = 1;
+    I_S_S_B = 2;
+    E_F_R_A_G = 3;
+    G_R_I = 4;
+    //TODO: add more
+}
+
+enum Unit{
+    TONNE_CO2E = 0;
+    TONNE_CO2 = 1;
+    TONNE_CH4 = 2;
+    TONNE_N2O = 3;
+    TONNE_S = 4;
+    TONNE_NOX = 5;
+    TONNE_SOX = 6;
+    TONNE_PM10 = 7;
+    TONNE_PM2_5 = 8;
+    TONNE_VOC = 9;
+    TONNE_NH3 = 10;
+    TONNE_PFC = 11;
+    TONNE_SF6 = 12;
+    TONNE_HFC = 13;
+    TONNE_CFC = 14;
+    TONNE_HFC23 = 15;
+    TONNE_HFC32 = 16;
+    TONNE_HFC125 = 17;
+    TONNE_HFC134a = 18;
+    TONNE_HFC143a = 19;
+    TONNE_HFC227ea = 20;
+    TONNE_HFC245fa = 21;
+    TONNE_HFC365mfc = 22;
+    TONNE_HFC4310mee = 23;
+    TONNE_C2F6 = 24;
+    TONNE_C3F8 = 25;
+    TONNE_C4F10 = 26;
+    TONNE_C5F12 = 27;
+    TONNE_C6F14 = 28;
+    TONNE_C7F16 = 29;
+    TONNE_C8F18 = 30;
+    TONNE_C10F18 = 31;
+    TONNE_C12F18 = 32;
+    TONNE_C14F18 = 33;
+    TONNE_C16F18 = 34;
+    TONNE_C18F18 = 35;
+    TONNE_C20F18 = 36;
+    TONNE_C22F18 = 37;
+    TONNE_C24F18 = 38;
+    TONNE_C26F18 = 39;
+    TONNE_C28F18 = 40;
+    TONNE_C30F18 = 41;
+    TONNE_C32F18 = 42;
+    TONNE_C34F18 = 43;
+    LITER = 100;
+    KILOGRAM = 101;
+    CUBIC_METER = 102;
+    KILOWATT = 103;
+    MEGAWATT = 104;
+    MEGAJUOLE = 105;
+    KILOMETER = 106;
+    SQUARE_METER = 107;
+    TONNE = 108;
+    MW_H = 109;
+    KW_H = 110;
+}
+

@@ -1,0 +1,1166 @@
+<pre class='metadata'>
+Title: DRAFT Carbon Call - Discoverable Data & Metadata 
+Shortname: CC-Discoverable Data - Metadata
+Level: 1
+Status: LD
+URL: https://github.com/marleyg/cc-metadata
+Editor: Marley Gray (Microsoft), https://microsoft.com, marleyg@microsoft.com
+Editor: 
+Abstract: Data sharing is vital for the maturity of the carbon accounting ecosystem. The issue of data sharing can be broken down into 2 basic categories: 1) what to share and 2) how to share. Within each category, there are major subcategories like data discoverability and privacy that also need to be addressed. This specification helps categorize many of the existing industry efforts into the context of these two categories and their sub-categories.
+Markup Shorthands: markdown yes, idl yes, dfn yes
+Boilerplate: omit copyright, omit conformance
+</pre>
+
+<pre class=biblio>
+{
+  "semver": {
+    "href": "https://semver.org/spec/v2.0.0.html",
+    "title": "Semantic Versioning",
+    "authors": [
+      "Tom Preston-Werner"
+    ],
+    "status": "Informational",
+    "publisher": "",
+    "id": "semver",
+    "date": "1 January 2013"
+  }
+}
+</pre>
+
+# Introduction # {#intro}
+
+Carbon accounting has a data problem. This data problem has many compounding causes, many of which can be traced back to a lack of data sharing between organizations. The issue of data sharing can be broken down 
+into 2 basic categories: 
+
+  - what to share  
+  - how to share 
+
+Within each category, there are major subcategories like data discoverability and privacy that also need to be addressed. There are multiple initiatives across the industry to address these issues, but they are not
+being designed in a way that will allow them to work together. This specification will help connect these initiatives and provide a framework for future initiatives to be designed in a way that will allow them to
+work together. Some basic capabilities need to be provided in order to effectively enable data sharing. 
+
+Carbon Call is working on establishing a common `smart dictionary` to help establish a baseline of common terms and definitions so that parties can agree on the language of carbon accounting. We also need to establish
+`what` data needs to be shared in a way that is extensible for industry sectors and different jurisdictions.  Common infrastructure for `how` to share data is also needed, which includes the ability to discover and control
+who can access the data.
+
+Direction of travel: what to share and how to share. Bring up initiatives like PACT, DPP and Dataspaces.
+
+Issue: Add what to share: Public `WBCSD - PF/PCF` - Private `Metadata`, link to discovery
+Issue: Link to share: public -> discovery, private -> metadata/Dataspaces
+
+Advisement:
+  This specification is a work in progress and is subject to change. It is not a final or otherwise published version.
+
+## Status of this Document ## {#doc-status}
+
+Comments regarding the document are welcome, please file issues directly on [GitHub](https://github.com/marleyg/cc-metadata/index.bs).
+
+
+## Scope ## {#scope}
+
+The scope of this document is to reach consensus on a Discoverable Sustainability Dat and Metadata.
+
+## Intended Audience ## {#audience}
+
+This technical specification is for
+
+- software developers who want to build software to edit, exchange or store data in the format defined by this specification
+- business analysts who want to understand the data model and data dictionary defined by this specification
+- data scientists who want to understand the data model and data dictionary defined by this specification
+- anyone else who wants to understand the data model and data dictionary defined by this specification
+
+## About the Carbon Call Discoverable Data & Metadata Expert Workgroups ## {#about}
+
+The Carbon Call Discoverable Data & Metadata Expert Workgroups is a group of experts from the Carbon Call community who are working to define a how sustainability data can be made discoverable and usable with the
+use of and inclusion of metadata.
+
+## Disclaimer ## {#disclaimer}
+
+While Carbon Call encourages the implementation of the technical specifications by all entities for interoperability, those organiazations and individuals who contributed to the development of this 
+document does not assume responsibility for any consequences or damages resulting directly or indirectly from the use of this document.
+
+## License ## {#selectionlicense}
+
+The license can be found in [[#license]].
+
+# Terminology # {#terminology}
+
+: <dfn>Carbon Call</dfn>
+:: 
+    Carbon Call is a community of sustainability experts who are working together to define a common data model and data dictionary for sustainability data.
+
+: <dfn>Report</dfn>
+:: 
+    A sustainability report is a document that describes the sustainability performance of an organization, a product, or a service. A sustainability report is also known as a sustainability disclosure, a sustainability statement, or a sustainability data sheet.
+
+: <dfn>Product Footprint</dfn>
+::
+    A [WBCSD:PACT Product Footprint](https://wbcsd.github.io/data-exchange-protocol/v2/) a specification for a product footprint that is based on the [WBCSD:PCF Product Carbon Footprint](https://www.wbcsd.org/Programs/Climate-and-Energy/Climate/Product-Carbon-Footprint-PCF) methodology.
+    This framework is interoperable with the Pathfinder network and provides footprint extensions.
+
+: <dfn>Dataspace</dfn>
+::
+    A [Dataspace](https://internationaldataspaces.org) is an open specification for establishing data sharing networks between organizations to facilitate controlled sharing of data.
+
+: <dfn>Metadata</dfn>
+:: 
+    Metadata is data that describes other data. Metadata is used to provide information about the data, such as how it was created, when it was last updated, and how it should be interpreted.
+
+: <dfn>Report Metadata</dfn>
+:: 
+    A Sustainability Report Metadata is a set of metadata about a sustainability report that is used to discover, understand, and use the sustainability report.
+
+: [=Metatag=]
+:: 
+    A simple name/value pair that is used to describe a piece of metadata.
+
+: <dfn>Context</dfn>
+:: 
+    Metadata is applied to a `context`, i.e., a report, a section of a report, a property, etc. The context is the thing that the metadata is describing.
+
+: <dfn>Report Context</dfn>
+:: 
+    Metadata that applies to the entire report.
+
+: <dfn>Property Context</dfn>
+:: 
+    Metadata that applies to a property of the report, e.g., a section or an individual property. 
+
+: <dfn>Global Report Identifier (GR.ID)</dfn>
+:: 
+    A Global Report Identifier (GR.ID) is a unique identifier for a sustainability report. The Global Report Identifier (GR.ID) is generated by the GR.ID platform
+    collects a range of metadata about the report, and then calculates a unique hash (or fingerprint) for the report.
+
+# Discoverable Data and Metadata # {#discoverable-data-metadata}
+
+Discoverable data defines the way data is packaged, identified and made available for discovery. Discoverable data is a key component of the Carbon Call data model and data dictionary. A part of the data be discovered
+are a set of metadata that describes the data. The metadata is used to discover, understand, and use the data.
+
+## Sustainability Report Schema ## {#sustainabilty-report-schema}
+
+A report schema is a set of normative data elements that identify a report and describe the data contained in the report. The report schema is used to validate the report data and also provide a set of metadata about 
+the report.
+
+### Properties ### {#dt-sustainabilty-report-properties}
+
+The Sustainability Report has the following properties:
+
+<figure id="sustainabilty-report-properties-table" dfn-type="element-attr" dfn-for="SustainabilityReport">
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Property
+        <th>Type
+        <th>Req
+        <th>Specification
+    <tbody>
+      <tr>
+        <td><dfn>GRID</dfn> : [=GRID=]
+        <td>String
+        <td>M
+        <td>The Sustainabilty Report global identifier, See [[#dt-grid]] for details.
+      <tr>
+        <td><dfn>metadata</dfn>
+        <td>Object
+        <td>M
+        <td>A metadata object, see [[#dt-metadata]] for details.
+      <tr>
+        <td><dfn>report</dfn> :
+        <td>String
+        <td>M
+        <td>The report data serialized as a bytestring or Base64 encoded string.
+    
+  </table>
+  <figcaption>Properties of a Sustainability Report</figcaption>
+
+</figure>
+
+## Data Type: Metadata ## {#dt-metadata}
+
+Report Metadata contains non-normative information about the targeted report and its contents. Typically a report will follow a normative standard, or a defined set of rules, 
+and the metadata will provide information about the report that is not covered by the standard. For example, the metadata may contain information about the organization that produced the report, 
+the reporting period, the industry, the assurance provider, etc.
+
+Here we have defined a set of `normative` metadata tags and also provide a mechanism for adding `non-normative` metadata tags that can be attached to a report or property context. See [[#dt-metatag]] for details.
+
+### Properties ### {#dt-metadata-properties}
+
+A metadata object has the following properties:
+
+<figure id="metadata-properties-table" dfn-type="element-attr" dfn-for="Metadata">
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Property
+        <th>Type
+        <th>Req
+        <th>Specification
+    <tbody>
+      <tr>
+        <td><dfn>GRID</dfn> [=GRID=]
+        <td>String
+        <td>M
+        <td>The GRID of the report that the metadata is about, see [[#dt-grid]] for details.
+      <tr>
+        <td><dfn>organizationIdentifier</dfn> 
+        <td>String
+        <td>M
+        <td>A unique identifier for the organization that produced the report.
+      <tr>
+        <td><dfn>organizationName</dfn>
+        <td>String
+        <td>M
+        <td>The name of the organization that produced the report.
+      <tr>
+        <td><dfn>domicile</dfn>
+        <td>String
+        <td>M
+        <td>The country where the organization is domiciled. The country MUST be specified using the ISO 3166-1 alpha-2 country code.
+      <tr>
+        <td><dfn>operatingCountries</dfn>
+        <td>Array
+        <td>M
+        <td>The countries where the organization operates. The countries MUST be specified using the ISO 3166-1 alpha-2 country code.
+      <tr>
+        <td><dfn>languages</dfn>
+        <td>Array
+        <td>M
+        <td>The languages used in the report. The languages MUST be specified using the ISO 639-1 language code.
+      <tr>
+        <td>reportType : {{ReportType}}
+        <td>String
+        <td>M
+        <td>The type of the report. The report type MUST be specified using the ReportType enumeration, see [[#dt-report-type]] for details.
+      <tr>
+        <td><dfn>reportIssueDate</dfn>
+        <td>String
+        <td>M
+        <td>The date the report was issued. The date MUST be specified using the ISO 8601 date format.
+      <tr>
+        <td><dfn>reportingPeriod</dfn> : [=TimePeriod=]
+        <td>Object
+        <td>M
+        <td>The reporting period of the report. The reporting period MUST be specified using the TimePeriod type, see [[#dt-time-period]] for details.
+      <tr>
+        <td><dfn>reportReplaces</dfn>
+        <td>String
+        <td>M
+        <td>The GRID of the report that this report replaces, if any. See [[#dt-grid]] for details.
+      <tr>
+        <td><dfn>location</dfn>
+        <td>String
+        <td>M
+        <td>The location of the report. The location MUST be specified using a URL or URI.
+      <tr>
+        <td><dfn>industry</dfn>
+        <td>String
+        <td>M
+        <td>The industry of the organization. The industry MUST be specified using the Industry type, see [[#dt-industry]] for details.
+      <tr>
+        <td><dfn>performance</dfn>
+        <td>String
+        <td>M
+        <td>xBRL-JSON snippet that provides certain performance information.
+      <tr>
+        <td><dfn>governance</dfn> : [=Governance=]
+        <td>Object
+        <td>M
+        <td>The governance of the organization. The governance MUST be specified using the Governance type, see [[#dt-governance]] for details.
+      <tr>
+        <td><dfn>methodology</dfn> : [=Methodology=]
+        <td>Object
+        <td>M
+        <td>The methodology used in the report. The methodology MUST be specified using the Methodology type, see [[#dt-methodology]] for details.
+      <tr>
+        <td>reportFormat : {{ReportFormat}}
+        <td>String
+        <td>M
+        <td>The string name for the format of the report. The report format MUST be specified using the ReportFormat enumeration, see [[#dt-report-format]] for details.
+      <tr>
+        <td>reportingStandard : {{ReportingStandard}}
+        <td>String
+        <td>M
+        <td>The string name for the reporting standard used in the report. The reporting standard MUST be specified using the ReportingStandard enumeration, see [[#dt-reporting-standard]] for details.
+      <tr>
+        <td><dfn>assurance</dfn>
+        <td>String
+        <td>M
+        <td>Scheme prefix and identifier for the provider that conducted the assurance or audit.
+      <tr>
+        <td><dfn>priorReport</dfn>
+        <td>String
+        <td>M
+        <td>The GRID of the report that this report is based on, if any. See [[#dt-grid]] for details.
+      <tr>
+        <td><dfn>reportHash</dfn>
+        <td>String
+        <td>M
+        <td>SHA-256 hash of the report.
+      <tr>
+        <td><dfn>activities</dfn> : [=Activity=]
+        <td>Array
+        <td>O
+        <td>A collection of activities, by [=Activity=]. See [[#dt-activity]] for details.
+      <tr>
+        <td><dfn>reportContext</dfn>: [=Metatag=]
+        <td>Array
+        <td>O
+        <td>A collection of [=Metatag=] for the report context. See [[#dt-metatag]] for details.
+      <tr>
+        <td><dfn>propertyContext</dfn>: [=PropertyContext=]
+        <td>Array
+        <td>O
+        <td>A collection of Report Property Context metadata using [=PropertyContext=]. See [[#dt-property-context]] for details.
+      |<tr>
+        <td><dfn>metadataExtensions</dfn>: [=MetadataExtension=]
+        <td>Array
+        <td>O
+        <td>A collection of metadata extensions using [=MetadataExtension=]. See [[#dt-metadata-extension]] for details.
+            |<tr>
+        <td><dfn>pfExtensions</dfn>: [=ProductFootprintExtension=]
+        <td>Array
+        <td>O
+        <td>A collection of product footprint extensions using [=ProductFootprintExtension=]. See [[#dt-product-footprint-extension]] for details.
+      <tr>
+        <td><dfn>relatedReports</dfn> : [=GRID=]
+        <td>Array
+        <td>O
+        <td>A collection of related reports, by [=GRID=]. For example, a reference to a financial disclosure, etc. See [[#dt-grid]] for details.
+     </table>
+    <figcaption>Properties of a Metadata Object</figcaption>
+  </figure>
+
+## Data Type: <dfn>TimePeriod</dfn> ## {#dt-time-period}
+
+A reporting period is a set of reporting period elements that describe the reporting period of a sustainability report.
+
+### Properties ### {#dt-time-period-properties}
+
+<figure id="time-period-properties-table" dfn-type="element-attr" dfn-for="TimePeriod">
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Property
+        <th>Type
+        <th>Req
+        <th>Specification
+    <tbody>
+      <tr>
+        <td><dfn>startDate</dfn>
+        <td>String
+        <td>M
+        <td>The start date of the reporting period. The date MUST be specified using the ISO 8601 date format.
+    <tr>
+        <td><dfn>endDate</dfn>
+        <td>String
+        <td>M
+        <td>The end date of the reporting period. The date MUST be specified using the ISO 8601 date format.
+  </table>
+  <figcaption>Properties of a Reporting Period</figcaption>
+  </figure>
+
+## Data Type: <dfn>Industry</dfn> ## {#dt-industry}
+
+An industry is a set of industry elements that describe the industry of an organization.
+
+### Properties ### {#dt-industry-properties}
+
+Industry has the following properties:
+
+<figure id="industry-properties-table" dfn-type="element-attr" dfn-for="Industry">
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Property
+        <th>Type
+        <th>Req
+        <th>Specification
+    <tbody>
+      <tr>
+        <td><dfn>sector</dfn>
+        <td>String
+        <td>M
+        <td>The sector of the industry. The sector MUST be specified using the Sector enumeration.
+    <tr>
+        <td><dfn>businessActivity</dfn>
+        <td>String
+        <td>M
+        <td>The business activity of the industry. The business activity MUST be specified using the BusinessActivity enumeration.
+  </table>
+  <figcaption>Properties of an Industry</figcaption>
+  </figure>
+
+## Data Type: <dfn>Activity</dfn> ## {#dt-activity}
+
+An activity, e.g., heating, cooling, & lighting a facility, travel, transportation, purchase. The activity metadata element can scope metatdata around a specific activity contained in the report.
+
+### Properties ### {#dt-activity-properties}
+
+Activity has the following properties:
+
+<figure id="activity-table" dfn-type="element-attr" dfn-for="Activity">
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Property
+        <th>Type
+        <th>Req
+        <th>Specification
+    <tbody>
+      <tr>
+        <td><dfn>activityType</dfn>
+        <td>String
+        <td>M
+        <td>An activity (heating, cooling, & lighting a facility, travel, transportation, purchase)
+    <tr>
+        <td><dfn>unitOfMeasure</dfn> : {{Unit}}
+        <td>String
+        <td>M
+        <td>The unit of measure for the activity. The unit of measure MUST be specified using the Unit enumeration.
+    <tr>
+      <td><dfn>activityAmount</dfn>
+      <td>String
+      <td>M
+      <td>The numerical amount in the {{Unit}} of the activity, formated as a string, see [[#dt-string]] for details.
+    <tr>
+      <td><dfn>activityPeriod</dfn> : [=TimePeriod=]
+      <td>Object
+      <td>M
+      <td>The time period of the activity. See [[#dt-time-period]] for details.
+    <tr>
+      <td><dfn>activityDescription</dfn>
+      <td>String
+      <td>O
+      <td>A description of the activity.
+    <tr>
+      <td><dfn>activityLocation</dfn> : [=GeographicLocation=]
+      <td>Object
+      <td>O
+      <td>The geographic location of the activity. See [[#dt-geographic-location]] for details.
+    <tr>
+      <td><dfn>activityFactorAndSource</dfn> : [=FactorAndSource=]
+      <td>Object
+      <td>O
+      <td>The factor and source of the activity. See [[#dt-factor-and-source]] for details.
+    <tr>
+      <td><dfn>relatedMetadata</dfn> : [=Metalink=]
+      <td>Array
+      <td>O
+      <td>An optional collection of related metadata, by [=Metalink=]. See [[#dt-metalink]] for details.
+  </table>
+  <figcaption>Properties of an Activity</figcaption>
+  </figure>
+
+## Data Type: <dfn>FactorAndSource</dfn> ## {#dt-factor-and-source}
+
+A factor and source is a set of factor and source elements that describe the factor and source of an activity.
+
+### Properties ### {#dt-factor-and-source-properties}
+
+Factor and source has the following properties:
+
+<figure id="factor-and-source-properties-table" dfn-type="element-attr" dfn-for="FactorAndSource">
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Property
+        <th>Type
+        <th>Req
+        <th>Specification
+    <tbody>
+      <tr>
+        <td><dfn>factorType</dfn> : {{FactorType}}
+        <td>String
+        <td>M
+        <td>The factor of the activity. The factor MUST be specified using the Factor enumeration, see [[#dt-factor-type]] for details.
+      <tr>
+          <td><dfn>factorUnit</dfn> : {{Unit}}
+          <td>String
+          <td>M
+          <td>The the unit of measure for the factor type, see [[#dt-unit]] for details.
+      <tr>
+          <td><dfn>factorSource</dfn>
+          <td>String
+          <td>M
+          <td>Source of emission factors, e.g., government agency such EPA, DEFRA, etc., commercial data base such as GABI, Ecoinvent, etc.  OR, supplier provided.
+      <tr>
+          <td><dfn>factorPrecision</dfn>
+          <td>Object
+          <td>M
+          <td>The precision of the factor. See [[#dt-precision-mix]] for details.
+  </table>
+  <figcaption>Properties of a Factor and Source</figcaption>
+  </figure>
+
+## Data Type: <dfn>Governance</dfn> ## {#dt-governance}
+
+A governance is a set of governance elements that describe the governance the organization follows in the report.
+
+### Properties ### {#dt-governance-properties}
+
+Governance has the following properties:
+
+<figure id="governance-properties-table" dfn-type="element-attr" dfn-for="Governance">
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Property
+        <th>Type
+        <th>Req
+        <th>Specification
+    <tbody>
+      <tr>
+        <td><dfn>intendedUse</dfn>
+        <td>String
+        <td>M
+        <td>The intended use of the report. 
+      <tr>
+        <td><dfn>restrictedAccess</dfn>
+        <td>Boolean
+        <td>M
+        <td>Whether the report is restricted access or not.
+      <tr>
+        <td><dfn>reportOwner</dfn>
+        <td>String
+        <td>M
+        <td>The organization that owns the report.
+  </table>
+  <figcaption>Properties of a Governance</figcaption>
+  </figure>
+
+## Data Type: <dfn>Methodology</dfn> ## {#dt-methodology}
+
+A methodology is a set of methodology elements that describe the methodology used to prepare the report.
+
+### Properties ### {#dt-methodology-properties}
+
+Methodology has the following properties:
+
+<figure id="methodology-properties-table" dfn-type="element-attr" dfn-for="Methodology">
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Property
+        <th>Type
+        <th>Req
+        <th>Specification
+    <tbody>
+      <tr>
+        <td><dfn>methodologyType</dfn>
+        <td>String
+        <td>M
+        <td>The methodology used to prepare the report. The methodology MUST be specified using the Methodology enumeration, see [[#dt-methodology-type]] for details.
+      <tr>
+        <td><dfn>percentageOfTotalPortfolioReported</dfn>
+        <td>Number
+        <td>M
+        <td>The percentage of the total portfolio scope 1, scope 2, and scope 3 emissions reported. The percentage MUST be represented as a string, see [[#dt-string]] for details.
+      <tr>
+        <td><dfn>percentageOfEstimatedCalculations</dfn>
+        <td>Number
+        <td>M
+        <td>The percentage of reported scope1, scope2, & scope3 emissions calculated based on actual data vs. estimated data. The percentage MUST be represented as a string, see [[#dt-string]] for details.
+      <tr>
+        <td>boundaryApproach : {{BoundaryApproach}}
+        <td>String
+        <td>M
+        <td>The boundary approach used to determine the scope of the report. The boundary approach MUST be specified using the BoundaryApproach enumeration, see [[#dt-boundary-approach]] for details.      
+  </table>
+  <figcaption>Properties of a Methodology</figcaption>
+  </figure>
+
+## Data Type: <dfn>GeographicLocation</dfn> ## {#dt-geographic-location}
+
+The GeographicLocation is a data type that can represent a GNSS/GPS point location for projects like a facility or building
+and or a geographic area, like a land project using a polygon represented as a string or file. *Either the longitude and latitude or
+the string or file for the area must have a value.
+
+### Properties ### {#dt-geographic-location-properties}
+
+<figure id="geographic-location-properties-table" dfn-type="element-attr" dfn-for="GeographicLocation">
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Property
+        <th>Type
+        <th>Req
+        <th>Specification
+    <tbody>
+      <tr>
+        <td><dfn>latitude</dfn> : 
+        <td>Decimal
+        <td>O*
+        <td>The latitude of the location using Decimal Degrees.
+      <tr>
+        <td><dfn>longitude</dfn> :
+        <td>Decimal
+        <td>O*
+        <td>The longitude of the location using Decimal Degrees.
+      <tr>
+        <td><dfn>geoJsonOrKml</dfn> :
+        <td>String
+        <td>O*
+        <td>The geoJson or KML as a minimized string of the geographic area.
+      <tr>
+        <td><dfn>geographicLocationFile</dfn>
+        <td>String
+        <td>O*
+        <td>The URI to the geographic location file, Geojson, KML, etc., for larger geographic data sets.
+  </table>
+<figcaption>Properties of data type GeographicLocation</figcaption>
+</figure>
+
+## Data Type: <dfn>PrecisionMix</dfn> ## {#dt-precision-mix}
+
+The mix of precision, by percentage, of the measurement specification used for the activity. The sum of all the mixes <b>must</b> be 100 for 100%.
+
+### Properties ### {#dt-precision-mix-properties}
+
+<figure id="precision-mix-properties-table" dfn-type="element-attr" dfn-for="PrecisionMix">
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Property
+        <th>Type
+        <th>Req
+        <th>Specification
+    <tbody>
+      <tr>
+        <td>low : 
+        <td>Decimal
+        <td>M
+        <td>The percentage of estimated or factored precision for the project, 10 = 10%.
+      <tr>
+        <td>medium : 
+        <td>Decimal
+        <td>M
+        <td>The percentage of indirect high quality precision for the project, 20 = 20%.
+      <tr>
+        <td>high : 
+        <td>Decimal
+        <td>M
+        <td>The percentage of direct highly accurate measurements for the project, i.e., from sensors, 50 = 50%. 
+  </table>
+  <figcaption>Properties of data type PrecisionMix</figcaption>
+  </figure>
+
+## Data Type: <dfn>Metatag</dfn> ## {#dt-metatag}
+
+A metatag is a user defined key-value pair that represents a metadata element. The key is a string that represents the name of the metadata element, 
+and the value is a string that represents the value of the metadata element.
+
+### Properties ### {#dt-metatag-properties}
+
+Metatag has the following properties:
+
+<figure id="metatag-properties-table" dfn-type="element-attr" dfn-for="Metatag">
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Property
+        <th>Type
+        <th>Req
+        <th>Specification
+    <tbody>
+      <tr>
+        <td><dfn>key</dfn>
+        <td>String
+        <td>M
+        <td>The key of the metatag.
+    <tr>
+        <td><dfn>value</dfn>
+        <td>String
+        <td>M
+        <td>The value of the metatag.
+    <tr>
+      <td><dfn>relatedMetadata</dfn> : [=Metalink=]
+      <td>Array
+      <td>O
+      <td>An optional collection of related metadata, by [=Metalink=]. See [[#dt-metalink]] for details.
+  </table>
+  <figcaption>Properties of a Metatag</figcaption>
+  </figure>
+
+## Data Type: <dfn>Metalink</dfn> ## {#dt-metalink}
+
+A metalink is a URI or JSON path to other metadata related to the metadata it is attached to.
+
+### Properties ### {#dt-metalink-properties}
+
+Metalink has the following properties:
+
+<figure id="metalink-properties-table" dfn-type="element-attr" dfn-for="Metalink">
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Property
+        <th>Type
+        <th>Req
+        <th>Specification
+    <tbody>
+      <tr>
+          <td><dfn>relatedMetadataPath</dfn>
+          <td>String
+          <td>M
+          <td>The JSON path to the metadata.
+  </table>
+  <figcaption>Properties of a Metalink</figcaption>
+  </figure>
+
+## Data Type: <dfn>PropertyContext</dfn> ## {#dt-property-context}
+
+A property context allows for a grouping of metatags that are associated with a specific property. For example, a property context may be used to group metatags that are associated with a specific
+indicator, or a specific aspect.
+
+### Properties ### {#dt-property-context-properties}
+
+PropertyContext has the following properties:
+
+<figure id="property-context-properties-table" dfn-type="element-attr" dfn-for="PropertyContext">
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Property
+        <th>Type
+        <th>Req
+        <th>Specification
+    <tbody>
+      <tr>
+        <td><dfn>property</dfn>
+        <td>String
+        <td>M
+        <td>The property name for the context. The property MUST be the normative name for the property for the report's specification. For example, the property name can be `section 1.1.1`, etc.
+      <tr>
+        <td>metatags : [=Metatag=]
+        <td>Array
+        <td>M
+        <td>A collection of metatags using [=Metatag=]s. See [[#dt-metatag]] for details.
+      <tr>
+        <td><dfn>relatedMetadata</dfn> : [=Metalink=]
+        <td>Array
+        <td>O
+        <td>An optional collection of related metadata, by [=Metalink=]. See [[#dt-metalink]] for details.
+  </table>
+  <figcaption>Properties of a Property Context</figcaption>
+</figure>
+
+## Data Type: <dfn>MetadataExtension</dfn> ## {#dt-metadata-extension}
+
+    A metadata extension is a Json schema based extension that can be used to store data that is defined by another specification, industry or agreement.
+
+    ### Properties ### {#dt-metadata-extension-properties}
+
+    <figure id="metadata-extension-properties-table" dfn-type="element-attr" dfn-for="MetadataExtension">
+      <table class="data">
+        <thead>
+          <tr>
+            <th>Property
+            <th>Type
+            <th>Req
+            <th>Specification
+        <tbody>
+          <tr>
+            <td>dataSchema : 
+            <td>String
+            <td>M
+            <td>The Url/Uri to the Json extension file for the schema, see [[#metadata-extension-definition]] for details.
+          <tr>
+            <td>documentation: 
+            <td>String
+            <td>M
+            <td>The Url/Uri to the documentation for the extension, see [[#extension-documentation]] for details.
+          <tr>
+            <td>data : 
+            <td>String
+            <td>M
+            <td>A Json object that contains the data for the extension, see [[#metadata-extension-definition]] for details.
+      </table>
+    <figcaption>Properties of data type TypedExtension</figcaption>
+    </figure>
+    
+    ## Typed Extension Schema File: <dfn>MetadataExtensionDefinition</dfn> ## {#metadata-extension-definition}
+
+      Every extension MUST define a [valid JSON Schema document according to the JSON Schema specification](https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-01).
+      The extension schema file defines the data encoding and syntactical data validation details.
+
+      Authors of extension schema definitions SHOULD attempt to add as many validation rules as possible such that data validation can be automated as much as possible.
+
+      Extension schemas SHOULD be defined in a way to make illegal extension representations unrepresentable.
+
+      Additional details which are not representable in JSON Schema such as data semantics or validation rules, MUST be defined in the extension documentation ([[#extension-documentation]]).
+
+    ## Extension Documentation: <dfn>ExtensionDocumentation</dfn> ## {#extension-documentation}
+
+      The extension documentation is a human-readable document that describes the extension in detail. Extension document MUST be written in English. The documentation CAN be offered as a translation in other languages as well.
+
+      The documentation MUST include:
+
+      1. Version of the extension and the document. The value MUST be a string in the format `major.minor.patch` as defined in [[!SEMVER|Semantic Versioning 2.0.0]].
+      2. If the extension was updated, the document MUST include a changelog. The changelog MUST contain a summary of the changes between subsequent versions.
+      2. A description of the extension, including the business case addressed by the extension and the business value gained by extending the Pathfinder Data Model.
+          2.1 This includes methodological alignment of the extension, especially covering the alignment with the Pathfinder Framework if applicable.
+      4. A public [[!RFC3986|URL]] to the [[#metadata-extension-definition]].
+      5. A license declaration covering the documentation, the extension schema file, and their use.
+      6. Electronic contact information on how to get in touch with the authors and maintainers of the extension.
+
+## Data Type: <dfn>ProductFootprintExtension</dfn> ## {#dt-product-footprint-extension}
+
+A Product Footprint Extension is a set of metadata that is a companion to a [=Product Footprint=]. This extension is used to provide additional metadata about the product footprint, some of which can be private
+and only shared under a [=Dataspace=] contract.
+
+### Properties ### {#dt-product-footprint-extension-properties}
+
+A Product Footprint Extension has the following properties:
+
+<figure id="product-footprint-extension-properties-table" dfn-type="element-attr" dfn-for="ProductFootprintExtension">
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Property
+        <th>Type
+        <th>Req
+        <th>Specification
+    <tbody>
+      <tr>
+        <td>dataSchema : 
+        <td>String
+        <td>M
+        <td>Add more here
+      <tr>
+        <td>documentation: 
+        <td>String
+        <td>M
+        <td>Add more here
+      <tr>
+        <td>data : 
+        <td>String
+        <td>M
+        <td>Add more here
+  </table>
+  <figcaption>Properties of data type ProductFootprintExtension</figcaption>
+  </figure>
+  Issue: This is incomplete as a DRAFT
+
+
+
+## Data Type: <dfn>Decimal</dfn> ## {#dt-decimal}
+
+A dotted-decimal number. 
+
+Example values:
+<div class=example>
+    - `10`
+    - `42.12`
+    - `-182.84`
+</div>
+
+### JSON Representation ### {#dt-decimal-json}
+
+Each Decimal MUST be encoded as a JSON String.
+
+## Data Type: <dfn>String</dfn> ## {#dt-string}
+
+A regular UTF-8 String.
+
+### JSON Data Representation ### {#dt-string-json}
+
+Each [=String=] MUST be encoded as a JSON String.
+
+## Data Type: <dfn>GRID</dfn> ## {#dt-grid}
+
+ A Unique 8 digit alphanumeric identifier. Omits [0/O | 1/I] to avoid ambiguity, case insensitive. Example: `R3AK.XF9B.24`,
+ where part1 = R3AK and part2 = XF9B, separated by a dot. The postfix checksum is 24 separated by a dot.
+ has a 2 digit numeric checksum, postfix, used to avoid typos in situations where the GRID is retyped.
+
+### JSON Representation ### {#dt-grid-json}
+
+Each GRID MUST be encoded as a JSON String, see [[#dt-string-json]] for details.
+
+Example JSON string value: 
+
+<div class=example>
+```json
+"7PBR.R569.29"
+```
+</div>
+
+## Data Type: <dfn enum>ReportFormat</dfn> ## {#dt-report-format}
+
+The format of the report, this is a non-exhastive list and needs expanding. The value MUST be one of the following:
+
+<dl dfn-type="enum-value" dfn-for="ReportFormat">
+
+: <dfn>NO_REPORT_FORMAT</dfn>
+:: for No Report Format
+
+: <dfn>PDF</dfn>
+:: for PDF
+
+: <dfn>HTML</dfn>
+:: for HTML
+
+: <dfn>DOCX</dfn>
+:: for DOCX
+
+: <dfn>XLSX</dfn>
+:: for XLSX
+
+: <dfn>CSV</dfn>
+:: for CSV
+
+: <dfn>XML</dfn>
+:: for XML
+
+: <dfn>JSON</dfn>
+:: for JSON
+
+: <dfn>XBRL</dfn>
+:: for XBRL
+
+</dl>
+
+### JSON Representation ### {#dt-report-format-json}
+
+Each ReportFormat MUST be encoded as a JSON String, see [[#dt-string]] for details.
+
+## Data Type: <dfn enum>ReportingStandard</dfn> ## {#dt-reporting-standard}
+
+The reporting standard used for the report, this is a non-exhastive list and needs expanding. The value MUST be one of the following:
+
+<dl dfn-type="enum-value" dfn-for="ReportingStandard">
+
+: <dfn>NO_REPORTING_STANDARD</dfn>
+:: for No Reporting Standard
+
+: <dfn>GRI</dfn>
+:: for Global Reporting Initiative
+
+: <dfn>CDP</dfn>
+:: for CDP, formerly Carbon Disclosure Project
+
+: <dfn>SASB</dfn>
+:: for Sustainability Accounting Standards Board
+
+: <dfn>IR</dfn>
+:: for International Integrated Reporting Council
+
+</dl>
+
+### JSON Representation ### {#dt-reporting-standard-json}
+
+Each ReportingStandard MUST be encoded as a JSON String, see [[#dt-string]] for details.
+
+## Data Type: <dfn enum>ReportType</dfn> ## {#dt-report-type}
+
+The type of report, this is a non-exhastive list and needs expanding. The value MUST be one of the following:
+
+<dl dfn-type="enum-value" dfn-for="ReportType">
+
+: <dfn>NO_REPORT_TYPE</dfn>
+:: for No Report Type
+
+: <dfn>ANNUAL_REPORT</dfn>
+:: for Annual Report
+
+: <dfn>FINANCIAL_REPORT</dfn>
+:: for Financial Report
+
+: <dfn>PROXY_STATEMENT</dfn>
+:: for Proxy Statement
+
+: <dfn>CSRD_REPORT</dfn>
+:: for Corporate Sustainability Report Declaration Report
+
+: <dfn>CDP</dfn>
+:: for CDP, formerly Carbon Disclosure Project, Report
+
+: <dfn>SASB</dfn>
+:: for Sustainability Accounting Standards Board Report
+
+</dl>
+
+### JSON Representation ### {#dt-report-type-json}
+
+Each {{ReportType}} MUST be encoded as a JSON String, see [[#dt-string]] for details.
+
+## Data Type: <dfn enum>MethodologyType</dfn> ## {#dt-methodology-type}
+
+The methodology used for the report, this is a non-exhastive list and needs expanding. The value MUST be one of the following:
+
+<dl dfn-type="enum-value" dfn-for="MethodologyType">
+
+: <dfn>UNKNOWN</dfn>
+:: for Unknown
+
+: <dfn>GHG_PROTOCOL</dfn>
+:: for GHG Protocol
+
+: <dfn>ISO_14067</dfn>
+:: for ISO 14067
+
+: <dfn>OTHER</dfn>
+:: for Other
+
+</dl>
+
+### JSON Representation ### {#dt-methodology-type-json}
+
+Each {{MethodologyType}} MUST be encoded as a JSON String, see [[#dt-string]] for details.
+
+## Data Type: <dfn enum>BoundaryApproach</dfn> ## {#dt-boundary-approach}
+
+The boundary approach used for the report, this is a non-exhastive list and needs expanding. The value MUST be one of the following:
+
+<dl dfn-type="enum-value" dfn-for="BoundaryApproach">
+
+: <dfn>OPERATIONAL_CONTROL</dfn>
+:: for Operational Control
+
+: <dfn>FINANCIAL_CONTROL</dfn>
+:: for Financial Control
+
+: <dfn>EQUITY_SHARE</dfn>
+:: for Equity Share
+
+</dl>
+
+### JSON Representation ### {#dt-boundary-approach-json}
+
+Each {{BoundaryApproach}} MUST be encoded as a JSON String, see [[#dt-string]] for details.
+
+## Data Type: <dfn enum>Unit</dfn> ## {#dt-unit}
+
+Unit is the enumeration of accepted declared units with values, not complete.
+
+<dl dfn-type="enum-value" dfn-for="Unit">
+
+: <dfn>liter</dfn>
+:: for unit liter
+
+: <dfn>kilogram</dfn>
+:: for unit kilogram
+
+: <dfn>cubic meter</dfn>
+:: for cubic meter
+
+: <dfn>kilowatt</dfn>
+:: for kilowatt
+
+: <dfn>megawatt</dfn>
+:: for megawatt
+
+: <dfn>megajoule</dfn>
+:: for megajoule
+
+: <dfn>ton kilometer</dfn>
+:: for ton kilometer
+
+: <dfn>square meter</dfn>
+:: for square meter
+
+: <dfn>TONNE_CO2E</dfn>
+:: for tonne of CO2e
+
+: <dfn>TONNE_CO2</dfn>
+:: for tonne of CO2
+
+: <dfn>TONNE_CH4</dfn>
+:: for tonne of CH4
+
+: <dfn>TONNE_N2O</dfn>
+:: for tonne of N2O
+
+: <dfn>MwH</dfn>
+:: for megawatt hour
+
+: <dfn>KwH</dfn>
+:: for kilowatt hour
+
+</dl>
+
+### JSON Representation ### {#dt-unit-json}
+
+The value of each {{Unit}} MUST be encoded as a JSON String, see [[#dt-string]] for details.
+
+## Data Type: <dfn enum>FactorType</dfn> ## {#dt-factor-type}
+
+FactorType is the enumeration of accepted declared factor types with values.
+
+<dl dfn-type="enum-value" dfn-for="FactorType">
+
+: <dfn>UNKNOWN</dfn>
+:: for Unknown
+
+: <dfn>ESTIMATED</dfn>
+:: for Estimated
+
+: <dfn>FACTORED</dfn>
+:: for Factored
+
+: <dfn>MEASURED</dfn>
+:: for Measured
+
+</dl>
+
+### JSON Representation ### {#dt-factor-type-json}
+
+The value of each {{FactorType}} MUST be encoded as a JSON String, see [[#dt-string]] for details.
+
+# Samples # {#samples}
+
+## Sustainability Report ## {#sample-sustainability-report}
+
+<div class="example">
+Sustainability Report:
+<pre class=include-code>
+path: samples/SustainabilityReport.json
+highlight: json
+</pre>
+</div>
+
+## Sustainability Report Metadata ## {#sample-sustainability-report-metadata}
+
+<div class="example">
+Sustainability Report Metadata:
+<pre class=include-code>
+path: samples/Metadata.json
+highlight: json
+</pre>
+</div>
+
+# Appendix A: License # {#license}
+
+<pre class=include>
+path: LICENSE
+</pre>
+
+# Appendix B: Changelog # {#changelog}
+
+Here we will document changes in the specification as they are made.
+
+## Version 1.0.20230627 (June 27, 2023) ## {#changelog-1.0.20230627}
+
+- Adding `ReportType` enum, see [[#dt-report-type]] for details.
+- Adding `reportContext` a collection of [=Metatag=] to [=Metadata=], see [[#dt-metadata-properties]] for details.
+- Adding `propertyContexts` a collection of [=PropertyContext=] to [=Metadata=], see [[#dt-metadata-properties]] for details.
+- Addition `relatedReports` to [=Metadata=], see [[#dt-metadata-properties]] for details.
+
+## Version 1.0.20230725 (July 25, 2023) ## {#changelog-1.0.20230725}
+
+- Adding `Goverance` type, see [[#dt-governance]] for details.
+
+## Version 1.0.20230728 (July 28, 2023) ## {#changelog-1.0.20230728}
+
+- Added data type [=Metalink=], see [[#dt-metalink]] for details.
+- Added `Metalinks` to [=Activity=], [=MetaTag=] and [=PropertyContext=], see [[#dt-activity-properties]], [[#dt-metatag-properties]] and [[#dt-property-context-properties]] for details.
+- Added data type [=GeographicLocation=], see [[#dt-geographic-location]] for details.
+- Changed `ReportingPeriod` to `TimePeriod` for reuse.
+- Added `IntendedUse`, `RestrictedAccess` and `ReportOwner` to [=Governance=], see [[#dt-governance-properties]] for details.
+- Added data type {{MethodologyType}}, see [[#dt-methodology-type]] for details.
+- Added data type {{BoundaryApproach}}, see [[#dt-boundary-approach]] for details.
+- Added data type {{Unit}}, see [[#dt-unit]] for details.
+- Added data type {{FactorType}}, see [[#dt-factor-type]] for details.
+- Added data type [=Methodology=], see [[#dt-methodology]] for details.
+- Added data type [=FactorAndSource=], see [[#dt-factor-and-source]] for details.
+- Added data type [=Activity=], see [[#dt-activity]] for details.
+- Updated samples, see [[#samples]] for details.

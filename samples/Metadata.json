@@ -1,0 +1,124 @@
+{
+  "grid": "C8MA.E2WA.36",
+  "organizationIdentifier": "LEI: 254900OPPU84GM83MG36",
+  "organizationName": "CarbonCall",
+  "domicile": "US",
+  "operatingCountries": [
+    "US",
+    "CN",
+    "GB"
+  ],
+  "languages": [
+    "En",
+    "Zh"
+  ],
+  "reportType": "SustainabilityReport",
+  "reportIssueDate": "2021-01-01",
+  "reportingPeriod": {
+    "startDate": "2020-01-01",
+    "endDate": "2020-12-31"
+  },
+  "reportReplaces": "",
+  "location": "https://carboncall.io/reportFromPeriod.json",
+  "industry": {
+    "prefix": "ISIC",
+    "code": "6201"
+  },
+  "performance": "{'Perf1':{'name':'Perf1','type':'performance','value':127000,'unit':'tCO2e'},'Perf2':{'name':'Perf2','type':'performance','value':0,'min':0,'max':100,'step':1,'unit':'%'}} ",
+  "goverance": {
+    "intendedUse": "Public",
+    "restrictedAccess": false,
+    "reportOwner": "CarbonCall"
+  },
+  "methodology": {
+    "methodologyType": "GhgProtocol",
+    "percentageOfTotalPortfolioReported": "100",
+    "percentageOfEstimatedCalculations": "82",
+    "boundaryApproach": "OperationalControl"
+  },
+  "reportFormat": "IXBRL",
+  "reportingStandard": "ISSB",
+  "assurance": "DE_BaFIN: 1234567890",
+  "priorReport": "",
+  "reportHash": "dftaae3297i89798adsdf832adfs912231azsdf",
+  "activities": [
+    {
+      "activityType": "Heating",
+      "unitOfMeasure": "TonneCo2E",
+      "activityAmount": "198.31",
+      "activityPeriod": {
+        "startDate": "2020-01-01",
+        "endDate": "2020-12-31"
+      },
+      "activityDescription": "Heating of buildings",
+      "activityLocation": {
+        "longitude": "123.456",
+        "latitude": "0.12123",
+        "geoJsonOrKml": "",
+        "geographicLocationFile": ""
+      },
+      "activityFactorAndSource": {
+        "factorType": "Factored",
+        "factorUnit": "TonneHfc",
+        "factorSource": "https://www.epa.gov/energy/greenhouse-gases-equivalencies-calculator-calculations-and-references",
+        "factorPrecision": {
+          "low": 70,
+          "medium": 20,
+          "high": 10
+        }
+      },
+      "relatedMetadata": [
+        {
+          "relatedMetadataPath": "Metadata/Activities/Heating/ActivityFactorAndSource"
+        }
+      ]
+    }
+  ],
+  "reportContext": [
+    {
+      "key": "Author Contact Email",
+      "value": "someone@somewhere.com",
+      "relatedMetadata": []
+    },
+    {
+      "key": "Author Contact Phone",
+      "value": "123-456-7890",
+      "relatedMetadata": []
+    }
+  ],
+  "propertyContexts": [
+    {
+      "propertyName": "Section 1.2.1",
+      "metatags": [
+        {
+          "key": "Carbon Offset Ratio",
+          "value": "1.2",
+          "relatedMetadata": []
+        }
+      ],
+      "relatedMetadata": []
+    },
+    {
+      "propertyName": "Section 1.2.2",
+      "metatags": [
+        {
+          "key": "GHG Adjustment Exception",
+          "value": "GGP-1_2_2",
+          "relatedMetadata": []
+        }
+      ],
+      "relatedMetadata": []
+    }
+  ],
+  "metatdataExtensions": [
+    {
+      "dataSchema": "https://carboncall.io/schemas/2024/01/01/CarbonCallMetadata.json",
+      "documentation": "https://carboncall.io/docs/2024/01/01/CarbonCallMetadata.html",
+      "data": "{'@context':'compliancemetrics.org','@type':'compliancemetrics.org/ComplianceMetric','name':'compliancemetrics.org/ComplianceMetric/1.0/1','jurisdiction':'eu','factorCompliance':0.5,'factorCompleteness':0.73,'factorCorrectness':0.9,'accessibility':100}"
+    }
+  ],
+  "relatedReports": [
+    "SDJQ.BPUN.15",
+    "ADCF.GPOM.16"
+  ]
+}
