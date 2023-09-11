@@ -25,6 +25,11 @@ public final class MetadataOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_carboncall_metadata_Metadata_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_carboncall_metadata_ProductFootprintExtension_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_carboncall_metadata_ProductFootprintExtension_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_carboncall_metadata_Activity_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -96,7 +101,7 @@ public final class MetadataOuterClass {
       "\n\016metadata.proto\022\023carboncall.metadata\"h\n" +
       "\024SustainabilityReport\022\017\n\007g_r_i_d\030\001 \001(\t\022/" +
       "\n\010metadata\030\002 \001(\0132\035.carboncall.metadata.M" +
-      "etadata\022\016\n\006report\030\003 \001(\t\"\270\010\n\010Metadata\022\017\n\007" +
+      "etadata\022\016\n\006report\030\003 \001(\t\"\200\t\n\010Metadata\022\017\n\007" +
       "g_r_i_d\030\001 \001(\t\022\037\n\027organization_identifier" +
       "\030\002 \001(\t\022\031\n\021organization_name\030\003 \001(\t\022:\n\010dom" +
       "icile\030\004 \001(\0162(.carboncall.metadata.ISO316" +
@@ -123,151 +128,155 @@ public final class MetadataOuterClass {
       "ontexts\030\027 \003(\0132$.carboncall.metadata.Prop" +
       "ertyContext\022D\n\024metatdata_extensions\030\030 \003(" +
       "\0132&.carboncall.metadata.MetadataExtensio" +
-      "n\022\027\n\017related_reports\030\031 \003(\t\"\215\003\n\010Activity\022" +
-      "\025\n\ractivity_type\030\001 \001(\t\0222\n\017unit_of_measur" +
-      "e\030\002 \001(\0162\031.carboncall.metadata.Unit\022\027\n\017ac" +
-      "tivity_amount\030\003 \001(\t\0228\n\017activity_period\030\004" +
-      " \001(\0132\037.carboncall.metadata.TimePeriod\022\034\n" +
-      "\024activity_description\030\005 \001(\t\022B\n\021activity_" +
-      "location\030\006 \001(\0132\'.carboncall.metadata.Geo" +
-      "graphicLocation\022H\n\032activity_factor_and_s" +
-      "ource\030\007 \001(\0132$.carboncall.metadata.Factor" +
-      "AndSource\0227\n\020related_metadata\030\010 \003(\0132\035.ca" +
-      "rboncall.metadata.Metalink\"\354\002\n\017FactorAnd" +
-      "Source\022D\n\013factor_type\030\001 \001(\0162/.carboncall" +
-      ".metadata.FactorAndSource.FactorType\022.\n\013" +
-      "factor_unit\030\002 \001(\0162\031.carboncall.metadata." +
-      "Unit\022\025\n\rfactor_source\030\003 \001(\t\022K\n\020factor_pr" +
-      "ecision\030\004 \001(\01321.carboncall.metadata.Fact" +
-      "orAndSource.PrecisionMix\0329\n\014PrecisionMix" +
-      "\022\013\n\003low\030\001 \001(\005\022\016\n\006medium\030\002 \001(\005\022\014\n\004high\030\003 " +
-      "\001(\005\"D\n\nFactorType\022\013\n\007UNKNOWN\020\000\022\r\n\tESTIMA" +
-      "TED\020\001\022\014\n\010FACTORED\020\002\022\014\n\010MEASURED\020\003\"\247\003\n\013Me" +
-      "thodology\022J\n\020methodology_type\030\001 \001(\01620.ca" +
-      "rboncall.metadata.Methodology.Methodolog" +
-      "yType\022.\n&percentage_of_total_portfolio_r" +
-      "eported\030\002 \001(\t\022,\n$percentage_of_estimated" +
-      "_calculations\030\003 \001(\t\022L\n\021boundary_approach" +
-      "\030\004 \001(\01621.carboncall.metadata.Methodology" +
-      ".BoundaryApproach\"J\n\017MethodologyType\022\013\n\007" +
-      "UNKNOWN\020\000\022\020\n\014GHG_PROTOCOL\020\001\022\r\n\tISO_14067" +
-      "\020\002\022\t\n\005OTHER\020d\"T\n\020BoundaryApproach\022\027\n\023OPE" +
-      "RATIONAL_CONTROL\020\000\022\025\n\021FINANCIAL_CONTROL\020" +
-      "\001\022\020\n\014EQUITY_SHARE\020\002\"R\n\tGoverance\022\024\n\014inte" +
-      "nded_use\030\001 \001(\t\022\031\n\021restricted_access\030\002 \001(" +
-      "\010\022\024\n\014report_owner\030\003 \001(\t\"2\n\nTimePeriod\022\022\n" +
-      "\nstart_date\030\001 \001(\t\022\020\n\010end_date\030\002 \001(\t\"t\n\022G" +
-      "eographicLocation\022\021\n\tlongitude\030\001 \001(\t\022\020\n\010" +
-      "latitude\030\002 \001(\t\022\027\n\017geo_json_or_kml\030\003 \001(\t\022" +
-      " \n\030geographic_location_file\030\004 \001(\t\"^\n\007Met" +
-      "atag\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\0227\n\020rela" +
-      "ted_metadata\030\003 \003(\0132\035.carboncall.metadata" +
-      ".Metalink\"\221\001\n\017PropertyContext\022\025\n\rpropert" +
-      "y_name\030\001 \001(\t\022.\n\010metatags\030\002 \003(\0132\034.carbonc" +
-      "all.metadata.Metatag\0227\n\020related_metadata" +
-      "\030\003 \003(\0132\035.carboncall.metadata.Metalink\")\n" +
-      "\010Metalink\022\035\n\025related_metadata_path\030\001 \001(\t" +
-      "\"L\n\021MetadataExtension\022\022\n\ndataSchema\030\001 \001(" +
-      "\t\022\025\n\rdocumentation\030\002 \001(\t\022\014\n\004data\030\003 \001(\t\"Q" +
-      "\n\010Industry\0227\n\006prefix\030\001 \001(\0162\'.carboncall." +
-      "metadata.IndustryCodePrefix\022\014\n\004code\030\002 \001(" +
-      "\t*\335\022\n\023ISO3166_CountryCode\022\013\n\007UNKNOWN\020\000\022\007" +
-      "\n\003A_F\020\001\022\007\n\003A_X\020\002\022\007\n\003A_L\020\003\022\007\n\003D_Z\020\004\022\007\n\003A_" +
-      "S\020\005\022\007\n\003A_D\020\006\022\007\n\003A_O\020\007\022\007\n\003A_I\020\010\022\007\n\003A_Q\020\t\022" +
-      "\007\n\003A_G\020\n\022\007\n\003A_R\020\013\022\007\n\003A_M\020\014\022\007\n\003A_W\020\r\022\007\n\003A" +
-      "_U\020\016\022\007\n\003A_T\020\017\022\007\n\003A_Z\020\020\022\007\n\003B_S\020\021\022\007\n\003B_H\020\022" +
-      "\022\007\n\003B_D\020\023\022\007\n\003B_B\020\024\022\007\n\003B_Y\020\025\022\007\n\003B_E\020\026\022\007\n\003" +
-      "B_Z\020\027\022\007\n\003B_J\020\030\022\007\n\003B_M\020\031\022\007\n\003B_T\020\032\022\007\n\003B_O\020" +
-      "\033\022\007\n\003B_Q\020\034\022\007\n\003B_A\020\035\022\007\n\003B_W\020\036\022\007\n\003B_V\020\037\022\007\n" +
-      "\003B_R\020 \022\007\n\003I_O\020!\022\007\n\003B_N\020\"\022\007\n\003B_G\020#\022\007\n\003B_F" +
-      "\020$\022\007\n\003B_I\020%\022\007\n\003C_V\020&\022\007\n\003K_H\020\'\022\007\n\003C_M\020(\022\007" +
-      "\n\003C_A\020)\022\007\n\003K_Y\020*\022\007\n\003C_F\020+\022\007\n\003T_D\020,\022\007\n\003C_" +
-      "L\020-\022\007\n\003C_N\020.\022\007\n\003C_X\020/\022\007\n\003C_C\0200\022\007\n\003C_O\0201\022" +
-      "\007\n\003K_M\0202\022\007\n\003C_G\0203\022\007\n\003C_D\0204\022\007\n\003C_K\0205\022\007\n\003C" +
-      "_R\0206\022\007\n\003C_I\0207\022\007\n\003H_R\0208\022\007\n\003C_U\0209\022\007\n\003C_W\020:" +
-      "\022\007\n\003C_Y\020;\022\007\n\003C_Z\020<\022\007\n\003D_K\020=\022\007\n\003D_J\020>\022\007\n\003" +
-      "D_M\020?\022\007\n\003D_O\020@\022\007\n\003E_C\020A\022\007\n\003E_G\020B\022\007\n\003S_V\020" +
-      "C\022\007\n\003G_Q\020D\022\007\n\003E_R\020E\022\007\n\003E_E\020F\022\007\n\003E_T\020G\022\007\n" +
-      "\003F_K\020H\022\007\n\003F_O\020I\022\007\n\003F_J\020J\022\007\n\003F_I\020K\022\007\n\003F_R" +
-      "\020L\022\007\n\003G_F\020M\022\007\n\003P_F\020N\022\007\n\003T_F\020O\022\007\n\003G_A\020P\022\007" +
-      "\n\003G_M\020Q\022\007\n\003G_E\020R\022\007\n\003D_E\020S\022\007\n\003G_H\020T\022\007\n\003G_" +
-      "I\020U\022\007\n\003G_R\020V\022\007\n\003G_L\020W\022\007\n\003G_D\020X\022\007\n\003G_P\020Y\022" +
-      "\007\n\003G_U\020Z\022\007\n\003G_T\020[\022\007\n\003G_G\020\\\022\007\n\003G_N\020]\022\007\n\003G" +
-      "_W\020^\022\007\n\003G_Y\020_\022\007\n\003H_T\020`\022\007\n\003H_M\020a\022\007\n\003V_A\020b" +
-      "\022\007\n\003H_N\020c\022\007\n\003H_K\020d\022\007\n\003H_U\020e\022\007\n\003I_S\020f\022\007\n\003" +
-      "I_N\020g\022\007\n\003I_D\020h\022\007\n\003I_R\020i\022\007\n\003I_Q\020j\022\007\n\003I_E\020" +
-      "k\022\007\n\003I_M\020l\022\007\n\003I_L\020m\022\007\n\003I_T\020n\022\007\n\003J_M\020o\022\007\n" +
-      "\003J_P\020p\022\007\n\003J_E\020q\022\007\n\003J_O\020r\022\007\n\003K_Z\020s\022\007\n\003K_E" +
-      "\020t\022\007\n\003K_I\020u\022\007\n\003K_P\020v\022\007\n\003K_R\020w\022\007\n\003K_W\020x\022\007" +
-      "\n\003K_G\020y\022\007\n\003L_A\020z\022\007\n\003L_V\020{\022\007\n\003L_B\020|\022\007\n\003L_" +
-      "S\020}\022\007\n\003L_R\020~\022\007\n\003L_Y\020\177\022\010\n\003L_I\020\200\001\022\010\n\003L_T\020\201" +
-      "\001\022\010\n\003L_U\020\202\001\022\010\n\003M_O\020\203\001\022\010\n\003M_K\020\204\001\022\010\n\003M_G\020\205" +
-      "\001\022\010\n\003M_W\020\206\001\022\010\n\003M_Y\020\207\001\022\010\n\003M_V\020\210\001\022\010\n\003M_L\020\211" +
-      "\001\022\010\n\003M_T\020\212\001\022\010\n\003M_H\020\213\001\022\010\n\003M_Q\020\214\001\022\010\n\003M_R\020\215" +
-      "\001\022\010\n\003M_U\020\216\001\022\010\n\003Y_T\020\217\001\022\010\n\003M_X\020\220\001\022\010\n\003F_M\020\221" +
-      "\001\022\010\n\003M_D\020\222\001\022\010\n\003M_C\020\223\001\022\010\n\003M_N\020\224\001\022\010\n\003M_E\020\225" +
-      "\001\022\010\n\003M_S\020\226\001\022\010\n\003M_A\020\227\001\022\010\n\003M_Z\020\230\001\022\010\n\003M_M\020\231" +
-      "\001\022\010\n\003N_A\020\232\001\022\010\n\003N_R\020\233\001\022\010\n\003N_P\020\234\001\022\010\n\003N_L\020\235" +
-      "\001\022\010\n\003N_C\020\236\001\022\010\n\003N_Z\020\237\001\022\010\n\003N_I\020\240\001\022\010\n\003N_E\020\241" +
-      "\001\022\010\n\003N_G\020\242\001\022\010\n\003N_U\020\243\001\022\010\n\003N_F\020\244\001\022\010\n\003M_P\020\245" +
-      "\001\022\010\n\003N_O\020\246\001\022\010\n\003O_M\020\247\001\022\010\n\003P_K\020\250\001\022\010\n\003P_W\020\251" +
-      "\001\022\010\n\003P_S\020\252\001\022\010\n\003P_A\020\253\001\022\010\n\003P_G\020\254\001\022\010\n\003P_Y\020\255" +
-      "\001\022\010\n\003P_E\020\256\001\022\010\n\003P_H\020\257\001\022\010\n\003P_N\020\260\001\022\010\n\003P_L\020\261" +
-      "\001\022\010\n\003P_T\020\262\001\022\010\n\003P_R\020\263\001\022\010\n\003Q_A\020\264\001\022\010\n\003R_E\020\265" +
-      "\001\022\010\n\003R_O\020\266\001\022\010\n\003R_U\020\267\001\022\010\n\003R_W\020\270\001\022\010\n\003B_L\020\271" +
-      "\001\022\010\n\003S_H\020\272\001\022\010\n\003K_N\020\273\001\022\010\n\003L_C\020\274\001\022\010\n\003M_F\020\275" +
-      "\001\022\010\n\003P_M\020\276\001\022\010\n\003V_C\020\277\001\022\010\n\003W_S\020\300\001\022\010\n\003S_M\020\301" +
-      "\001\022\010\n\003S_T\020\302\001\022\010\n\003S_A\020\303\001\022\010\n\003S_N\020\304\001\022\010\n\003R_S\020\305" +
-      "\001\022\010\n\003S_C\020\306\001\022\010\n\003S_L\020\307\001\022\010\n\003S_G\020\310\001\022\010\n\003S_X\020\311" +
-      "\001\022\010\n\003S_K\020\312\001\022\010\n\003S_I\020\313\001\022\010\n\003S_B\020\314\001\022\010\n\003S_O\020\315" +
-      "\001\022\010\n\003Z_A\020\316\001\022\010\n\003G_S\020\317\001\022\010\n\003S_S\020\320\001\022\010\n\003E_S\020\321" +
-      "\001\022\010\n\003L_K\020\322\001\022\010\n\003S_D\020\323\001\022\010\n\003S_R\020\324\001\022\010\n\003S_J\020\325" +
-      "\001\022\010\n\003S_Z\020\326\001\022\010\n\003S_E\020\327\001\022\010\n\003C_H\020\330\001\022\010\n\003S_Y\020\331" +
-      "\001\022\010\n\003T_W\020\332\001\022\010\n\003T_J\020\333\001\022\010\n\003T_Z\020\334\001\022\010\n\003T_H\020\335" +
-      "\001\022\010\n\003T_L\020\336\001\022\010\n\003T_G\020\337\001\022\010\n\003T_K\020\340\001\022\010\n\003T_O\020\341" +
-      "\001\022\010\n\003T_T\020\342\001\022\010\n\003T_N\020\343\001\022\010\n\003T_R\020\344\001\022\010\n\003T_M\020\345" +
-      "\001\022\010\n\003T_C\020\346\001\022\010\n\003T_V\020\347\001\022\010\n\003U_G\020\350\001\022\010\n\003U_A\020\351" +
-      "\001\022\010\n\003A_E\020\352\001\022\010\n\003G_B\020\353\001\022\010\n\003U_S\020\354\001\022\010\n\003U_M\020\355" +
-      "\001\022\010\n\003U_Y\020\356\001\022\010\n\003U_Z\020\357\001\022\010\n\003V_U\020\360\001\022\010\n\003V_E\020\361" +
-      "\001\022\010\n\003V_N\020\362\001\022\010\n\003V_G\020\363\001\022\010\n\003V_I\020\364\001\022\010\n\003W_F\020\365" +
-      "\001\022\010\n\003E_H\020\366\001\022\010\n\003Y_E\020\367\001\022\010\n\003Z_M\020\370\001\022\010\n\003Z_W\020\371" +
-      "\001**\n\010Language\022\006\n\002en\020\000\022\006\n\002es\020\001\022\006\n\002zh\020\002\022\006\n" +
-      "\002fr\020\003*\321\001\n\nReportType\022\025\n\021INTEGRATED_REPOR" +
-      "T\020\000\022\024\n\020FINANCIAL_REPORT\020\001\022\031\n\025SUSTAINABIL" +
-      "ITY_REPORT\020\002\022\021\n\rANNUAL_REPORT\020\003\022\023\n\017PROXY" +
-      "_STATEMENT\020\004\022\032\n\026REGISTRATION_STATEMENT\020\005" +
-      "\022\024\n\020QUARTERLY_REPORT\020\006\022\026\n\022HALF_YEARLY_RE" +
-      "PORT\020\007\022\t\n\005OTHER\020\010*H\n\022IndustryCodePrefix\022" +
-      "\013\n\007I_S_I_C\020\000\022\r\n\tN_A_I_C_S\020\001\022\013\n\007G_I_C_S\020\002" +
-      "\022\t\n\005S_I_C\020\003*6\n\014ReportFormat\022\t\n\005P_D_F\020\000\022\r" +
-      "\n\ti_X_B_R_L\020\001\022\014\n\010OPEN_XML\020\002*T\n\021Reporting" +
-      "Standard\022\013\n\007G_A_A_P\020\000\022\013\n\007I_F_R_S\020\001\022\013\n\007I_" +
-      "S_S_B\020\002\022\r\n\tE_F_R_A_G\020\003\022\t\n\005G_R_I\020\004*\212\007\n\004Un" +
-      "it\022\016\n\nTONNE_CO2E\020\000\022\r\n\tTONNE_CO2\020\001\022\r\n\tTON" +
-      "NE_CH4\020\002\022\r\n\tTONNE_N2O\020\003\022\013\n\007TONNE_S\020\004\022\r\n\t" +
-      "TONNE_NOX\020\005\022\r\n\tTONNE_SOX\020\006\022\016\n\nTONNE_PM10" +
-      "\020\007\022\017\n\013TONNE_PM2_5\020\010\022\r\n\tTONNE_VOC\020\t\022\r\n\tTO" +
-      "NNE_NH3\020\n\022\r\n\tTONNE_PFC\020\013\022\r\n\tTONNE_SF6\020\014\022" +
-      "\r\n\tTONNE_HFC\020\r\022\r\n\tTONNE_CFC\020\016\022\017\n\013TONNE_H" +
-      "FC23\020\017\022\017\n\013TONNE_HFC32\020\020\022\020\n\014TONNE_HFC125\020" +
-      "\021\022\021\n\rTONNE_HFC134a\020\022\022\021\n\rTONNE_HFC143a\020\023\022" +
-      "\022\n\016TONNE_HFC227ea\020\024\022\022\n\016TONNE_HFC245fa\020\025\022" +
-      "\023\n\017TONNE_HFC365mfc\020\026\022\024\n\020TONNE_HFC4310mee" +
-      "\020\027\022\016\n\nTONNE_C2F6\020\030\022\016\n\nTONNE_C3F8\020\031\022\017\n\013TO" +
-      "NNE_C4F10\020\032\022\017\n\013TONNE_C5F12\020\033\022\017\n\013TONNE_C6" +
-      "F14\020\034\022\017\n\013TONNE_C7F16\020\035\022\017\n\013TONNE_C8F18\020\036\022" +
-      "\020\n\014TONNE_C10F18\020\037\022\020\n\014TONNE_C12F18\020 \022\020\n\014T" +
-      "ONNE_C14F18\020!\022\020\n\014TONNE_C16F18\020\"\022\020\n\014TONNE" +
-      "_C18F18\020#\022\020\n\014TONNE_C20F18\020$\022\020\n\014TONNE_C22" +
-      "F18\020%\022\020\n\014TONNE_C24F18\020&\022\020\n\014TONNE_C26F18\020" +
-      "\'\022\020\n\014TONNE_C28F18\020(\022\020\n\014TONNE_C30F18\020)\022\020\n" +
-      "\014TONNE_C32F18\020*\022\020\n\014TONNE_C34F18\020+\022\t\n\005LIT" +
-      "ER\020d\022\014\n\010KILOGRAM\020e\022\017\n\013CUBIC_METER\020f\022\014\n\010K" +
-      "ILOWATT\020g\022\014\n\010MEGAWATT\020h\022\r\n\tMEGAJUOLE\020i\022\r" +
-      "\n\tKILOMETER\020j\022\020\n\014SQUARE_METER\020k\022\t\n\005TONNE" +
-      "\020l\022\010\n\004MW_H\020m\022\010\n\004KW_H\020nB1\n\027org.carboncall" +
-      ".metadataP\001\252\002\023CarbonCall.Metadatab\006proto" +
-      "3"
+      "n\022F\n\016p_f_extensions\030\031 \003(\0132..carboncall.m" +
+      "etadata.ProductFootprintExtension\022\027\n\017rel" +
+      "ated_reports\030\032 \003(\t\"l\n\031ProductFootprintEx" +
+      "tension\022\014\n\004pfId\030\001 \001(\t\022A\n\023p_c_f_property_" +
+      "data\030\002 \003(\0132$.carboncall.metadata.Propert" +
+      "yContext\"\215\003\n\010Activity\022\025\n\ractivity_type\030\001" +
+      " \001(\t\0222\n\017unit_of_measure\030\002 \001(\0162\031.carbonca" +
+      "ll.metadata.Unit\022\027\n\017activity_amount\030\003 \001(" +
+      "\t\0228\n\017activity_period\030\004 \001(\0132\037.carboncall." +
+      "metadata.TimePeriod\022\034\n\024activity_descript" +
+      "ion\030\005 \001(\t\022B\n\021activity_location\030\006 \001(\0132\'.c" +
+      "arboncall.metadata.GeographicLocation\022H\n" +
+      "\032activity_factor_and_source\030\007 \001(\0132$.carb" +
+      "oncall.metadata.FactorAndSource\0227\n\020relat" +
+      "ed_metadata\030\010 \003(\0132\035.carboncall.metadata." +
+      "Metalink\"\354\002\n\017FactorAndSource\022D\n\013factor_t" +
+      "ype\030\001 \001(\0162/.carboncall.metadata.FactorAn" +
+      "dSource.FactorType\022.\n\013factor_unit\030\002 \001(\0162" +
+      "\031.carboncall.metadata.Unit\022\025\n\rfactor_sou" +
+      "rce\030\003 \001(\t\022K\n\020factor_precision\030\004 \001(\01321.ca" +
+      "rboncall.metadata.FactorAndSource.Precis" +
+      "ionMix\0329\n\014PrecisionMix\022\013\n\003low\030\001 \001(\005\022\016\n\006m" +
+      "edium\030\002 \001(\005\022\014\n\004high\030\003 \001(\005\"D\n\nFactorType\022" +
+      "\013\n\007UNKNOWN\020\000\022\r\n\tESTIMATED\020\001\022\014\n\010FACTORED\020" +
+      "\002\022\014\n\010MEASURED\020\003\"\247\003\n\013Methodology\022J\n\020metho" +
+      "dology_type\030\001 \001(\01620.carboncall.metadata." +
+      "Methodology.MethodologyType\022.\n&percentag" +
+      "e_of_total_portfolio_reported\030\002 \001(\t\022,\n$p" +
+      "ercentage_of_estimated_calculations\030\003 \001(" +
+      "\t\022L\n\021boundary_approach\030\004 \001(\01621.carboncal" +
+      "l.metadata.Methodology.BoundaryApproach\"" +
+      "J\n\017MethodologyType\022\013\n\007UNKNOWN\020\000\022\020\n\014GHG_P" +
+      "ROTOCOL\020\001\022\r\n\tISO_14067\020\002\022\t\n\005OTHER\020d\"T\n\020B" +
+      "oundaryApproach\022\027\n\023OPERATIONAL_CONTROL\020\000" +
+      "\022\025\n\021FINANCIAL_CONTROL\020\001\022\020\n\014EQUITY_SHARE\020" +
+      "\002\"R\n\tGoverance\022\024\n\014intended_use\030\001 \001(\t\022\031\n\021" +
+      "restricted_access\030\002 \001(\010\022\024\n\014report_owner\030" +
+      "\003 \001(\t\"2\n\nTimePeriod\022\022\n\nstart_date\030\001 \001(\t\022" +
+      "\020\n\010end_date\030\002 \001(\t\"t\n\022GeographicLocation\022" +
+      "\021\n\tlongitude\030\001 \001(\t\022\020\n\010latitude\030\002 \001(\t\022\027\n\017" +
+      "geo_json_or_kml\030\003 \001(\t\022 \n\030geographic_loca" +
+      "tion_file\030\004 \001(\t\"^\n\007Metatag\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t\0227\n\020related_metadata\030\003 \003(\013" +
+      "2\035.carboncall.metadata.Metalink\"\221\001\n\017Prop" +
+      "ertyContext\022\025\n\rproperty_name\030\001 \001(\t\022.\n\010me" +
+      "tatags\030\002 \003(\0132\034.carboncall.metadata.Metat" +
+      "ag\0227\n\020related_metadata\030\003 \003(\0132\035.carboncal" +
+      "l.metadata.Metalink\")\n\010Metalink\022\035\n\025relat" +
+      "ed_metadata_path\030\001 \001(\t\"L\n\021MetadataExtens" +
+      "ion\022\022\n\ndataSchema\030\001 \001(\t\022\025\n\rdocumentation" +
+      "\030\002 \001(\t\022\014\n\004data\030\003 \001(\t\"Q\n\010Industry\0227\n\006pref" +
+      "ix\030\001 \001(\0162\'.carboncall.metadata.IndustryC" +
+      "odePrefix\022\014\n\004code\030\002 \001(\t*\335\022\n\023ISO3166_Coun" +
+      "tryCode\022\013\n\007UNKNOWN\020\000\022\007\n\003A_F\020\001\022\007\n\003A_X\020\002\022\007" +
+      "\n\003A_L\020\003\022\007\n\003D_Z\020\004\022\007\n\003A_S\020\005\022\007\n\003A_D\020\006\022\007\n\003A_" +
+      "O\020\007\022\007\n\003A_I\020\010\022\007\n\003A_Q\020\t\022\007\n\003A_G\020\n\022\007\n\003A_R\020\013\022" +
+      "\007\n\003A_M\020\014\022\007\n\003A_W\020\r\022\007\n\003A_U\020\016\022\007\n\003A_T\020\017\022\007\n\003A" +
+      "_Z\020\020\022\007\n\003B_S\020\021\022\007\n\003B_H\020\022\022\007\n\003B_D\020\023\022\007\n\003B_B\020\024" +
+      "\022\007\n\003B_Y\020\025\022\007\n\003B_E\020\026\022\007\n\003B_Z\020\027\022\007\n\003B_J\020\030\022\007\n\003" +
+      "B_M\020\031\022\007\n\003B_T\020\032\022\007\n\003B_O\020\033\022\007\n\003B_Q\020\034\022\007\n\003B_A\020" +
+      "\035\022\007\n\003B_W\020\036\022\007\n\003B_V\020\037\022\007\n\003B_R\020 \022\007\n\003I_O\020!\022\007\n" +
+      "\003B_N\020\"\022\007\n\003B_G\020#\022\007\n\003B_F\020$\022\007\n\003B_I\020%\022\007\n\003C_V" +
+      "\020&\022\007\n\003K_H\020\'\022\007\n\003C_M\020(\022\007\n\003C_A\020)\022\007\n\003K_Y\020*\022\007" +
+      "\n\003C_F\020+\022\007\n\003T_D\020,\022\007\n\003C_L\020-\022\007\n\003C_N\020.\022\007\n\003C_" +
+      "X\020/\022\007\n\003C_C\0200\022\007\n\003C_O\0201\022\007\n\003K_M\0202\022\007\n\003C_G\0203\022" +
+      "\007\n\003C_D\0204\022\007\n\003C_K\0205\022\007\n\003C_R\0206\022\007\n\003C_I\0207\022\007\n\003H" +
+      "_R\0208\022\007\n\003C_U\0209\022\007\n\003C_W\020:\022\007\n\003C_Y\020;\022\007\n\003C_Z\020<" +
+      "\022\007\n\003D_K\020=\022\007\n\003D_J\020>\022\007\n\003D_M\020?\022\007\n\003D_O\020@\022\007\n\003" +
+      "E_C\020A\022\007\n\003E_G\020B\022\007\n\003S_V\020C\022\007\n\003G_Q\020D\022\007\n\003E_R\020" +
+      "E\022\007\n\003E_E\020F\022\007\n\003E_T\020G\022\007\n\003F_K\020H\022\007\n\003F_O\020I\022\007\n" +
+      "\003F_J\020J\022\007\n\003F_I\020K\022\007\n\003F_R\020L\022\007\n\003G_F\020M\022\007\n\003P_F" +
+      "\020N\022\007\n\003T_F\020O\022\007\n\003G_A\020P\022\007\n\003G_M\020Q\022\007\n\003G_E\020R\022\007" +
+      "\n\003D_E\020S\022\007\n\003G_H\020T\022\007\n\003G_I\020U\022\007\n\003G_R\020V\022\007\n\003G_" +
+      "L\020W\022\007\n\003G_D\020X\022\007\n\003G_P\020Y\022\007\n\003G_U\020Z\022\007\n\003G_T\020[\022" +
+      "\007\n\003G_G\020\\\022\007\n\003G_N\020]\022\007\n\003G_W\020^\022\007\n\003G_Y\020_\022\007\n\003H" +
+      "_T\020`\022\007\n\003H_M\020a\022\007\n\003V_A\020b\022\007\n\003H_N\020c\022\007\n\003H_K\020d" +
+      "\022\007\n\003H_U\020e\022\007\n\003I_S\020f\022\007\n\003I_N\020g\022\007\n\003I_D\020h\022\007\n\003" +
+      "I_R\020i\022\007\n\003I_Q\020j\022\007\n\003I_E\020k\022\007\n\003I_M\020l\022\007\n\003I_L\020" +
+      "m\022\007\n\003I_T\020n\022\007\n\003J_M\020o\022\007\n\003J_P\020p\022\007\n\003J_E\020q\022\007\n" +
+      "\003J_O\020r\022\007\n\003K_Z\020s\022\007\n\003K_E\020t\022\007\n\003K_I\020u\022\007\n\003K_P" +
+      "\020v\022\007\n\003K_R\020w\022\007\n\003K_W\020x\022\007\n\003K_G\020y\022\007\n\003L_A\020z\022\007" +
+      "\n\003L_V\020{\022\007\n\003L_B\020|\022\007\n\003L_S\020}\022\007\n\003L_R\020~\022\007\n\003L_" +
+      "Y\020\177\022\010\n\003L_I\020\200\001\022\010\n\003L_T\020\201\001\022\010\n\003L_U\020\202\001\022\010\n\003M_O" +
+      "\020\203\001\022\010\n\003M_K\020\204\001\022\010\n\003M_G\020\205\001\022\010\n\003M_W\020\206\001\022\010\n\003M_Y" +
+      "\020\207\001\022\010\n\003M_V\020\210\001\022\010\n\003M_L\020\211\001\022\010\n\003M_T\020\212\001\022\010\n\003M_H" +
+      "\020\213\001\022\010\n\003M_Q\020\214\001\022\010\n\003M_R\020\215\001\022\010\n\003M_U\020\216\001\022\010\n\003Y_T" +
+      "\020\217\001\022\010\n\003M_X\020\220\001\022\010\n\003F_M\020\221\001\022\010\n\003M_D\020\222\001\022\010\n\003M_C" +
+      "\020\223\001\022\010\n\003M_N\020\224\001\022\010\n\003M_E\020\225\001\022\010\n\003M_S\020\226\001\022\010\n\003M_A" +
+      "\020\227\001\022\010\n\003M_Z\020\230\001\022\010\n\003M_M\020\231\001\022\010\n\003N_A\020\232\001\022\010\n\003N_R" +
+      "\020\233\001\022\010\n\003N_P\020\234\001\022\010\n\003N_L\020\235\001\022\010\n\003N_C\020\236\001\022\010\n\003N_Z" +
+      "\020\237\001\022\010\n\003N_I\020\240\001\022\010\n\003N_E\020\241\001\022\010\n\003N_G\020\242\001\022\010\n\003N_U" +
+      "\020\243\001\022\010\n\003N_F\020\244\001\022\010\n\003M_P\020\245\001\022\010\n\003N_O\020\246\001\022\010\n\003O_M" +
+      "\020\247\001\022\010\n\003P_K\020\250\001\022\010\n\003P_W\020\251\001\022\010\n\003P_S\020\252\001\022\010\n\003P_A" +
+      "\020\253\001\022\010\n\003P_G\020\254\001\022\010\n\003P_Y\020\255\001\022\010\n\003P_E\020\256\001\022\010\n\003P_H" +
+      "\020\257\001\022\010\n\003P_N\020\260\001\022\010\n\003P_L\020\261\001\022\010\n\003P_T\020\262\001\022\010\n\003P_R" +
+      "\020\263\001\022\010\n\003Q_A\020\264\001\022\010\n\003R_E\020\265\001\022\010\n\003R_O\020\266\001\022\010\n\003R_U" +
+      "\020\267\001\022\010\n\003R_W\020\270\001\022\010\n\003B_L\020\271\001\022\010\n\003S_H\020\272\001\022\010\n\003K_N" +
+      "\020\273\001\022\010\n\003L_C\020\274\001\022\010\n\003M_F\020\275\001\022\010\n\003P_M\020\276\001\022\010\n\003V_C" +
+      "\020\277\001\022\010\n\003W_S\020\300\001\022\010\n\003S_M\020\301\001\022\010\n\003S_T\020\302\001\022\010\n\003S_A" +
+      "\020\303\001\022\010\n\003S_N\020\304\001\022\010\n\003R_S\020\305\001\022\010\n\003S_C\020\306\001\022\010\n\003S_L" +
+      "\020\307\001\022\010\n\003S_G\020\310\001\022\010\n\003S_X\020\311\001\022\010\n\003S_K\020\312\001\022\010\n\003S_I" +
+      "\020\313\001\022\010\n\003S_B\020\314\001\022\010\n\003S_O\020\315\001\022\010\n\003Z_A\020\316\001\022\010\n\003G_S" +
+      "\020\317\001\022\010\n\003S_S\020\320\001\022\010\n\003E_S\020\321\001\022\010\n\003L_K\020\322\001\022\010\n\003S_D" +
+      "\020\323\001\022\010\n\003S_R\020\324\001\022\010\n\003S_J\020\325\001\022\010\n\003S_Z\020\326\001\022\010\n\003S_E" +
+      "\020\327\001\022\010\n\003C_H\020\330\001\022\010\n\003S_Y\020\331\001\022\010\n\003T_W\020\332\001\022\010\n\003T_J" +
+      "\020\333\001\022\010\n\003T_Z\020\334\001\022\010\n\003T_H\020\335\001\022\010\n\003T_L\020\336\001\022\010\n\003T_G" +
+      "\020\337\001\022\010\n\003T_K\020\340\001\022\010\n\003T_O\020\341\001\022\010\n\003T_T\020\342\001\022\010\n\003T_N" +
+      "\020\343\001\022\010\n\003T_R\020\344\001\022\010\n\003T_M\020\345\001\022\010\n\003T_C\020\346\001\022\010\n\003T_V" +
+      "\020\347\001\022\010\n\003U_G\020\350\001\022\010\n\003U_A\020\351\001\022\010\n\003A_E\020\352\001\022\010\n\003G_B" +
+      "\020\353\001\022\010\n\003U_S\020\354\001\022\010\n\003U_M\020\355\001\022\010\n\003U_Y\020\356\001\022\010\n\003U_Z" +
+      "\020\357\001\022\010\n\003V_U\020\360\001\022\010\n\003V_E\020\361\001\022\010\n\003V_N\020\362\001\022\010\n\003V_G" +
+      "\020\363\001\022\010\n\003V_I\020\364\001\022\010\n\003W_F\020\365\001\022\010\n\003E_H\020\366\001\022\010\n\003Y_E" +
+      "\020\367\001\022\010\n\003Z_M\020\370\001\022\010\n\003Z_W\020\371\001**\n\010Language\022\006\n\002e" +
+      "n\020\000\022\006\n\002es\020\001\022\006\n\002zh\020\002\022\006\n\002fr\020\003*\321\001\n\nReportTy" +
+      "pe\022\025\n\021INTEGRATED_REPORT\020\000\022\024\n\020FINANCIAL_R" +
+      "EPORT\020\001\022\031\n\025SUSTAINABILITY_REPORT\020\002\022\021\n\rAN" +
+      "NUAL_REPORT\020\003\022\023\n\017PROXY_STATEMENT\020\004\022\032\n\026RE" +
+      "GISTRATION_STATEMENT\020\005\022\024\n\020QUARTERLY_REPO" +
+      "RT\020\006\022\026\n\022HALF_YEARLY_REPORT\020\007\022\t\n\005OTHER\020\010*" +
+      "H\n\022IndustryCodePrefix\022\013\n\007I_S_I_C\020\000\022\r\n\tN_" +
+      "A_I_C_S\020\001\022\013\n\007G_I_C_S\020\002\022\t\n\005S_I_C\020\003*6\n\014Rep" +
+      "ortFormat\022\t\n\005P_D_F\020\000\022\r\n\ti_X_B_R_L\020\001\022\014\n\010O" +
+      "PEN_XML\020\002*T\n\021ReportingStandard\022\013\n\007G_A_A_" +
+      "P\020\000\022\013\n\007I_F_R_S\020\001\022\013\n\007I_S_S_B\020\002\022\r\n\tE_F_R_A" +
+      "_G\020\003\022\t\n\005G_R_I\020\004*\212\007\n\004Unit\022\016\n\nTONNE_CO2E\020\000" +
+      "\022\r\n\tTONNE_CO2\020\001\022\r\n\tTONNE_CH4\020\002\022\r\n\tTONNE_" +
+      "N2O\020\003\022\013\n\007TONNE_S\020\004\022\r\n\tTONNE_NOX\020\005\022\r\n\tTON" +
+      "NE_SOX\020\006\022\016\n\nTONNE_PM10\020\007\022\017\n\013TONNE_PM2_5\020" +
+      "\010\022\r\n\tTONNE_VOC\020\t\022\r\n\tTONNE_NH3\020\n\022\r\n\tTONNE" +
+      "_PFC\020\013\022\r\n\tTONNE_SF6\020\014\022\r\n\tTONNE_HFC\020\r\022\r\n\t" +
+      "TONNE_CFC\020\016\022\017\n\013TONNE_HFC23\020\017\022\017\n\013TONNE_HF" +
+      "C32\020\020\022\020\n\014TONNE_HFC125\020\021\022\021\n\rTONNE_HFC134a" +
+      "\020\022\022\021\n\rTONNE_HFC143a\020\023\022\022\n\016TONNE_HFC227ea\020" +
+      "\024\022\022\n\016TONNE_HFC245fa\020\025\022\023\n\017TONNE_HFC365mfc" +
+      "\020\026\022\024\n\020TONNE_HFC4310mee\020\027\022\016\n\nTONNE_C2F6\020\030" +
+      "\022\016\n\nTONNE_C3F8\020\031\022\017\n\013TONNE_C4F10\020\032\022\017\n\013TON" +
+      "NE_C5F12\020\033\022\017\n\013TONNE_C6F14\020\034\022\017\n\013TONNE_C7F" +
+      "16\020\035\022\017\n\013TONNE_C8F18\020\036\022\020\n\014TONNE_C10F18\020\037\022" +
+      "\020\n\014TONNE_C12F18\020 \022\020\n\014TONNE_C14F18\020!\022\020\n\014T" +
+      "ONNE_C16F18\020\"\022\020\n\014TONNE_C18F18\020#\022\020\n\014TONNE" +
+      "_C20F18\020$\022\020\n\014TONNE_C22F18\020%\022\020\n\014TONNE_C24" +
+      "F18\020&\022\020\n\014TONNE_C26F18\020\'\022\020\n\014TONNE_C28F18\020" +
+      "(\022\020\n\014TONNE_C30F18\020)\022\020\n\014TONNE_C32F18\020*\022\020\n" +
+      "\014TONNE_C34F18\020+\022\t\n\005LITER\020d\022\014\n\010KILOGRAM\020e" +
+      "\022\017\n\013CUBIC_METER\020f\022\014\n\010KILOWATT\020g\022\014\n\010MEGAW" +
+      "ATT\020h\022\r\n\tMEGAJUOLE\020i\022\r\n\tKILOMETER\020j\022\020\n\014S" +
+      "QUARE_METER\020k\022\t\n\005TONNE\020l\022\010\n\004MW_H\020m\022\010\n\004KW" +
+      "_H\020nB1\n\027org.carboncall.metadataP\001\252\002\023Carb" +
+      "onCall.Metadatab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -284,15 +293,21 @@ public final class MetadataOuterClass {
     internal_static_carboncall_metadata_Metadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_carboncall_metadata_Metadata_descriptor,
-        new java.lang.String[] { "GRID", "OrganizationIdentifier", "OrganizationName", "Domicile", "OperatingCountries", "Languages", "ReportType", "ReportIssueDate", "ReportingPeriod", "ReportReplaces", "Location", "Industry", "Performance", "Goverance", "Methodology", "ReportFormat", "ReportingStandard", "Assurance", "PriorReport", "ReportHash", "Activities", "ReportContext", "PropertyContexts", "MetatdataExtensions", "RelatedReports", });
-    internal_static_carboncall_metadata_Activity_descriptor =
+        new java.lang.String[] { "GRID", "OrganizationIdentifier", "OrganizationName", "Domicile", "OperatingCountries", "Languages", "ReportType", "ReportIssueDate", "ReportingPeriod", "ReportReplaces", "Location", "Industry", "Performance", "Goverance", "Methodology", "ReportFormat", "ReportingStandard", "Assurance", "PriorReport", "ReportHash", "Activities", "ReportContext", "PropertyContexts", "MetatdataExtensions", "PFExtensions", "RelatedReports", });
+    internal_static_carboncall_metadata_ProductFootprintExtension_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_carboncall_metadata_ProductFootprintExtension_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_carboncall_metadata_ProductFootprintExtension_descriptor,
+        new java.lang.String[] { "PfId", "PCFPropertyData", });
+    internal_static_carboncall_metadata_Activity_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_carboncall_metadata_Activity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_carboncall_metadata_Activity_descriptor,
         new java.lang.String[] { "ActivityType", "UnitOfMeasure", "ActivityAmount", "ActivityPeriod", "ActivityDescription", "ActivityLocation", "ActivityFactorAndSource", "RelatedMetadata", });
     internal_static_carboncall_metadata_FactorAndSource_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_carboncall_metadata_FactorAndSource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_carboncall_metadata_FactorAndSource_descriptor,
@@ -304,55 +319,55 @@ public final class MetadataOuterClass {
         internal_static_carboncall_metadata_FactorAndSource_PrecisionMix_descriptor,
         new java.lang.String[] { "Low", "Medium", "High", });
     internal_static_carboncall_metadata_Methodology_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_carboncall_metadata_Methodology_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_carboncall_metadata_Methodology_descriptor,
         new java.lang.String[] { "MethodologyType", "PercentageOfTotalPortfolioReported", "PercentageOfEstimatedCalculations", "BoundaryApproach", });
     internal_static_carboncall_metadata_Goverance_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_carboncall_metadata_Goverance_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_carboncall_metadata_Goverance_descriptor,
         new java.lang.String[] { "IntendedUse", "RestrictedAccess", "ReportOwner", });
     internal_static_carboncall_metadata_TimePeriod_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_carboncall_metadata_TimePeriod_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_carboncall_metadata_TimePeriod_descriptor,
         new java.lang.String[] { "StartDate", "EndDate", });
     internal_static_carboncall_metadata_GeographicLocation_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_carboncall_metadata_GeographicLocation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_carboncall_metadata_GeographicLocation_descriptor,
         new java.lang.String[] { "Longitude", "Latitude", "GeoJsonOrKml", "GeographicLocationFile", });
     internal_static_carboncall_metadata_Metatag_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_carboncall_metadata_Metatag_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_carboncall_metadata_Metatag_descriptor,
         new java.lang.String[] { "Key", "Value", "RelatedMetadata", });
     internal_static_carboncall_metadata_PropertyContext_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_carboncall_metadata_PropertyContext_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_carboncall_metadata_PropertyContext_descriptor,
         new java.lang.String[] { "PropertyName", "Metatags", "RelatedMetadata", });
     internal_static_carboncall_metadata_Metalink_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_carboncall_metadata_Metalink_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_carboncall_metadata_Metalink_descriptor,
         new java.lang.String[] { "RelatedMetadataPath", });
     internal_static_carboncall_metadata_MetadataExtension_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_carboncall_metadata_MetadataExtension_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_carboncall_metadata_MetadataExtension_descriptor,
         new java.lang.String[] { "DataSchema", "Documentation", "Data", });
     internal_static_carboncall_metadata_Industry_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_carboncall_metadata_Industry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_carboncall_metadata_Industry_descriptor,

@@ -36,6 +36,7 @@ private static final long serialVersionUID = 0L;
     reportContext_ = java.util.Collections.emptyList();
     propertyContexts_ = java.util.Collections.emptyList();
     metatdataExtensions_ = java.util.Collections.emptyList();
+    pFExtensions_ = java.util.Collections.emptyList();
     relatedReports_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
@@ -289,10 +290,19 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 202: {
-            java.lang.String s = input.readStringRequireUtf8();
             if (!((mutable_bitField0_ & 0x00000040) != 0)) {
-              relatedReports_ = new com.google.protobuf.LazyStringArrayList();
+              pFExtensions_ = new java.util.ArrayList<org.carboncall.metadata.ProductFootprintExtension>();
               mutable_bitField0_ |= 0x00000040;
+            }
+            pFExtensions_.add(
+                input.readMessage(org.carboncall.metadata.ProductFootprintExtension.parser(), extensionRegistry));
+            break;
+          }
+          case 210: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000080) != 0)) {
+              relatedReports_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000080;
             }
             relatedReports_.add(s);
             break;
@@ -333,6 +343,9 @@ private static final long serialVersionUID = 0L;
         metatdataExtensions_ = java.util.Collections.unmodifiableList(metatdataExtensions_);
       }
       if (((mutable_bitField0_ & 0x00000040) != 0)) {
+        pFExtensions_ = java.util.Collections.unmodifiableList(pFExtensions_);
+      }
+      if (((mutable_bitField0_ & 0x00000080) != 0)) {
         relatedReports_ = relatedReports_.getUnmodifiableView();
       }
       this.unknownFields = unknownFields.build();
@@ -1372,14 +1385,74 @@ private static final long serialVersionUID = 0L;
     return metatdataExtensions_.get(index);
   }
 
-  public static final int RELATED_REPORTS_FIELD_NUMBER = 25;
+  public static final int P_F_EXTENSIONS_FIELD_NUMBER = 25;
+  private java.util.List<org.carboncall.metadata.ProductFootprintExtension> pFExtensions_;
+  /**
+   * <pre>
+   *Extensions to any related product footprints in the report
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+   */
+  @java.lang.Override
+  public java.util.List<org.carboncall.metadata.ProductFootprintExtension> getPFExtensionsList() {
+    return pFExtensions_;
+  }
+  /**
+   * <pre>
+   *Extensions to any related product footprints in the report
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends org.carboncall.metadata.ProductFootprintExtensionOrBuilder> 
+      getPFExtensionsOrBuilderList() {
+    return pFExtensions_;
+  }
+  /**
+   * <pre>
+   *Extensions to any related product footprints in the report
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+   */
+  @java.lang.Override
+  public int getPFExtensionsCount() {
+    return pFExtensions_.size();
+  }
+  /**
+   * <pre>
+   *Extensions to any related product footprints in the report
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+   */
+  @java.lang.Override
+  public org.carboncall.metadata.ProductFootprintExtension getPFExtensions(int index) {
+    return pFExtensions_.get(index);
+  }
+  /**
+   * <pre>
+   *Extensions to any related product footprints in the report
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+   */
+  @java.lang.Override
+  public org.carboncall.metadata.ProductFootprintExtensionOrBuilder getPFExtensionsOrBuilder(
+      int index) {
+    return pFExtensions_.get(index);
+  }
+
+  public static final int RELATED_REPORTS_FIELD_NUMBER = 26;
   private com.google.protobuf.LazyStringList relatedReports_;
   /**
    * <pre>
    *GR.IDs of related reports
    * </pre>
    *
-   * <code>repeated string related_reports = 25;</code>
+   * <code>repeated string related_reports = 26;</code>
    * @return A list containing the relatedReports.
    */
   public com.google.protobuf.ProtocolStringList
@@ -1391,7 +1464,7 @@ private static final long serialVersionUID = 0L;
    *GR.IDs of related reports
    * </pre>
    *
-   * <code>repeated string related_reports = 25;</code>
+   * <code>repeated string related_reports = 26;</code>
    * @return The count of relatedReports.
    */
   public int getRelatedReportsCount() {
@@ -1402,7 +1475,7 @@ private static final long serialVersionUID = 0L;
    *GR.IDs of related reports
    * </pre>
    *
-   * <code>repeated string related_reports = 25;</code>
+   * <code>repeated string related_reports = 26;</code>
    * @param index The index of the element to return.
    * @return The relatedReports at the given index.
    */
@@ -1414,7 +1487,7 @@ private static final long serialVersionUID = 0L;
    *GR.IDs of related reports
    * </pre>
    *
-   * <code>repeated string related_reports = 25;</code>
+   * <code>repeated string related_reports = 26;</code>
    * @param index The index of the value to return.
    * @return The bytes of the relatedReports at the given index.
    */
@@ -1518,8 +1591,11 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < metatdataExtensions_.size(); i++) {
       output.writeMessage(24, metatdataExtensions_.get(i));
     }
+    for (int i = 0; i < pFExtensions_.size(); i++) {
+      output.writeMessage(25, pFExtensions_.get(i));
+    }
     for (int i = 0; i < relatedReports_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 25, relatedReports_.getRaw(i));
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 26, relatedReports_.getRaw(i));
     }
     unknownFields.writeTo(output);
   }
@@ -1632,6 +1708,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(24, metatdataExtensions_.get(i));
     }
+    for (int i = 0; i < pFExtensions_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(25, pFExtensions_.get(i));
+    }
     {
       int dataSize = 0;
       for (int i = 0; i < relatedReports_.size(); i++) {
@@ -1709,6 +1789,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getPropertyContextsList())) return false;
     if (!getMetatdataExtensionsList()
         .equals(other.getMetatdataExtensionsList())) return false;
+    if (!getPFExtensionsList()
+        .equals(other.getPFExtensionsList())) return false;
     if (!getRelatedReportsList()
         .equals(other.getRelatedReportsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
@@ -1789,6 +1871,10 @@ private static final long serialVersionUID = 0L;
     if (getMetatdataExtensionsCount() > 0) {
       hash = (37 * hash) + METATDATA_EXTENSIONS_FIELD_NUMBER;
       hash = (53 * hash) + getMetatdataExtensionsList().hashCode();
+    }
+    if (getPFExtensionsCount() > 0) {
+      hash = (37 * hash) + P_F_EXTENSIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getPFExtensionsList().hashCode();
     }
     if (getRelatedReportsCount() > 0) {
       hash = (37 * hash) + RELATED_REPORTS_FIELD_NUMBER;
@@ -1926,6 +2012,7 @@ private static final long serialVersionUID = 0L;
         getReportContextFieldBuilder();
         getPropertyContextsFieldBuilder();
         getMetatdataExtensionsFieldBuilder();
+        getPFExtensionsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -2011,8 +2098,14 @@ private static final long serialVersionUID = 0L;
       } else {
         metatdataExtensionsBuilder_.clear();
       }
+      if (pFExtensionsBuilder_ == null) {
+        pFExtensions_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+      } else {
+        pFExtensionsBuilder_.clear();
+      }
       relatedReports_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       return this;
     }
 
@@ -2120,9 +2213,18 @@ private static final long serialVersionUID = 0L;
       } else {
         result.metatdataExtensions_ = metatdataExtensionsBuilder_.build();
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (pFExtensionsBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0)) {
+          pFExtensions_ = java.util.Collections.unmodifiableList(pFExtensions_);
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.pFExtensions_ = pFExtensions_;
+      } else {
+        result.pFExtensions_ = pFExtensionsBuilder_.build();
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
         relatedReports_ = relatedReports_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
       }
       result.relatedReports_ = relatedReports_;
       onBuilt();
@@ -2361,10 +2463,36 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (pFExtensionsBuilder_ == null) {
+        if (!other.pFExtensions_.isEmpty()) {
+          if (pFExtensions_.isEmpty()) {
+            pFExtensions_ = other.pFExtensions_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensurePFExtensionsIsMutable();
+            pFExtensions_.addAll(other.pFExtensions_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.pFExtensions_.isEmpty()) {
+          if (pFExtensionsBuilder_.isEmpty()) {
+            pFExtensionsBuilder_.dispose();
+            pFExtensionsBuilder_ = null;
+            pFExtensions_ = other.pFExtensions_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+            pFExtensionsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getPFExtensionsFieldBuilder() : null;
+          } else {
+            pFExtensionsBuilder_.addAllMessages(other.pFExtensions_);
+          }
+        }
+      }
       if (!other.relatedReports_.isEmpty()) {
         if (relatedReports_.isEmpty()) {
           relatedReports_ = other.relatedReports_;
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000080);
         } else {
           ensureRelatedReportsIsMutable();
           relatedReports_.addAll(other.relatedReports_);
@@ -5653,11 +5781,323 @@ private static final long serialVersionUID = 0L;
       return metatdataExtensionsBuilder_;
     }
 
+    private java.util.List<org.carboncall.metadata.ProductFootprintExtension> pFExtensions_ =
+      java.util.Collections.emptyList();
+    private void ensurePFExtensionsIsMutable() {
+      if (!((bitField0_ & 0x00000040) != 0)) {
+        pFExtensions_ = new java.util.ArrayList<org.carboncall.metadata.ProductFootprintExtension>(pFExtensions_);
+        bitField0_ |= 0x00000040;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        org.carboncall.metadata.ProductFootprintExtension, org.carboncall.metadata.ProductFootprintExtension.Builder, org.carboncall.metadata.ProductFootprintExtensionOrBuilder> pFExtensionsBuilder_;
+
+    /**
+     * <pre>
+     *Extensions to any related product footprints in the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+     */
+    public java.util.List<org.carboncall.metadata.ProductFootprintExtension> getPFExtensionsList() {
+      if (pFExtensionsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(pFExtensions_);
+      } else {
+        return pFExtensionsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     *Extensions to any related product footprints in the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+     */
+    public int getPFExtensionsCount() {
+      if (pFExtensionsBuilder_ == null) {
+        return pFExtensions_.size();
+      } else {
+        return pFExtensionsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     *Extensions to any related product footprints in the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+     */
+    public org.carboncall.metadata.ProductFootprintExtension getPFExtensions(int index) {
+      if (pFExtensionsBuilder_ == null) {
+        return pFExtensions_.get(index);
+      } else {
+        return pFExtensionsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     *Extensions to any related product footprints in the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+     */
+    public Builder setPFExtensions(
+        int index, org.carboncall.metadata.ProductFootprintExtension value) {
+      if (pFExtensionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePFExtensionsIsMutable();
+        pFExtensions_.set(index, value);
+        onChanged();
+      } else {
+        pFExtensionsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Extensions to any related product footprints in the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+     */
+    public Builder setPFExtensions(
+        int index, org.carboncall.metadata.ProductFootprintExtension.Builder builderForValue) {
+      if (pFExtensionsBuilder_ == null) {
+        ensurePFExtensionsIsMutable();
+        pFExtensions_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        pFExtensionsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Extensions to any related product footprints in the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+     */
+    public Builder addPFExtensions(org.carboncall.metadata.ProductFootprintExtension value) {
+      if (pFExtensionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePFExtensionsIsMutable();
+        pFExtensions_.add(value);
+        onChanged();
+      } else {
+        pFExtensionsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Extensions to any related product footprints in the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+     */
+    public Builder addPFExtensions(
+        int index, org.carboncall.metadata.ProductFootprintExtension value) {
+      if (pFExtensionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePFExtensionsIsMutable();
+        pFExtensions_.add(index, value);
+        onChanged();
+      } else {
+        pFExtensionsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Extensions to any related product footprints in the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+     */
+    public Builder addPFExtensions(
+        org.carboncall.metadata.ProductFootprintExtension.Builder builderForValue) {
+      if (pFExtensionsBuilder_ == null) {
+        ensurePFExtensionsIsMutable();
+        pFExtensions_.add(builderForValue.build());
+        onChanged();
+      } else {
+        pFExtensionsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Extensions to any related product footprints in the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+     */
+    public Builder addPFExtensions(
+        int index, org.carboncall.metadata.ProductFootprintExtension.Builder builderForValue) {
+      if (pFExtensionsBuilder_ == null) {
+        ensurePFExtensionsIsMutable();
+        pFExtensions_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        pFExtensionsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Extensions to any related product footprints in the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+     */
+    public Builder addAllPFExtensions(
+        java.lang.Iterable<? extends org.carboncall.metadata.ProductFootprintExtension> values) {
+      if (pFExtensionsBuilder_ == null) {
+        ensurePFExtensionsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, pFExtensions_);
+        onChanged();
+      } else {
+        pFExtensionsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Extensions to any related product footprints in the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+     */
+    public Builder clearPFExtensions() {
+      if (pFExtensionsBuilder_ == null) {
+        pFExtensions_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+      } else {
+        pFExtensionsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Extensions to any related product footprints in the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+     */
+    public Builder removePFExtensions(int index) {
+      if (pFExtensionsBuilder_ == null) {
+        ensurePFExtensionsIsMutable();
+        pFExtensions_.remove(index);
+        onChanged();
+      } else {
+        pFExtensionsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Extensions to any related product footprints in the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+     */
+    public org.carboncall.metadata.ProductFootprintExtension.Builder getPFExtensionsBuilder(
+        int index) {
+      return getPFExtensionsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     *Extensions to any related product footprints in the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+     */
+    public org.carboncall.metadata.ProductFootprintExtensionOrBuilder getPFExtensionsOrBuilder(
+        int index) {
+      if (pFExtensionsBuilder_ == null) {
+        return pFExtensions_.get(index);  } else {
+        return pFExtensionsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     *Extensions to any related product footprints in the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+     */
+    public java.util.List<? extends org.carboncall.metadata.ProductFootprintExtensionOrBuilder> 
+         getPFExtensionsOrBuilderList() {
+      if (pFExtensionsBuilder_ != null) {
+        return pFExtensionsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(pFExtensions_);
+      }
+    }
+    /**
+     * <pre>
+     *Extensions to any related product footprints in the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+     */
+    public org.carboncall.metadata.ProductFootprintExtension.Builder addPFExtensionsBuilder() {
+      return getPFExtensionsFieldBuilder().addBuilder(
+          org.carboncall.metadata.ProductFootprintExtension.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     *Extensions to any related product footprints in the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+     */
+    public org.carboncall.metadata.ProductFootprintExtension.Builder addPFExtensionsBuilder(
+        int index) {
+      return getPFExtensionsFieldBuilder().addBuilder(
+          index, org.carboncall.metadata.ProductFootprintExtension.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     *Extensions to any related product footprints in the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+     */
+    public java.util.List<org.carboncall.metadata.ProductFootprintExtension.Builder> 
+         getPFExtensionsBuilderList() {
+      return getPFExtensionsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        org.carboncall.metadata.ProductFootprintExtension, org.carboncall.metadata.ProductFootprintExtension.Builder, org.carboncall.metadata.ProductFootprintExtensionOrBuilder> 
+        getPFExtensionsFieldBuilder() {
+      if (pFExtensionsBuilder_ == null) {
+        pFExtensionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            org.carboncall.metadata.ProductFootprintExtension, org.carboncall.metadata.ProductFootprintExtension.Builder, org.carboncall.metadata.ProductFootprintExtensionOrBuilder>(
+                pFExtensions_,
+                ((bitField0_ & 0x00000040) != 0),
+                getParentForChildren(),
+                isClean());
+        pFExtensions_ = null;
+      }
+      return pFExtensionsBuilder_;
+    }
+
     private com.google.protobuf.LazyStringList relatedReports_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureRelatedReportsIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000080) != 0)) {
         relatedReports_ = new com.google.protobuf.LazyStringArrayList(relatedReports_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
        }
     }
     /**
@@ -5665,7 +6105,7 @@ private static final long serialVersionUID = 0L;
      *GR.IDs of related reports
      * </pre>
      *
-     * <code>repeated string related_reports = 25;</code>
+     * <code>repeated string related_reports = 26;</code>
      * @return A list containing the relatedReports.
      */
     public com.google.protobuf.ProtocolStringList
@@ -5677,7 +6117,7 @@ private static final long serialVersionUID = 0L;
      *GR.IDs of related reports
      * </pre>
      *
-     * <code>repeated string related_reports = 25;</code>
+     * <code>repeated string related_reports = 26;</code>
      * @return The count of relatedReports.
      */
     public int getRelatedReportsCount() {
@@ -5688,7 +6128,7 @@ private static final long serialVersionUID = 0L;
      *GR.IDs of related reports
      * </pre>
      *
-     * <code>repeated string related_reports = 25;</code>
+     * <code>repeated string related_reports = 26;</code>
      * @param index The index of the element to return.
      * @return The relatedReports at the given index.
      */
@@ -5700,7 +6140,7 @@ private static final long serialVersionUID = 0L;
      *GR.IDs of related reports
      * </pre>
      *
-     * <code>repeated string related_reports = 25;</code>
+     * <code>repeated string related_reports = 26;</code>
      * @param index The index of the value to return.
      * @return The bytes of the relatedReports at the given index.
      */
@@ -5713,7 +6153,7 @@ private static final long serialVersionUID = 0L;
      *GR.IDs of related reports
      * </pre>
      *
-     * <code>repeated string related_reports = 25;</code>
+     * <code>repeated string related_reports = 26;</code>
      * @param index The index to set the value at.
      * @param value The relatedReports to set.
      * @return This builder for chaining.
@@ -5733,7 +6173,7 @@ private static final long serialVersionUID = 0L;
      *GR.IDs of related reports
      * </pre>
      *
-     * <code>repeated string related_reports = 25;</code>
+     * <code>repeated string related_reports = 26;</code>
      * @param value The relatedReports to add.
      * @return This builder for chaining.
      */
@@ -5752,7 +6192,7 @@ private static final long serialVersionUID = 0L;
      *GR.IDs of related reports
      * </pre>
      *
-     * <code>repeated string related_reports = 25;</code>
+     * <code>repeated string related_reports = 26;</code>
      * @param values The relatedReports to add.
      * @return This builder for chaining.
      */
@@ -5769,12 +6209,12 @@ private static final long serialVersionUID = 0L;
      *GR.IDs of related reports
      * </pre>
      *
-     * <code>repeated string related_reports = 25;</code>
+     * <code>repeated string related_reports = 26;</code>
      * @return This builder for chaining.
      */
     public Builder clearRelatedReports() {
       relatedReports_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -5783,7 +6223,7 @@ private static final long serialVersionUID = 0L;
      *GR.IDs of related reports
      * </pre>
      *
-     * <code>repeated string related_reports = 25;</code>
+     * <code>repeated string related_reports = 26;</code>
      * @param value The bytes of the relatedReports to add.
      * @return This builder for chaining.
      */

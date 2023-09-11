@@ -27,7 +27,7 @@ namespace CarbonCall.Metadata {
             "Cg5tZXRhZGF0YS5wcm90bxITY2FyYm9uY2FsbC5tZXRhZGF0YSJoChRTdXN0",
             "YWluYWJpbGl0eVJlcG9ydBIPCgdnX3JfaV9kGAEgASgJEi8KCG1ldGFkYXRh",
             "GAIgASgLMh0uY2FyYm9uY2FsbC5tZXRhZGF0YS5NZXRhZGF0YRIOCgZyZXBv",
-            "cnQYAyABKAkiuAgKCE1ldGFkYXRhEg8KB2dfcl9pX2QYASABKAkSHwoXb3Jn",
+            "cnQYAyABKAkigAkKCE1ldGFkYXRhEg8KB2dfcl9pX2QYASABKAkSHwoXb3Jn",
             "YW5pemF0aW9uX2lkZW50aWZpZXIYAiABKAkSGQoRb3JnYW5pemF0aW9uX25h",
             "bWUYAyABKAkSOgoIZG9taWNpbGUYBCABKA4yKC5jYXJib25jYWxsLm1ldGFk",
             "YXRhLklTTzMxNjZfQ291bnRyeUNvZGUSRQoTb3BlcmF0aW5nX2NvdW50cmll",
@@ -50,140 +50,145 @@ namespace CarbonCall.Metadata {
             "CzIcLmNhcmJvbmNhbGwubWV0YWRhdGEuTWV0YXRhZxI/ChFwcm9wZXJ0eV9j",
             "b250ZXh0cxgXIAMoCzIkLmNhcmJvbmNhbGwubWV0YWRhdGEuUHJvcGVydHlD",
             "b250ZXh0EkQKFG1ldGF0ZGF0YV9leHRlbnNpb25zGBggAygLMiYuY2FyYm9u",
-            "Y2FsbC5tZXRhZGF0YS5NZXRhZGF0YUV4dGVuc2lvbhIXCg9yZWxhdGVkX3Jl",
-            "cG9ydHMYGSADKAkijQMKCEFjdGl2aXR5EhUKDWFjdGl2aXR5X3R5cGUYASAB",
-            "KAkSMgoPdW5pdF9vZl9tZWFzdXJlGAIgASgOMhkuY2FyYm9uY2FsbC5tZXRh",
-            "ZGF0YS5Vbml0EhcKD2FjdGl2aXR5X2Ftb3VudBgDIAEoCRI4Cg9hY3Rpdml0",
-            "eV9wZXJpb2QYBCABKAsyHy5jYXJib25jYWxsLm1ldGFkYXRhLlRpbWVQZXJp",
-            "b2QSHAoUYWN0aXZpdHlfZGVzY3JpcHRpb24YBSABKAkSQgoRYWN0aXZpdHlf",
-            "bG9jYXRpb24YBiABKAsyJy5jYXJib25jYWxsLm1ldGFkYXRhLkdlb2dyYXBo",
-            "aWNMb2NhdGlvbhJIChphY3Rpdml0eV9mYWN0b3JfYW5kX3NvdXJjZRgHIAEo",
-            "CzIkLmNhcmJvbmNhbGwubWV0YWRhdGEuRmFjdG9yQW5kU291cmNlEjcKEHJl",
-            "bGF0ZWRfbWV0YWRhdGEYCCADKAsyHS5jYXJib25jYWxsLm1ldGFkYXRhLk1l",
-            "dGFsaW5rIuwCCg9GYWN0b3JBbmRTb3VyY2USRAoLZmFjdG9yX3R5cGUYASAB",
-            "KA4yLy5jYXJib25jYWxsLm1ldGFkYXRhLkZhY3RvckFuZFNvdXJjZS5GYWN0",
-            "b3JUeXBlEi4KC2ZhY3Rvcl91bml0GAIgASgOMhkuY2FyYm9uY2FsbC5tZXRh",
-            "ZGF0YS5Vbml0EhUKDWZhY3Rvcl9zb3VyY2UYAyABKAkSSwoQZmFjdG9yX3By",
-            "ZWNpc2lvbhgEIAEoCzIxLmNhcmJvbmNhbGwubWV0YWRhdGEuRmFjdG9yQW5k",
-            "U291cmNlLlByZWNpc2lvbk1peBo5CgxQcmVjaXNpb25NaXgSCwoDbG93GAEg",
-            "ASgFEg4KBm1lZGl1bRgCIAEoBRIMCgRoaWdoGAMgASgFIkQKCkZhY3RvclR5",
-            "cGUSCwoHVU5LTk9XThAAEg0KCUVTVElNQVRFRBABEgwKCEZBQ1RPUkVEEAIS",
-            "DAoITUVBU1VSRUQQAyKnAwoLTWV0aG9kb2xvZ3kSSgoQbWV0aG9kb2xvZ3lf",
-            "dHlwZRgBIAEoDjIwLmNhcmJvbmNhbGwubWV0YWRhdGEuTWV0aG9kb2xvZ3ku",
-            "TWV0aG9kb2xvZ3lUeXBlEi4KJnBlcmNlbnRhZ2Vfb2ZfdG90YWxfcG9ydGZv",
-            "bGlvX3JlcG9ydGVkGAIgASgJEiwKJHBlcmNlbnRhZ2Vfb2ZfZXN0aW1hdGVk",
-            "X2NhbGN1bGF0aW9ucxgDIAEoCRJMChFib3VuZGFyeV9hcHByb2FjaBgEIAEo",
-            "DjIxLmNhcmJvbmNhbGwubWV0YWRhdGEuTWV0aG9kb2xvZ3kuQm91bmRhcnlB",
-            "cHByb2FjaCJKCg9NZXRob2RvbG9neVR5cGUSCwoHVU5LTk9XThAAEhAKDEdI",
-            "R19QUk9UT0NPTBABEg0KCUlTT18xNDA2NxACEgkKBU9USEVSEGQiVAoQQm91",
-            "bmRhcnlBcHByb2FjaBIXChNPUEVSQVRJT05BTF9DT05UUk9MEAASFQoRRklO",
-            "QU5DSUFMX0NPTlRST0wQARIQCgxFUVVJVFlfU0hBUkUQAiJSCglHb3ZlcmFu",
-            "Y2USFAoMaW50ZW5kZWRfdXNlGAEgASgJEhkKEXJlc3RyaWN0ZWRfYWNjZXNz",
-            "GAIgASgIEhQKDHJlcG9ydF9vd25lchgDIAEoCSIyCgpUaW1lUGVyaW9kEhIK",
-            "CnN0YXJ0X2RhdGUYASABKAkSEAoIZW5kX2RhdGUYAiABKAkidAoSR2VvZ3Jh",
-            "cGhpY0xvY2F0aW9uEhEKCWxvbmdpdHVkZRgBIAEoCRIQCghsYXRpdHVkZRgC",
-            "IAEoCRIXCg9nZW9fanNvbl9vcl9rbWwYAyABKAkSIAoYZ2VvZ3JhcGhpY19s",
-            "b2NhdGlvbl9maWxlGAQgASgJIl4KB01ldGF0YWcSCwoDa2V5GAEgASgJEg0K",
-            "BXZhbHVlGAIgASgJEjcKEHJlbGF0ZWRfbWV0YWRhdGEYAyADKAsyHS5jYXJi",
-            "b25jYWxsLm1ldGFkYXRhLk1ldGFsaW5rIpEBCg9Qcm9wZXJ0eUNvbnRleHQS",
-            "FQoNcHJvcGVydHlfbmFtZRgBIAEoCRIuCghtZXRhdGFncxgCIAMoCzIcLmNh",
-            "cmJvbmNhbGwubWV0YWRhdGEuTWV0YXRhZxI3ChByZWxhdGVkX21ldGFkYXRh",
-            "GAMgAygLMh0uY2FyYm9uY2FsbC5tZXRhZGF0YS5NZXRhbGluayIpCghNZXRh",
-            "bGluaxIdChVyZWxhdGVkX21ldGFkYXRhX3BhdGgYASABKAkiTAoRTWV0YWRh",
-            "dGFFeHRlbnNpb24SEgoKZGF0YVNjaGVtYRgBIAEoCRIVCg1kb2N1bWVudGF0",
-            "aW9uGAIgASgJEgwKBGRhdGEYAyABKAkiUQoISW5kdXN0cnkSNwoGcHJlZml4",
-            "GAEgASgOMicuY2FyYm9uY2FsbC5tZXRhZGF0YS5JbmR1c3RyeUNvZGVQcmVm",
-            "aXgSDAoEY29kZRgCIAEoCSrdEgoTSVNPMzE2Nl9Db3VudHJ5Q29kZRILCgdV",
-            "TktOT1dOEAASBwoDQV9GEAESBwoDQV9YEAISBwoDQV9MEAMSBwoDRF9aEAQS",
-            "BwoDQV9TEAUSBwoDQV9EEAYSBwoDQV9PEAcSBwoDQV9JEAgSBwoDQV9REAkS",
-            "BwoDQV9HEAoSBwoDQV9SEAsSBwoDQV9NEAwSBwoDQV9XEA0SBwoDQV9VEA4S",
-            "BwoDQV9UEA8SBwoDQV9aEBASBwoDQl9TEBESBwoDQl9IEBISBwoDQl9EEBMS",
-            "BwoDQl9CEBQSBwoDQl9ZEBUSBwoDQl9FEBYSBwoDQl9aEBcSBwoDQl9KEBgS",
-            "BwoDQl9NEBkSBwoDQl9UEBoSBwoDQl9PEBsSBwoDQl9REBwSBwoDQl9BEB0S",
-            "BwoDQl9XEB4SBwoDQl9WEB8SBwoDQl9SECASBwoDSV9PECESBwoDQl9OECIS",
-            "BwoDQl9HECMSBwoDQl9GECQSBwoDQl9JECUSBwoDQ19WECYSBwoDS19IECcS",
-            "BwoDQ19NECgSBwoDQ19BECkSBwoDS19ZECoSBwoDQ19GECsSBwoDVF9EECwS",
-            "BwoDQ19MEC0SBwoDQ19OEC4SBwoDQ19YEC8SBwoDQ19DEDASBwoDQ19PEDES",
-            "BwoDS19NEDISBwoDQ19HEDMSBwoDQ19EEDQSBwoDQ19LEDUSBwoDQ19SEDYS",
-            "BwoDQ19JEDcSBwoDSF9SEDgSBwoDQ19VEDkSBwoDQ19XEDoSBwoDQ19ZEDsS",
-            "BwoDQ19aEDwSBwoDRF9LED0SBwoDRF9KED4SBwoDRF9NED8SBwoDRF9PEEAS",
-            "BwoDRV9DEEESBwoDRV9HEEISBwoDU19WEEMSBwoDR19REEQSBwoDRV9SEEUS",
-            "BwoDRV9FEEYSBwoDRV9UEEcSBwoDRl9LEEgSBwoDRl9PEEkSBwoDRl9KEEoS",
-            "BwoDRl9JEEsSBwoDRl9SEEwSBwoDR19GEE0SBwoDUF9GEE4SBwoDVF9GEE8S",
-            "BwoDR19BEFASBwoDR19NEFESBwoDR19FEFISBwoDRF9FEFMSBwoDR19IEFQS",
-            "BwoDR19JEFUSBwoDR19SEFYSBwoDR19MEFcSBwoDR19EEFgSBwoDR19QEFkS",
-            "BwoDR19VEFoSBwoDR19UEFsSBwoDR19HEFwSBwoDR19OEF0SBwoDR19XEF4S",
-            "BwoDR19ZEF8SBwoDSF9UEGASBwoDSF9NEGESBwoDVl9BEGISBwoDSF9OEGMS",
-            "BwoDSF9LEGQSBwoDSF9VEGUSBwoDSV9TEGYSBwoDSV9OEGcSBwoDSV9EEGgS",
-            "BwoDSV9SEGkSBwoDSV9REGoSBwoDSV9FEGsSBwoDSV9NEGwSBwoDSV9MEG0S",
-            "BwoDSV9UEG4SBwoDSl9NEG8SBwoDSl9QEHASBwoDSl9FEHESBwoDSl9PEHIS",
-            "BwoDS19aEHMSBwoDS19FEHQSBwoDS19JEHUSBwoDS19QEHYSBwoDS19SEHcS",
-            "BwoDS19XEHgSBwoDS19HEHkSBwoDTF9BEHoSBwoDTF9WEHsSBwoDTF9CEHwS",
-            "BwoDTF9TEH0SBwoDTF9SEH4SBwoDTF9ZEH8SCAoDTF9JEIABEggKA0xfVBCB",
-            "ARIICgNMX1UQggESCAoDTV9PEIMBEggKA01fSxCEARIICgNNX0cQhQESCAoD",
-            "TV9XEIYBEggKA01fWRCHARIICgNNX1YQiAESCAoDTV9MEIkBEggKA01fVBCK",
-            "ARIICgNNX0gQiwESCAoDTV9REIwBEggKA01fUhCNARIICgNNX1UQjgESCAoD",
-            "WV9UEI8BEggKA01fWBCQARIICgNGX00QkQESCAoDTV9EEJIBEggKA01fQxCT",
-            "ARIICgNNX04QlAESCAoDTV9FEJUBEggKA01fUxCWARIICgNNX0EQlwESCAoD",
-            "TV9aEJgBEggKA01fTRCZARIICgNOX0EQmgESCAoDTl9SEJsBEggKA05fUBCc",
-            "ARIICgNOX0wQnQESCAoDTl9DEJ4BEggKA05fWhCfARIICgNOX0kQoAESCAoD",
-            "Tl9FEKEBEggKA05fRxCiARIICgNOX1UQowESCAoDTl9GEKQBEggKA01fUBCl",
-            "ARIICgNOX08QpgESCAoDT19NEKcBEggKA1BfSxCoARIICgNQX1cQqQESCAoD",
-            "UF9TEKoBEggKA1BfQRCrARIICgNQX0cQrAESCAoDUF9ZEK0BEggKA1BfRRCu",
-            "ARIICgNQX0gQrwESCAoDUF9OELABEggKA1BfTBCxARIICgNQX1QQsgESCAoD",
-            "UF9SELMBEggKA1FfQRC0ARIICgNSX0UQtQESCAoDUl9PELYBEggKA1JfVRC3",
-            "ARIICgNSX1cQuAESCAoDQl9MELkBEggKA1NfSBC6ARIICgNLX04QuwESCAoD",
-            "TF9DELwBEggKA01fRhC9ARIICgNQX00QvgESCAoDVl9DEL8BEggKA1dfUxDA",
-            "ARIICgNTX00QwQESCAoDU19UEMIBEggKA1NfQRDDARIICgNTX04QxAESCAoD",
-            "Ul9TEMUBEggKA1NfQxDGARIICgNTX0wQxwESCAoDU19HEMgBEggKA1NfWBDJ",
-            "ARIICgNTX0sQygESCAoDU19JEMsBEggKA1NfQhDMARIICgNTX08QzQESCAoD",
-            "Wl9BEM4BEggKA0dfUxDPARIICgNTX1MQ0AESCAoDRV9TENEBEggKA0xfSxDS",
-            "ARIICgNTX0QQ0wESCAoDU19SENQBEggKA1NfShDVARIICgNTX1oQ1gESCAoD",
-            "U19FENcBEggKA0NfSBDYARIICgNTX1kQ2QESCAoDVF9XENoBEggKA1RfShDb",
-            "ARIICgNUX1oQ3AESCAoDVF9IEN0BEggKA1RfTBDeARIICgNUX0cQ3wESCAoD",
-            "VF9LEOABEggKA1RfTxDhARIICgNUX1QQ4gESCAoDVF9OEOMBEggKA1RfUhDk",
-            "ARIICgNUX00Q5QESCAoDVF9DEOYBEggKA1RfVhDnARIICgNVX0cQ6AESCAoD",
-            "VV9BEOkBEggKA0FfRRDqARIICgNHX0IQ6wESCAoDVV9TEOwBEggKA1VfTRDt",
-            "ARIICgNVX1kQ7gESCAoDVV9aEO8BEggKA1ZfVRDwARIICgNWX0UQ8QESCAoD",
-            "Vl9OEPIBEggKA1ZfRxDzARIICgNWX0kQ9AESCAoDV19GEPUBEggKA0VfSBD2",
-            "ARIICgNZX0UQ9wESCAoDWl9NEPgBEggKA1pfVxD5ASoqCghMYW5ndWFnZRIG",
-            "CgJlbhAAEgYKAmVzEAESBgoCemgQAhIGCgJmchADKtEBCgpSZXBvcnRUeXBl",
-            "EhUKEUlOVEVHUkFURURfUkVQT1JUEAASFAoQRklOQU5DSUFMX1JFUE9SVBAB",
-            "EhkKFVNVU1RBSU5BQklMSVRZX1JFUE9SVBACEhEKDUFOTlVBTF9SRVBPUlQQ",
-            "AxITCg9QUk9YWV9TVEFURU1FTlQQBBIaChZSRUdJU1RSQVRJT05fU1RBVEVN",
-            "RU5UEAUSFAoQUVVBUlRFUkxZX1JFUE9SVBAGEhYKEkhBTEZfWUVBUkxZX1JF",
-            "UE9SVBAHEgkKBU9USEVSEAgqSAoSSW5kdXN0cnlDb2RlUHJlZml4EgsKB0lf",
-            "U19JX0MQABINCglOX0FfSV9DX1MQARILCgdHX0lfQ19TEAISCQoFU19JX0MQ",
-            "Ayo2CgxSZXBvcnRGb3JtYXQSCQoFUF9EX0YQABINCglpX1hfQl9SX0wQARIM",
-            "CghPUEVOX1hNTBACKlQKEVJlcG9ydGluZ1N0YW5kYXJkEgsKB0dfQV9BX1AQ",
-            "ABILCgdJX0ZfUl9TEAESCwoHSV9TX1NfQhACEg0KCUVfRl9SX0FfRxADEgkK",
-            "BUdfUl9JEAQqigcKBFVuaXQSDgoKVE9OTkVfQ08yRRAAEg0KCVRPTk5FX0NP",
-            "MhABEg0KCVRPTk5FX0NINBACEg0KCVRPTk5FX04yTxADEgsKB1RPTk5FX1MQ",
-            "BBINCglUT05ORV9OT1gQBRINCglUT05ORV9TT1gQBhIOCgpUT05ORV9QTTEw",
-            "EAcSDwoLVE9OTkVfUE0yXzUQCBINCglUT05ORV9WT0MQCRINCglUT05ORV9O",
-            "SDMQChINCglUT05ORV9QRkMQCxINCglUT05ORV9TRjYQDBINCglUT05ORV9I",
-            "RkMQDRINCglUT05ORV9DRkMQDhIPCgtUT05ORV9IRkMyMxAPEg8KC1RPTk5F",
-            "X0hGQzMyEBASEAoMVE9OTkVfSEZDMTI1EBESEQoNVE9OTkVfSEZDMTM0YRAS",
-            "EhEKDVRPTk5FX0hGQzE0M2EQExISCg5UT05ORV9IRkMyMjdlYRAUEhIKDlRP",
-            "Tk5FX0hGQzI0NWZhEBUSEwoPVE9OTkVfSEZDMzY1bWZjEBYSFAoQVE9OTkVf",
-            "SEZDNDMxMG1lZRAXEg4KClRPTk5FX0MyRjYQGBIOCgpUT05ORV9DM0Y4EBkS",
-            "DwoLVE9OTkVfQzRGMTAQGhIPCgtUT05ORV9DNUYxMhAbEg8KC1RPTk5FX0M2",
-            "RjE0EBwSDwoLVE9OTkVfQzdGMTYQHRIPCgtUT05ORV9DOEYxOBAeEhAKDFRP",
-            "Tk5FX0MxMEYxOBAfEhAKDFRPTk5FX0MxMkYxOBAgEhAKDFRPTk5FX0MxNEYx",
-            "OBAhEhAKDFRPTk5FX0MxNkYxOBAiEhAKDFRPTk5FX0MxOEYxOBAjEhAKDFRP",
-            "Tk5FX0MyMEYxOBAkEhAKDFRPTk5FX0MyMkYxOBAlEhAKDFRPTk5FX0MyNEYx",
-            "OBAmEhAKDFRPTk5FX0MyNkYxOBAnEhAKDFRPTk5FX0MyOEYxOBAoEhAKDFRP",
-            "Tk5FX0MzMEYxOBApEhAKDFRPTk5FX0MzMkYxOBAqEhAKDFRPTk5FX0MzNEYx",
-            "OBArEgkKBUxJVEVSEGQSDAoIS0lMT0dSQU0QZRIPCgtDVUJJQ19NRVRFUhBm",
-            "EgwKCEtJTE9XQVRUEGcSDAoITUVHQVdBVFQQaBINCglNRUdBSlVPTEUQaRIN",
-            "CglLSUxPTUVURVIQahIQCgxTUVVBUkVfTUVURVIQaxIJCgVUT05ORRBsEggK",
-            "BE1XX0gQbRIICgRLV19IEG5CMQoXb3JnLmNhcmJvbmNhbGwubWV0YWRhdGFQ",
-            "AaoCE0NhcmJvbkNhbGwuTWV0YWRhdGFiBnByb3RvMw=="));
+            "Y2FsbC5tZXRhZGF0YS5NZXRhZGF0YUV4dGVuc2lvbhJGCg5wX2ZfZXh0ZW5z",
+            "aW9ucxgZIAMoCzIuLmNhcmJvbmNhbGwubWV0YWRhdGEuUHJvZHVjdEZvb3Rw",
+            "cmludEV4dGVuc2lvbhIXCg9yZWxhdGVkX3JlcG9ydHMYGiADKAkibAoZUHJv",
+            "ZHVjdEZvb3RwcmludEV4dGVuc2lvbhIMCgRwZklkGAEgASgJEkEKE3BfY19m",
+            "X3Byb3BlcnR5X2RhdGEYAiADKAsyJC5jYXJib25jYWxsLm1ldGFkYXRhLlBy",
+            "b3BlcnR5Q29udGV4dCKNAwoIQWN0aXZpdHkSFQoNYWN0aXZpdHlfdHlwZRgB",
+            "IAEoCRIyCg91bml0X29mX21lYXN1cmUYAiABKA4yGS5jYXJib25jYWxsLm1l",
+            "dGFkYXRhLlVuaXQSFwoPYWN0aXZpdHlfYW1vdW50GAMgASgJEjgKD2FjdGl2",
+            "aXR5X3BlcmlvZBgEIAEoCzIfLmNhcmJvbmNhbGwubWV0YWRhdGEuVGltZVBl",
+            "cmlvZBIcChRhY3Rpdml0eV9kZXNjcmlwdGlvbhgFIAEoCRJCChFhY3Rpdml0",
+            "eV9sb2NhdGlvbhgGIAEoCzInLmNhcmJvbmNhbGwubWV0YWRhdGEuR2VvZ3Jh",
+            "cGhpY0xvY2F0aW9uEkgKGmFjdGl2aXR5X2ZhY3Rvcl9hbmRfc291cmNlGAcg",
+            "ASgLMiQuY2FyYm9uY2FsbC5tZXRhZGF0YS5GYWN0b3JBbmRTb3VyY2USNwoQ",
+            "cmVsYXRlZF9tZXRhZGF0YRgIIAMoCzIdLmNhcmJvbmNhbGwubWV0YWRhdGEu",
+            "TWV0YWxpbmsi7AIKD0ZhY3RvckFuZFNvdXJjZRJECgtmYWN0b3JfdHlwZRgB",
+            "IAEoDjIvLmNhcmJvbmNhbGwubWV0YWRhdGEuRmFjdG9yQW5kU291cmNlLkZh",
+            "Y3RvclR5cGUSLgoLZmFjdG9yX3VuaXQYAiABKA4yGS5jYXJib25jYWxsLm1l",
+            "dGFkYXRhLlVuaXQSFQoNZmFjdG9yX3NvdXJjZRgDIAEoCRJLChBmYWN0b3Jf",
+            "cHJlY2lzaW9uGAQgASgLMjEuY2FyYm9uY2FsbC5tZXRhZGF0YS5GYWN0b3JB",
+            "bmRTb3VyY2UuUHJlY2lzaW9uTWl4GjkKDFByZWNpc2lvbk1peBILCgNsb3cY",
+            "ASABKAUSDgoGbWVkaXVtGAIgASgFEgwKBGhpZ2gYAyABKAUiRAoKRmFjdG9y",
+            "VHlwZRILCgdVTktOT1dOEAASDQoJRVNUSU1BVEVEEAESDAoIRkFDVE9SRUQQ",
+            "AhIMCghNRUFTVVJFRBADIqcDCgtNZXRob2RvbG9neRJKChBtZXRob2RvbG9n",
+            "eV90eXBlGAEgASgOMjAuY2FyYm9uY2FsbC5tZXRhZGF0YS5NZXRob2RvbG9n",
+            "eS5NZXRob2RvbG9neVR5cGUSLgomcGVyY2VudGFnZV9vZl90b3RhbF9wb3J0",
+            "Zm9saW9fcmVwb3J0ZWQYAiABKAkSLAokcGVyY2VudGFnZV9vZl9lc3RpbWF0",
+            "ZWRfY2FsY3VsYXRpb25zGAMgASgJEkwKEWJvdW5kYXJ5X2FwcHJvYWNoGAQg",
+            "ASgOMjEuY2FyYm9uY2FsbC5tZXRhZGF0YS5NZXRob2RvbG9neS5Cb3VuZGFy",
+            "eUFwcHJvYWNoIkoKD01ldGhvZG9sb2d5VHlwZRILCgdVTktOT1dOEAASEAoM",
+            "R0hHX1BST1RPQ09MEAESDQoJSVNPXzE0MDY3EAISCQoFT1RIRVIQZCJUChBC",
+            "b3VuZGFyeUFwcHJvYWNoEhcKE09QRVJBVElPTkFMX0NPTlRST0wQABIVChFG",
+            "SU5BTkNJQUxfQ09OVFJPTBABEhAKDEVRVUlUWV9TSEFSRRACIlIKCUdvdmVy",
+            "YW5jZRIUCgxpbnRlbmRlZF91c2UYASABKAkSGQoRcmVzdHJpY3RlZF9hY2Nl",
+            "c3MYAiABKAgSFAoMcmVwb3J0X293bmVyGAMgASgJIjIKClRpbWVQZXJpb2QS",
+            "EgoKc3RhcnRfZGF0ZRgBIAEoCRIQCghlbmRfZGF0ZRgCIAEoCSJ0ChJHZW9n",
+            "cmFwaGljTG9jYXRpb24SEQoJbG9uZ2l0dWRlGAEgASgJEhAKCGxhdGl0dWRl",
+            "GAIgASgJEhcKD2dlb19qc29uX29yX2ttbBgDIAEoCRIgChhnZW9ncmFwaGlj",
+            "X2xvY2F0aW9uX2ZpbGUYBCABKAkiXgoHTWV0YXRhZxILCgNrZXkYASABKAkS",
+            "DQoFdmFsdWUYAiABKAkSNwoQcmVsYXRlZF9tZXRhZGF0YRgDIAMoCzIdLmNh",
+            "cmJvbmNhbGwubWV0YWRhdGEuTWV0YWxpbmsikQEKD1Byb3BlcnR5Q29udGV4",
+            "dBIVCg1wcm9wZXJ0eV9uYW1lGAEgASgJEi4KCG1ldGF0YWdzGAIgAygLMhwu",
+            "Y2FyYm9uY2FsbC5tZXRhZGF0YS5NZXRhdGFnEjcKEHJlbGF0ZWRfbWV0YWRh",
+            "dGEYAyADKAsyHS5jYXJib25jYWxsLm1ldGFkYXRhLk1ldGFsaW5rIikKCE1l",
+            "dGFsaW5rEh0KFXJlbGF0ZWRfbWV0YWRhdGFfcGF0aBgBIAEoCSJMChFNZXRh",
+            "ZGF0YUV4dGVuc2lvbhISCgpkYXRhU2NoZW1hGAEgASgJEhUKDWRvY3VtZW50",
+            "YXRpb24YAiABKAkSDAoEZGF0YRgDIAEoCSJRCghJbmR1c3RyeRI3CgZwcmVm",
+            "aXgYASABKA4yJy5jYXJib25jYWxsLm1ldGFkYXRhLkluZHVzdHJ5Q29kZVBy",
+            "ZWZpeBIMCgRjb2RlGAIgASgJKt0SChNJU08zMTY2X0NvdW50cnlDb2RlEgsK",
+            "B1VOS05PV04QABIHCgNBX0YQARIHCgNBX1gQAhIHCgNBX0wQAxIHCgNEX1oQ",
+            "BBIHCgNBX1MQBRIHCgNBX0QQBhIHCgNBX08QBxIHCgNBX0kQCBIHCgNBX1EQ",
+            "CRIHCgNBX0cQChIHCgNBX1IQCxIHCgNBX00QDBIHCgNBX1cQDRIHCgNBX1UQ",
+            "DhIHCgNBX1QQDxIHCgNBX1oQEBIHCgNCX1MQERIHCgNCX0gQEhIHCgNCX0QQ",
+            "ExIHCgNCX0IQFBIHCgNCX1kQFRIHCgNCX0UQFhIHCgNCX1oQFxIHCgNCX0oQ",
+            "GBIHCgNCX00QGRIHCgNCX1QQGhIHCgNCX08QGxIHCgNCX1EQHBIHCgNCX0EQ",
+            "HRIHCgNCX1cQHhIHCgNCX1YQHxIHCgNCX1IQIBIHCgNJX08QIRIHCgNCX04Q",
+            "IhIHCgNCX0cQIxIHCgNCX0YQJBIHCgNCX0kQJRIHCgNDX1YQJhIHCgNLX0gQ",
+            "JxIHCgNDX00QKBIHCgNDX0EQKRIHCgNLX1kQKhIHCgNDX0YQKxIHCgNUX0QQ",
+            "LBIHCgNDX0wQLRIHCgNDX04QLhIHCgNDX1gQLxIHCgNDX0MQMBIHCgNDX08Q",
+            "MRIHCgNLX00QMhIHCgNDX0cQMxIHCgNDX0QQNBIHCgNDX0sQNRIHCgNDX1IQ",
+            "NhIHCgNDX0kQNxIHCgNIX1IQOBIHCgNDX1UQORIHCgNDX1cQOhIHCgNDX1kQ",
+            "OxIHCgNDX1oQPBIHCgNEX0sQPRIHCgNEX0oQPhIHCgNEX00QPxIHCgNEX08Q",
+            "QBIHCgNFX0MQQRIHCgNFX0cQQhIHCgNTX1YQQxIHCgNHX1EQRBIHCgNFX1IQ",
+            "RRIHCgNFX0UQRhIHCgNFX1QQRxIHCgNGX0sQSBIHCgNGX08QSRIHCgNGX0oQ",
+            "ShIHCgNGX0kQSxIHCgNGX1IQTBIHCgNHX0YQTRIHCgNQX0YQThIHCgNUX0YQ",
+            "TxIHCgNHX0EQUBIHCgNHX00QURIHCgNHX0UQUhIHCgNEX0UQUxIHCgNHX0gQ",
+            "VBIHCgNHX0kQVRIHCgNHX1IQVhIHCgNHX0wQVxIHCgNHX0QQWBIHCgNHX1AQ",
+            "WRIHCgNHX1UQWhIHCgNHX1QQWxIHCgNHX0cQXBIHCgNHX04QXRIHCgNHX1cQ",
+            "XhIHCgNHX1kQXxIHCgNIX1QQYBIHCgNIX00QYRIHCgNWX0EQYhIHCgNIX04Q",
+            "YxIHCgNIX0sQZBIHCgNIX1UQZRIHCgNJX1MQZhIHCgNJX04QZxIHCgNJX0QQ",
+            "aBIHCgNJX1IQaRIHCgNJX1EQahIHCgNJX0UQaxIHCgNJX00QbBIHCgNJX0wQ",
+            "bRIHCgNJX1QQbhIHCgNKX00QbxIHCgNKX1AQcBIHCgNKX0UQcRIHCgNKX08Q",
+            "chIHCgNLX1oQcxIHCgNLX0UQdBIHCgNLX0kQdRIHCgNLX1AQdhIHCgNLX1IQ",
+            "dxIHCgNLX1cQeBIHCgNLX0cQeRIHCgNMX0EQehIHCgNMX1YQexIHCgNMX0IQ",
+            "fBIHCgNMX1MQfRIHCgNMX1IQfhIHCgNMX1kQfxIICgNMX0kQgAESCAoDTF9U",
+            "EIEBEggKA0xfVRCCARIICgNNX08QgwESCAoDTV9LEIQBEggKA01fRxCFARII",
+            "CgNNX1cQhgESCAoDTV9ZEIcBEggKA01fVhCIARIICgNNX0wQiQESCAoDTV9U",
+            "EIoBEggKA01fSBCLARIICgNNX1EQjAESCAoDTV9SEI0BEggKA01fVRCOARII",
+            "CgNZX1QQjwESCAoDTV9YEJABEggKA0ZfTRCRARIICgNNX0QQkgESCAoDTV9D",
+            "EJMBEggKA01fThCUARIICgNNX0UQlQESCAoDTV9TEJYBEggKA01fQRCXARII",
+            "CgNNX1oQmAESCAoDTV9NEJkBEggKA05fQRCaARIICgNOX1IQmwESCAoDTl9Q",
+            "EJwBEggKA05fTBCdARIICgNOX0MQngESCAoDTl9aEJ8BEggKA05fSRCgARII",
+            "CgNOX0UQoQESCAoDTl9HEKIBEggKA05fVRCjARIICgNOX0YQpAESCAoDTV9Q",
+            "EKUBEggKA05fTxCmARIICgNPX00QpwESCAoDUF9LEKgBEggKA1BfVxCpARII",
+            "CgNQX1MQqgESCAoDUF9BEKsBEggKA1BfRxCsARIICgNQX1kQrQESCAoDUF9F",
+            "EK4BEggKA1BfSBCvARIICgNQX04QsAESCAoDUF9MELEBEggKA1BfVBCyARII",
+            "CgNQX1IQswESCAoDUV9BELQBEggKA1JfRRC1ARIICgNSX08QtgESCAoDUl9V",
+            "ELcBEggKA1JfVxC4ARIICgNCX0wQuQESCAoDU19IELoBEggKA0tfThC7ARII",
+            "CgNMX0MQvAESCAoDTV9GEL0BEggKA1BfTRC+ARIICgNWX0MQvwESCAoDV19T",
+            "EMABEggKA1NfTRDBARIICgNTX1QQwgESCAoDU19BEMMBEggKA1NfThDEARII",
+            "CgNSX1MQxQESCAoDU19DEMYBEggKA1NfTBDHARIICgNTX0cQyAESCAoDU19Y",
+            "EMkBEggKA1NfSxDKARIICgNTX0kQywESCAoDU19CEMwBEggKA1NfTxDNARII",
+            "CgNaX0EQzgESCAoDR19TEM8BEggKA1NfUxDQARIICgNFX1MQ0QESCAoDTF9L",
+            "ENIBEggKA1NfRBDTARIICgNTX1IQ1AESCAoDU19KENUBEggKA1NfWhDWARII",
+            "CgNTX0UQ1wESCAoDQ19IENgBEggKA1NfWRDZARIICgNUX1cQ2gESCAoDVF9K",
+            "ENsBEggKA1RfWhDcARIICgNUX0gQ3QESCAoDVF9MEN4BEggKA1RfRxDfARII",
+            "CgNUX0sQ4AESCAoDVF9PEOEBEggKA1RfVBDiARIICgNUX04Q4wESCAoDVF9S",
+            "EOQBEggKA1RfTRDlARIICgNUX0MQ5gESCAoDVF9WEOcBEggKA1VfRxDoARII",
+            "CgNVX0EQ6QESCAoDQV9FEOoBEggKA0dfQhDrARIICgNVX1MQ7AESCAoDVV9N",
+            "EO0BEggKA1VfWRDuARIICgNVX1oQ7wESCAoDVl9VEPABEggKA1ZfRRDxARII",
+            "CgNWX04Q8gESCAoDVl9HEPMBEggKA1ZfSRD0ARIICgNXX0YQ9QESCAoDRV9I",
+            "EPYBEggKA1lfRRD3ARIICgNaX00Q+AESCAoDWl9XEPkBKioKCExhbmd1YWdl",
+            "EgYKAmVuEAASBgoCZXMQARIGCgJ6aBACEgYKAmZyEAMq0QEKClJlcG9ydFR5",
+            "cGUSFQoRSU5URUdSQVRFRF9SRVBPUlQQABIUChBGSU5BTkNJQUxfUkVQT1JU",
+            "EAESGQoVU1VTVEFJTkFCSUxJVFlfUkVQT1JUEAISEQoNQU5OVUFMX1JFUE9S",
+            "VBADEhMKD1BST1hZX1NUQVRFTUVOVBAEEhoKFlJFR0lTVFJBVElPTl9TVEFU",
+            "RU1FTlQQBRIUChBRVUFSVEVSTFlfUkVQT1JUEAYSFgoSSEFMRl9ZRUFSTFlf",
+            "UkVQT1JUEAcSCQoFT1RIRVIQCCpIChJJbmR1c3RyeUNvZGVQcmVmaXgSCwoH",
+            "SV9TX0lfQxAAEg0KCU5fQV9JX0NfUxABEgsKB0dfSV9DX1MQAhIJCgVTX0lf",
+            "QxADKjYKDFJlcG9ydEZvcm1hdBIJCgVQX0RfRhAAEg0KCWlfWF9CX1JfTBAB",
+            "EgwKCE9QRU5fWE1MEAIqVAoRUmVwb3J0aW5nU3RhbmRhcmQSCwoHR19BX0Ff",
+            "UBAAEgsKB0lfRl9SX1MQARILCgdJX1NfU19CEAISDQoJRV9GX1JfQV9HEAMS",
+            "CQoFR19SX0kQBCqKBwoEVW5pdBIOCgpUT05ORV9DTzJFEAASDQoJVE9OTkVf",
+            "Q08yEAESDQoJVE9OTkVfQ0g0EAISDQoJVE9OTkVfTjJPEAMSCwoHVE9OTkVf",
+            "UxAEEg0KCVRPTk5FX05PWBAFEg0KCVRPTk5FX1NPWBAGEg4KClRPTk5FX1BN",
+            "MTAQBxIPCgtUT05ORV9QTTJfNRAIEg0KCVRPTk5FX1ZPQxAJEg0KCVRPTk5F",
+            "X05IMxAKEg0KCVRPTk5FX1BGQxALEg0KCVRPTk5FX1NGNhAMEg0KCVRPTk5F",
+            "X0hGQxANEg0KCVRPTk5FX0NGQxAOEg8KC1RPTk5FX0hGQzIzEA8SDwoLVE9O",
+            "TkVfSEZDMzIQEBIQCgxUT05ORV9IRkMxMjUQERIRCg1UT05ORV9IRkMxMzRh",
+            "EBISEQoNVE9OTkVfSEZDMTQzYRATEhIKDlRPTk5FX0hGQzIyN2VhEBQSEgoO",
+            "VE9OTkVfSEZDMjQ1ZmEQFRITCg9UT05ORV9IRkMzNjVtZmMQFhIUChBUT05O",
+            "RV9IRkM0MzEwbWVlEBcSDgoKVE9OTkVfQzJGNhAYEg4KClRPTk5FX0MzRjgQ",
+            "GRIPCgtUT05ORV9DNEYxMBAaEg8KC1RPTk5FX0M1RjEyEBsSDwoLVE9OTkVf",
+            "QzZGMTQQHBIPCgtUT05ORV9DN0YxNhAdEg8KC1RPTk5FX0M4RjE4EB4SEAoM",
+            "VE9OTkVfQzEwRjE4EB8SEAoMVE9OTkVfQzEyRjE4ECASEAoMVE9OTkVfQzE0",
+            "RjE4ECESEAoMVE9OTkVfQzE2RjE4ECISEAoMVE9OTkVfQzE4RjE4ECMSEAoM",
+            "VE9OTkVfQzIwRjE4ECQSEAoMVE9OTkVfQzIyRjE4ECUSEAoMVE9OTkVfQzI0",
+            "RjE4ECYSEAoMVE9OTkVfQzI2RjE4ECcSEAoMVE9OTkVfQzI4RjE4ECgSEAoM",
+            "VE9OTkVfQzMwRjE4ECkSEAoMVE9OTkVfQzMyRjE4ECoSEAoMVE9OTkVfQzM0",
+            "RjE4ECsSCQoFTElURVIQZBIMCghLSUxPR1JBTRBlEg8KC0NVQklDX01FVEVS",
+            "EGYSDAoIS0lMT1dBVFQQZxIMCghNRUdBV0FUVBBoEg0KCU1FR0FKVU9MRRBp",
+            "Eg0KCUtJTE9NRVRFUhBqEhAKDFNRVUFSRV9NRVRFUhBrEgkKBVRPTk5FEGwS",
+            "CAoETVdfSBBtEggKBEtXX0gQbkIxChdvcmcuY2FyYm9uY2FsbC5tZXRhZGF0",
+            "YVABqgITQ2FyYm9uQ2FsbC5NZXRhZGF0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::CarbonCall.Metadata.ISO3166_CountryCode), typeof(global::CarbonCall.Metadata.Language), typeof(global::CarbonCall.Metadata.ReportType), typeof(global::CarbonCall.Metadata.IndustryCodePrefix), typeof(global::CarbonCall.Metadata.ReportFormat), typeof(global::CarbonCall.Metadata.ReportingStandard), typeof(global::CarbonCall.Metadata.Unit), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::CarbonCall.Metadata.SustainabilityReport), global::CarbonCall.Metadata.SustainabilityReport.Parser, new[]{ "GRID", "Metadata", "Report" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::CarbonCall.Metadata.Metadata), global::CarbonCall.Metadata.Metadata.Parser, new[]{ "GRID", "OrganizationIdentifier", "OrganizationName", "Domicile", "OperatingCountries", "Languages", "ReportType", "ReportIssueDate", "ReportingPeriod", "ReportReplaces", "Location", "Industry", "Performance", "Goverance", "Methodology", "ReportFormat", "ReportingStandard", "Assurance", "PriorReport", "ReportHash", "Activities", "ReportContext", "PropertyContexts", "MetatdataExtensions", "RelatedReports" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::CarbonCall.Metadata.Metadata), global::CarbonCall.Metadata.Metadata.Parser, new[]{ "GRID", "OrganizationIdentifier", "OrganizationName", "Domicile", "OperatingCountries", "Languages", "ReportType", "ReportIssueDate", "ReportingPeriod", "ReportReplaces", "Location", "Industry", "Performance", "Goverance", "Methodology", "ReportFormat", "ReportingStandard", "Assurance", "PriorReport", "ReportHash", "Activities", "ReportContext", "PropertyContexts", "MetatdataExtensions", "PFExtensions", "RelatedReports" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::CarbonCall.Metadata.ProductFootprintExtension), global::CarbonCall.Metadata.ProductFootprintExtension.Parser, new[]{ "PfId", "PCFPropertyData" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::CarbonCall.Metadata.Activity), global::CarbonCall.Metadata.Activity.Parser, new[]{ "ActivityType", "UnitOfMeasure", "ActivityAmount", "ActivityPeriod", "ActivityDescription", "ActivityLocation", "ActivityFactorAndSource", "RelatedMetadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::CarbonCall.Metadata.FactorAndSource), global::CarbonCall.Metadata.FactorAndSource.Parser, new[]{ "FactorType", "FactorUnit", "FactorSource", "FactorPrecision" }, null, new[]{ typeof(global::CarbonCall.Metadata.FactorAndSource.Types.FactorType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::CarbonCall.Metadata.FactorAndSource.Types.PrecisionMix), global::CarbonCall.Metadata.FactorAndSource.Types.PrecisionMix.Parser, new[]{ "Low", "Medium", "High" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::CarbonCall.Metadata.Methodology), global::CarbonCall.Metadata.Methodology.Parser, new[]{ "MethodologyType", "PercentageOfTotalPortfolioReported", "PercentageOfEstimatedCalculations", "BoundaryApproach" }, null, new[]{ typeof(global::CarbonCall.Metadata.Methodology.Types.MethodologyType), typeof(global::CarbonCall.Metadata.Methodology.Types.BoundaryApproach) }, null, null),
@@ -1665,6 +1670,7 @@ namespace CarbonCall.Metadata {
       reportContext_ = other.reportContext_.Clone();
       propertyContexts_ = other.propertyContexts_.Clone();
       metatdataExtensions_ = other.metatdataExtensions_.Clone();
+      pFExtensions_ = other.pFExtensions_.Clone();
       relatedReports_ = other.relatedReports_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2005,10 +2011,24 @@ namespace CarbonCall.Metadata {
       get { return metatdataExtensions_; }
     }
 
+    /// <summary>Field number for the "p_f_extensions" field.</summary>
+    public const int PFExtensionsFieldNumber = 25;
+    private static readonly pb::FieldCodec<global::CarbonCall.Metadata.ProductFootprintExtension> _repeated_pFExtensions_codec
+        = pb::FieldCodec.ForMessage(202, global::CarbonCall.Metadata.ProductFootprintExtension.Parser);
+    private readonly pbc::RepeatedField<global::CarbonCall.Metadata.ProductFootprintExtension> pFExtensions_ = new pbc::RepeatedField<global::CarbonCall.Metadata.ProductFootprintExtension>();
+    /// <summary>
+    ///Extensions to any related product footprints in the report
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::CarbonCall.Metadata.ProductFootprintExtension> PFExtensions {
+      get { return pFExtensions_; }
+    }
+
     /// <summary>Field number for the "related_reports" field.</summary>
-    public const int RelatedReportsFieldNumber = 25;
+    public const int RelatedReportsFieldNumber = 26;
     private static readonly pb::FieldCodec<string> _repeated_relatedReports_codec
-        = pb::FieldCodec.ForString(202);
+        = pb::FieldCodec.ForString(210);
     private readonly pbc::RepeatedField<string> relatedReports_ = new pbc::RepeatedField<string>();
     /// <summary>
     ///GR.IDs of related reports
@@ -2058,6 +2078,7 @@ namespace CarbonCall.Metadata {
       if(!reportContext_.Equals(other.reportContext_)) return false;
       if(!propertyContexts_.Equals(other.propertyContexts_)) return false;
       if(!metatdataExtensions_.Equals(other.metatdataExtensions_)) return false;
+      if(!pFExtensions_.Equals(other.pFExtensions_)) return false;
       if(!relatedReports_.Equals(other.relatedReports_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2090,6 +2111,7 @@ namespace CarbonCall.Metadata {
       hash ^= reportContext_.GetHashCode();
       hash ^= propertyContexts_.GetHashCode();
       hash ^= metatdataExtensions_.GetHashCode();
+      hash ^= pFExtensions_.GetHashCode();
       hash ^= relatedReports_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2187,6 +2209,7 @@ namespace CarbonCall.Metadata {
       reportContext_.WriteTo(output, _repeated_reportContext_codec);
       propertyContexts_.WriteTo(output, _repeated_propertyContexts_codec);
       metatdataExtensions_.WriteTo(output, _repeated_metatdataExtensions_codec);
+      pFExtensions_.WriteTo(output, _repeated_pFExtensions_codec);
       relatedReports_.WriteTo(output, _repeated_relatedReports_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2276,6 +2299,7 @@ namespace CarbonCall.Metadata {
       reportContext_.WriteTo(ref output, _repeated_reportContext_codec);
       propertyContexts_.WriteTo(ref output, _repeated_propertyContexts_codec);
       metatdataExtensions_.WriteTo(ref output, _repeated_metatdataExtensions_codec);
+      pFExtensions_.WriteTo(ref output, _repeated_pFExtensions_codec);
       relatedReports_.WriteTo(ref output, _repeated_relatedReports_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -2347,6 +2371,7 @@ namespace CarbonCall.Metadata {
       size += reportContext_.CalculateSize(_repeated_reportContext_codec);
       size += propertyContexts_.CalculateSize(_repeated_propertyContexts_codec);
       size += metatdataExtensions_.CalculateSize(_repeated_metatdataExtensions_codec);
+      size += pFExtensions_.CalculateSize(_repeated_pFExtensions_codec);
       size += relatedReports_.CalculateSize(_repeated_relatedReports_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2432,6 +2457,7 @@ namespace CarbonCall.Metadata {
       reportContext_.Add(other.reportContext_);
       propertyContexts_.Add(other.propertyContexts_);
       metatdataExtensions_.Add(other.metatdataExtensions_);
+      pFExtensions_.Add(other.pFExtensions_);
       relatedReports_.Add(other.relatedReports_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2559,6 +2585,10 @@ namespace CarbonCall.Metadata {
             break;
           }
           case 202: {
+            pFExtensions_.AddEntriesFrom(input, _repeated_pFExtensions_codec);
+            break;
+          }
+          case 210: {
             relatedReports_.AddEntriesFrom(input, _repeated_relatedReports_codec);
             break;
           }
@@ -2688,7 +2718,232 @@ namespace CarbonCall.Metadata {
             break;
           }
           case 202: {
+            pFExtensions_.AddEntriesFrom(ref input, _repeated_pFExtensions_codec);
+            break;
+          }
+          case 210: {
             relatedReports_.AddEntriesFrom(ref input, _repeated_relatedReports_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ProductFootprintExtension : pb::IMessage<ProductFootprintExtension>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProductFootprintExtension> _parser = new pb::MessageParser<ProductFootprintExtension>(() => new ProductFootprintExtension());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ProductFootprintExtension> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductFootprintExtension() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductFootprintExtension(ProductFootprintExtension other) : this() {
+      pfId_ = other.pfId_;
+      pCFPropertyData_ = other.pCFPropertyData_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductFootprintExtension Clone() {
+      return new ProductFootprintExtension(this);
+    }
+
+    /// <summary>Field number for the "pfId" field.</summary>
+    public const int PfIdFieldNumber = 1;
+    private string pfId_ = "";
+    /// <summary>
+    ///Id of the product footprint
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PfId {
+      get { return pfId_; }
+      set {
+        pfId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "p_c_f_property_data" field.</summary>
+    public const int PCFPropertyDataFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::CarbonCall.Metadata.PropertyContext> _repeated_pCFPropertyData_codec
+        = pb::FieldCodec.ForMessage(18, global::CarbonCall.Metadata.PropertyContext.Parser);
+    private readonly pbc::RepeatedField<global::CarbonCall.Metadata.PropertyContext> pCFPropertyData_ = new pbc::RepeatedField<global::CarbonCall.Metadata.PropertyContext>();
+    /// <summary>
+    ///Property contexts that provide additional context for the product footprint, i.e., section metadata
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::CarbonCall.Metadata.PropertyContext> PCFPropertyData {
+      get { return pCFPropertyData_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ProductFootprintExtension);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ProductFootprintExtension other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PfId != other.PfId) return false;
+      if(!pCFPropertyData_.Equals(other.pCFPropertyData_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PfId.Length != 0) hash ^= PfId.GetHashCode();
+      hash ^= pCFPropertyData_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PfId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PfId);
+      }
+      pCFPropertyData_.WriteTo(output, _repeated_pCFPropertyData_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PfId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PfId);
+      }
+      pCFPropertyData_.WriteTo(ref output, _repeated_pCFPropertyData_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (PfId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PfId);
+      }
+      size += pCFPropertyData_.CalculateSize(_repeated_pCFPropertyData_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ProductFootprintExtension other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PfId.Length != 0) {
+        PfId = other.PfId;
+      }
+      pCFPropertyData_.Add(other.pCFPropertyData_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PfId = input.ReadString();
+            break;
+          }
+          case 18: {
+            pCFPropertyData_.AddEntriesFrom(input, _repeated_pCFPropertyData_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PfId = input.ReadString();
+            break;
+          }
+          case 18: {
+            pCFPropertyData_.AddEntriesFrom(ref input, _repeated_pCFPropertyData_codec);
             break;
           }
         }
@@ -2712,7 +2967,7 @@ namespace CarbonCall.Metadata {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[2]; }
+      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3182,7 +3437,7 @@ namespace CarbonCall.Metadata {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[3]; }
+      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3778,7 +4033,7 @@ namespace CarbonCall.Metadata {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[4]; }
+      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4105,7 +4360,7 @@ namespace CarbonCall.Metadata {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[5]; }
+      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4377,7 +4632,7 @@ namespace CarbonCall.Metadata {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[6]; }
+      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4612,7 +4867,7 @@ namespace CarbonCall.Metadata {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[7]; }
+      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4924,7 +5179,7 @@ namespace CarbonCall.Metadata {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[8]; }
+      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5179,7 +5434,7 @@ namespace CarbonCall.Metadata {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[9]; }
+      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5426,7 +5681,7 @@ namespace CarbonCall.Metadata {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[10]; }
+      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5621,7 +5876,7 @@ namespace CarbonCall.Metadata {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[11]; }
+      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5893,7 +6148,7 @@ namespace CarbonCall.Metadata {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[12]; }
+      get { return global::CarbonCall.Metadata.MetadataReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

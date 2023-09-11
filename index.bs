@@ -822,26 +822,38 @@ A Product Footprint Extension has the following properties:
         <th>Specification
     <tbody>
       <tr>
-        <td>dataSchema : 
+        <td>pfId : [=Id=]
         <td>String
         <td>M
-        <td>Add more here
+        <td>The Id of the Product Footprint, see [[#dt-id]] for details.
       <tr>
-        <td>documentation: 
-        <td>String
+        <td>pcfPropertyData: [=PropertyContext=]
+        <td>Array
         <td>M
-        <td>Add more here
-      <tr>
-        <td>data : 
-        <td>String
-        <td>M
-        <td>Add more here
+        <td>A collection of Product Footprint Property Context metadata using [=PropertyContext=]. Can be added for specific properties in a Product Footprint to add additional metadata about the value in the footprint.
+         See [[#dt-property-context]] for details.
   </table>
   <figcaption>Properties of data type ProductFootprintExtension</figcaption>
   </figure>
-  Issue: This is incomplete as a DRAFT
 
 
+## Data Type: <dfn>Id</dfn> ## {#dt-id}
+
+A Id MUST either be a UUID v4 as specified in [[!RFC4122]].
+
+or a unique key that can be represented as a string.
+
+### JSON Representation ### {#dt-id-json}
+
+Each Id MUST be encoded as a JSON String, see [[#dt-string-json]] for details.
+
+Example JSON string value: 
+
+<div class=example>
+```json
+"f4b1225a-bd44-4c8e-861d-079e4e1dfd69"
+```
+</div>
 
 ## Data Type: <dfn>Decimal</dfn> ## {#dt-decimal}
 
@@ -1171,3 +1183,8 @@ Here we will document changes in the specification as they are made.
 - Added `ProductFootprintExtension` data type, see [[#dt-product-footprint-extension]] for details.
 - Added `Dataspaces` to definitions.
 - Placeholders for synchronization with the Pathfinder Framework and business case.
+
+## Version 1.0.230911 (September 11, 2023) ## {#changelog-1.0.230911}
+
+- Added `Id` to data type [=ProductFootprintExtension=], see [[#dt-product-footprint-extension-properties]] for details.
+- Added `pcfPropertyData` to data type [=ProductFootprintExtension=], see [[#dt-product-footprint-extension-properties]] for details.

@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 5fcd28d6d, updated Tue May 30 13:12:11 2023 -0700" name="generator">
   <link href="https://carboncall.github.io/metadata/" rel="canonical">
-  <meta content="fe8827b8fbd9f3c8ad4dd9eb48ce4c714e9156d2" name="document-revision">
+  <meta content="0066cc09d9c51346faf0e3289757953774c221ed" name="document-revision">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
     color: var(--a-normal-text);
@@ -2071,7 +2071,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">DRAFT Carbon Call - Discoverable Data &amp; Metadata</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document, <time class="dt-updated" datetime="2023-09-06">6 September 2023</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document, <time class="dt-updated" datetime="2023-09-11">11 September 2023</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -2187,54 +2187,59 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
         <li><a href="#dt-product-footprint-extension-properties"><span class="secno">3.17.1</span> <span class="content">Properties</span></a>
        </ol>
       <li>
-       <a href="#dt-decimal"><span class="secno">3.18</span> <span class="content">Data Type: <span>Decimal</span></span></a>
+       <a href="#dt-id"><span class="secno">3.18</span> <span class="content">Data Type: <span>Id</span></span></a>
        <ol class="toc">
-        <li><a href="#dt-decimal-json"><span class="secno">3.18.1</span> <span class="content">JSON Representation</span></a>
+        <li><a href="#dt-id-json"><span class="secno">3.18.1</span> <span class="content">JSON Representation</span></a>
        </ol>
       <li>
-       <a href="#dt-string"><span class="secno">3.19</span> <span class="content">Data Type: <span>String</span></span></a>
+       <a href="#dt-decimal"><span class="secno">3.19</span> <span class="content">Data Type: <span>Decimal</span></span></a>
        <ol class="toc">
-        <li><a href="#dt-string-json"><span class="secno">3.19.1</span> <span class="content">JSON Data Representation</span></a>
+        <li><a href="#dt-decimal-json"><span class="secno">3.19.1</span> <span class="content">JSON Representation</span></a>
        </ol>
       <li>
-       <a href="#dt-grid"><span class="secno">3.20</span> <span class="content">Data Type: <span>GRID</span></span></a>
+       <a href="#dt-string"><span class="secno">3.20</span> <span class="content">Data Type: <span>String</span></span></a>
        <ol class="toc">
-        <li><a href="#dt-grid-json"><span class="secno">3.20.1</span> <span class="content">JSON Representation</span></a>
+        <li><a href="#dt-string-json"><span class="secno">3.20.1</span> <span class="content">JSON Data Representation</span></a>
        </ol>
       <li>
-       <a href="#dt-report-format"><span class="secno">3.21</span> <span class="content">Data Type: <span><code>ReportFormat</code></span></span></a>
+       <a href="#dt-grid"><span class="secno">3.21</span> <span class="content">Data Type: <span>GRID</span></span></a>
        <ol class="toc">
-        <li><a href="#dt-report-format-json"><span class="secno">3.21.1</span> <span class="content">JSON Representation</span></a>
+        <li><a href="#dt-grid-json"><span class="secno">3.21.1</span> <span class="content">JSON Representation</span></a>
        </ol>
       <li>
-       <a href="#dt-reporting-standard"><span class="secno">3.22</span> <span class="content">Data Type: <span><code>ReportingStandard</code></span></span></a>
+       <a href="#dt-report-format"><span class="secno">3.22</span> <span class="content">Data Type: <span><code>ReportFormat</code></span></span></a>
        <ol class="toc">
-        <li><a href="#dt-reporting-standard-json"><span class="secno">3.22.1</span> <span class="content">JSON Representation</span></a>
+        <li><a href="#dt-report-format-json"><span class="secno">3.22.1</span> <span class="content">JSON Representation</span></a>
        </ol>
       <li>
-       <a href="#dt-report-type"><span class="secno">3.23</span> <span class="content">Data Type: <span><code>ReportType</code></span></span></a>
+       <a href="#dt-reporting-standard"><span class="secno">3.23</span> <span class="content">Data Type: <span><code>ReportingStandard</code></span></span></a>
        <ol class="toc">
-        <li><a href="#dt-report-type-json"><span class="secno">3.23.1</span> <span class="content">JSON Representation</span></a>
+        <li><a href="#dt-reporting-standard-json"><span class="secno">3.23.1</span> <span class="content">JSON Representation</span></a>
        </ol>
       <li>
-       <a href="#dt-methodology-type"><span class="secno">3.24</span> <span class="content">Data Type: <span><code>MethodologyType</code></span></span></a>
+       <a href="#dt-report-type"><span class="secno">3.24</span> <span class="content">Data Type: <span><code>ReportType</code></span></span></a>
        <ol class="toc">
-        <li><a href="#dt-methodology-type-json"><span class="secno">3.24.1</span> <span class="content">JSON Representation</span></a>
+        <li><a href="#dt-report-type-json"><span class="secno">3.24.1</span> <span class="content">JSON Representation</span></a>
        </ol>
       <li>
-       <a href="#dt-boundary-approach"><span class="secno">3.25</span> <span class="content">Data Type: <span><code>BoundaryApproach</code></span></span></a>
+       <a href="#dt-methodology-type"><span class="secno">3.25</span> <span class="content">Data Type: <span><code>MethodologyType</code></span></span></a>
        <ol class="toc">
-        <li><a href="#dt-boundary-approach-json"><span class="secno">3.25.1</span> <span class="content">JSON Representation</span></a>
+        <li><a href="#dt-methodology-type-json"><span class="secno">3.25.1</span> <span class="content">JSON Representation</span></a>
        </ol>
       <li>
-       <a href="#dt-unit"><span class="secno">3.26</span> <span class="content">Data Type: <span><code>Unit</code></span></span></a>
+       <a href="#dt-boundary-approach"><span class="secno">3.26</span> <span class="content">Data Type: <span><code>BoundaryApproach</code></span></span></a>
        <ol class="toc">
-        <li><a href="#dt-unit-json"><span class="secno">3.26.1</span> <span class="content">JSON Representation</span></a>
+        <li><a href="#dt-boundary-approach-json"><span class="secno">3.26.1</span> <span class="content">JSON Representation</span></a>
        </ol>
       <li>
-       <a href="#dt-factor-type"><span class="secno">3.27</span> <span class="content">Data Type: <span><code>FactorType</code></span></span></a>
+       <a href="#dt-unit"><span class="secno">3.27</span> <span class="content">Data Type: <span><code>Unit</code></span></span></a>
        <ol class="toc">
-        <li><a href="#dt-factor-type-json"><span class="secno">3.27.1</span> <span class="content">JSON Representation</span></a>
+        <li><a href="#dt-unit-json"><span class="secno">3.27.1</span> <span class="content">JSON Representation</span></a>
+       </ol>
+      <li>
+       <a href="#dt-factor-type"><span class="secno">3.28</span> <span class="content">Data Type: <span><code>FactorType</code></span></span></a>
+       <ol class="toc">
+        <li><a href="#dt-factor-type-json"><span class="secno">3.28.1</span> <span class="content">JSON Representation</span></a>
        </ol>
      </ol>
     <li>
@@ -2251,6 +2256,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
       <li><a href="#changelog-1.0.20230725"><span class="secno"></span> <span class="content">Version 1.0.20230725 (July 25, 2023)</span></a>
       <li><a href="#changelog-1.0.20230728"><span class="secno"></span> <span class="content">Version 1.0.20230728 (July 28, 2023)</span></a>
       <li><a href="#changelog-1.0.20230906"><span class="secno"></span> <span class="content">Version 1.0.20230906 (September 6, 2023)</span></a>
+      <li><a href="#changelog-1.0.230911"><span class="secno"></span> <span class="content">Version 1.0.230911 (September 11, 2023)</span></a>
      </ol>
     <li>
      <a href="#index"><span class="secno"></span> <span class="content">Index</span></a>
@@ -2367,7 +2373,7 @@ the report.</p>
        <td><dfn data-dfn-for="SustainabilityReport" data-dfn-type="element-attr" data-export id="element-attrdef-sustainabilityreport-grid"><code>GRID</code><a class="self-link" href="#element-attrdef-sustainabilityreport-grid"></a></dfn> : <a data-link-type="dfn" href="#grid" id="ref-for-grid">GRID</a> 
        <td>String 
        <td>M 
-       <td>The Sustainabilty Report global identifier, See <a href="#dt-grid">§ 3.20 Data Type: GRID</a> for details. 
+       <td>The Sustainabilty Report global identifier, See <a href="#dt-grid">§ 3.21 Data Type: GRID</a> for details. 
       <tr>
        <td><dfn data-dfn-for="SustainabilityReport" data-dfn-type="element-attr" data-export id="element-attrdef-sustainabilityreport-metadata"><code>metadata</code><a class="self-link" href="#element-attrdef-sustainabilityreport-metadata"></a></dfn> 
        <td>Object 
@@ -2401,7 +2407,7 @@ the reporting period, the industry, the assurance provider, etc.</p>
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-grid"><code>GRID</code><a class="self-link" href="#element-attrdef-metadata-grid"></a></dfn> <a data-link-type="dfn" href="#grid" id="ref-for-grid①">GRID</a> 
        <td>String 
        <td>M 
-       <td>The GRID of the report that the metadata is about, see <a href="#dt-grid">§ 3.20 Data Type: GRID</a> for details. 
+       <td>The GRID of the report that the metadata is about, see <a href="#dt-grid">§ 3.21 Data Type: GRID</a> for details. 
       <tr>
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-organizationidentifier"><code>organizationIdentifier</code><a class="self-link" href="#element-attrdef-metadata-organizationidentifier"></a></dfn> 
        <td>String 
@@ -2431,7 +2437,7 @@ the reporting period, the industry, the assurance provider, etc.</p>
        <td>reportType : <code class="idl"><a data-link-type="idl" href="#enumdef-reporttype" id="ref-for-enumdef-reporttype">ReportType</a></code> 
        <td>String 
        <td>M 
-       <td>The type of the report. The report type MUST be specified using the ReportType enumeration, see <a href="#dt-report-type">§ 3.23 Data Type: ReportType</a> for details. 
+       <td>The type of the report. The report type MUST be specified using the ReportType enumeration, see <a href="#dt-report-type">§ 3.24 Data Type: ReportType</a> for details. 
       <tr>
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-reportissuedate"><code>reportIssueDate</code><a class="self-link" href="#element-attrdef-metadata-reportissuedate"></a></dfn> 
        <td>String 
@@ -2446,7 +2452,7 @@ the reporting period, the industry, the assurance provider, etc.</p>
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-reportreplaces"><code>reportReplaces</code><a class="self-link" href="#element-attrdef-metadata-reportreplaces"></a></dfn> 
        <td>String 
        <td>M 
-       <td>The GRID of the report that this report replaces, if any. See <a href="#dt-grid">§ 3.20 Data Type: GRID</a> for details. 
+       <td>The GRID of the report that this report replaces, if any. See <a href="#dt-grid">§ 3.21 Data Type: GRID</a> for details. 
       <tr>
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-location"><code>location</code><a class="self-link" href="#element-attrdef-metadata-location"></a></dfn> 
        <td>String 
@@ -2476,12 +2482,12 @@ the reporting period, the industry, the assurance provider, etc.</p>
        <td>reportFormat : <code class="idl"><a data-link-type="idl" href="#enumdef-reportformat" id="ref-for-enumdef-reportformat">ReportFormat</a></code> 
        <td>String 
        <td>M 
-       <td>The string name for the format of the report. The report format MUST be specified using the ReportFormat enumeration, see <a href="#dt-report-format">§ 3.21 Data Type: ReportFormat</a> for details. 
+       <td>The string name for the format of the report. The report format MUST be specified using the ReportFormat enumeration, see <a href="#dt-report-format">§ 3.22 Data Type: ReportFormat</a> for details. 
       <tr>
        <td>reportingStandard : <code class="idl"><a data-link-type="idl" href="#enumdef-reportingstandard" id="ref-for-enumdef-reportingstandard">ReportingStandard</a></code> 
        <td>String 
        <td>M 
-       <td>The string name for the reporting standard used in the report. The reporting standard MUST be specified using the ReportingStandard enumeration, see <a href="#dt-reporting-standard">§ 3.22 Data Type: ReportingStandard</a> for details. 
+       <td>The string name for the reporting standard used in the report. The reporting standard MUST be specified using the ReportingStandard enumeration, see <a href="#dt-reporting-standard">§ 3.23 Data Type: ReportingStandard</a> for details. 
       <tr>
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-assurance"><code>assurance</code><a class="self-link" href="#element-attrdef-metadata-assurance"></a></dfn> 
        <td>String 
@@ -2491,7 +2497,7 @@ the reporting period, the industry, the assurance provider, etc.</p>
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-priorreport"><code>priorReport</code><a class="self-link" href="#element-attrdef-metadata-priorreport"></a></dfn> 
        <td>String 
        <td>M 
-       <td>The GRID of the report that this report is based on, if any. See <a href="#dt-grid">§ 3.20 Data Type: GRID</a> for details. 
+       <td>The GRID of the report that this report is based on, if any. See <a href="#dt-grid">§ 3.21 Data Type: GRID</a> for details. 
       <tr>
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-reporthash"><code>reportHash</code><a class="self-link" href="#element-attrdef-metadata-reporthash"></a></dfn> 
        <td>String 
@@ -2528,7 +2534,7 @@ the reporting period, the industry, the assurance provider, etc.</p>
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-relatedreports"><code>relatedReports</code><a class="self-link" href="#element-attrdef-metadata-relatedreports"></a></dfn> : <a data-link-type="dfn" href="#grid" id="ref-for-grid②">GRID</a> 
        <td>Array 
        <td>O 
-       <td>A collection of related reports, by <a data-link-type="dfn" href="#grid" id="ref-for-grid③">GRID</a>. For example, a reference to a financial disclosure, etc. See <a href="#dt-grid">§ 3.20 Data Type: GRID</a> for details. 
+       <td>A collection of related reports, by <a data-link-type="dfn" href="#grid" id="ref-for-grid③">GRID</a>. For example, a reference to a financial disclosure, etc. See <a href="#dt-grid">§ 3.21 Data Type: GRID</a> for details. 
     </table>
     <figcaption>Properties of a Metadata Object</figcaption>
    </figure>
@@ -2610,7 +2616,7 @@ the reporting period, the industry, the assurance provider, etc.</p>
        <td><dfn data-dfn-for="Activity" data-dfn-type="element-attr" data-export id="element-attrdef-activity-activityamount"><code>activityAmount</code><a class="self-link" href="#element-attrdef-activity-activityamount"></a></dfn> 
        <td>String 
        <td>M 
-       <td>The numerical amount in the <code class="idl"><a data-link-type="idl" href="#enumdef-unit" id="ref-for-enumdef-unit①">Unit</a></code> of the activity, formated as a string, see <a href="#dt-string">§ 3.19 Data Type: String</a> for details. 
+       <td>The numerical amount in the <code class="idl"><a data-link-type="idl" href="#enumdef-unit" id="ref-for-enumdef-unit①">Unit</a></code> of the activity, formated as a string, see <a href="#dt-string">§ 3.20 Data Type: String</a> for details. 
       <tr>
        <td><dfn data-dfn-for="Activity" data-dfn-type="element-attr" data-export id="element-attrdef-activity-activityperiod"><code>activityPeriod</code><a class="self-link" href="#element-attrdef-activity-activityperiod"></a></dfn> : <a data-link-type="dfn" href="#timeperiod" id="ref-for-timeperiod①">TimePeriod</a> 
        <td>Object 
@@ -2656,12 +2662,12 @@ the reporting period, the industry, the assurance provider, etc.</p>
        <td><dfn data-dfn-for="FactorAndSource" data-dfn-type="element-attr" data-export id="element-attrdef-factorandsource-factortype"><code>factorType</code><a class="self-link" href="#element-attrdef-factorandsource-factortype"></a></dfn> : <code class="idl"><a data-link-type="idl" href="#enumdef-factortype" id="ref-for-enumdef-factortype">FactorType</a></code> 
        <td>String 
        <td>M 
-       <td>The factor of the activity. The factor MUST be specified using the Factor enumeration, see <a href="#dt-factor-type">§ 3.27 Data Type: FactorType</a> for details. 
+       <td>The factor of the activity. The factor MUST be specified using the Factor enumeration, see <a href="#dt-factor-type">§ 3.28 Data Type: FactorType</a> for details. 
       <tr>
        <td><dfn data-dfn-for="FactorAndSource" data-dfn-type="element-attr" data-export id="element-attrdef-factorandsource-factorunit"><code>factorUnit</code><a class="self-link" href="#element-attrdef-factorandsource-factorunit"></a></dfn> : <code class="idl"><a data-link-type="idl" href="#enumdef-unit" id="ref-for-enumdef-unit②">Unit</a></code> 
        <td>String 
        <td>M 
-       <td>The the unit of measure for the factor type, see <a href="#dt-unit">§ 3.26 Data Type: Unit</a> for details. 
+       <td>The the unit of measure for the factor type, see <a href="#dt-unit">§ 3.27 Data Type: Unit</a> for details. 
       <tr>
        <td><dfn data-dfn-for="FactorAndSource" data-dfn-type="element-attr" data-export id="element-attrdef-factorandsource-factorsource"><code>factorSource</code><a class="self-link" href="#element-attrdef-factorandsource-factorsource"></a></dfn> 
        <td>String 
@@ -2723,22 +2729,22 @@ the reporting period, the industry, the assurance provider, etc.</p>
        <td><dfn data-dfn-for="Methodology" data-dfn-type="element-attr" data-export id="element-attrdef-methodology-methodologytype"><code>methodologyType</code><a class="self-link" href="#element-attrdef-methodology-methodologytype"></a></dfn> 
        <td>String 
        <td>M 
-       <td>The methodology used to prepare the report. The methodology MUST be specified using the Methodology enumeration, see <a href="#dt-methodology-type">§ 3.24 Data Type: MethodologyType</a> for details. 
+       <td>The methodology used to prepare the report. The methodology MUST be specified using the Methodology enumeration, see <a href="#dt-methodology-type">§ 3.25 Data Type: MethodologyType</a> for details. 
       <tr>
        <td><dfn data-dfn-for="Methodology" data-dfn-type="element-attr" data-export id="element-attrdef-methodology-percentageoftotalportfolioreported"><code>percentageOfTotalPortfolioReported</code><a class="self-link" href="#element-attrdef-methodology-percentageoftotalportfolioreported"></a></dfn> 
        <td>Number 
        <td>M 
-       <td>The percentage of the total portfolio scope 1, scope 2, and scope 3 emissions reported. The percentage MUST be represented as a string, see <a href="#dt-string">§ 3.19 Data Type: String</a> for details. 
+       <td>The percentage of the total portfolio scope 1, scope 2, and scope 3 emissions reported. The percentage MUST be represented as a string, see <a href="#dt-string">§ 3.20 Data Type: String</a> for details. 
       <tr>
        <td><dfn data-dfn-for="Methodology" data-dfn-type="element-attr" data-export id="element-attrdef-methodology-percentageofestimatedcalculations"><code>percentageOfEstimatedCalculations</code><a class="self-link" href="#element-attrdef-methodology-percentageofestimatedcalculations"></a></dfn> 
        <td>Number 
        <td>M 
-       <td>The percentage of reported scope1, scope2, &amp; scope3 emissions calculated based on actual data vs. estimated data. The percentage MUST be represented as a string, see <a href="#dt-string">§ 3.19 Data Type: String</a> for details. 
+       <td>The percentage of reported scope1, scope2, &amp; scope3 emissions calculated based on actual data vs. estimated data. The percentage MUST be represented as a string, see <a href="#dt-string">§ 3.20 Data Type: String</a> for details. 
       <tr>
        <td>boundaryApproach : <code class="idl"><a data-link-type="idl" href="#enumdef-boundaryapproach" id="ref-for-enumdef-boundaryapproach">BoundaryApproach</a></code> 
        <td>String 
        <td>M 
-       <td>The boundary approach used to determine the scope of the report. The boundary approach MUST be specified using the BoundaryApproach enumeration, see <a href="#dt-boundary-approach">§ 3.25 Data Type: BoundaryApproach</a> for details. 
+       <td>The boundary approach used to determine the scope of the report. The boundary approach MUST be specified using the BoundaryApproach enumeration, see <a href="#dt-boundary-approach">§ 3.26 Data Type: BoundaryApproach</a> for details. 
     </table>
     <figcaption>Properties of a Methodology</figcaption>
    </figure>
@@ -2963,25 +2969,31 @@ and only shared under a <a data-link-type="dfn" href="#dataspace" id="ref-for-da
        <th>Specification 
      <tbody>
       <tr>
-       <td>dataSchema : 
+       <td>pfId : <a data-link-type="dfn" href="#id" id="ref-for-id">Id</a> 
        <td>String 
        <td>M 
-       <td>Add more here 
+       <td>The Id of the Product Footprint, see <a href="#dt-id">§ 3.18 Data Type: Id</a> for details. 
       <tr>
-       <td>documentation: 
-       <td>String 
+       <td>pcfPropertyData: <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext②">PropertyContext</a> 
+       <td>Array 
        <td>M 
-       <td>Add more here 
-      <tr>
-       <td>data : 
-       <td>String 
-       <td>M 
-       <td>Add more here 
+       <td>A collection of Product Footprint Property Context metadata using <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext③">PropertyContext</a>. Can be added for specific properties in a Product Footprint to add additional metadata about the value in the footprint.
+         See <a href="#dt-property-context">§ 3.13 Data Type: PropertyContext</a> for details. 
     </table>
     <figcaption>Properties of data type ProductFootprintExtension</figcaption>
    </figure>
-    Issue: This is incomplete as a DRAFT 
-   <h3 class="heading settled" data-level="3.18" id="dt-decimal"><span class="secno">3.18. </span><span class="content">Data Type: <dfn data-dfn-type="dfn" data-noexport id="decimal">Decimal<a class="self-link" href="#decimal"></a></dfn></span><a class="self-link" href="#dt-decimal"></a></h3>
+   <h3 class="heading settled" data-level="3.18" id="dt-id"><span class="secno">3.18. </span><span class="content">Data Type: <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="id">Id</dfn></span><a class="self-link" href="#dt-id"></a></h3>
+   <p>A Id MUST either be a UUID v4 as specified in <a data-link-type="biblio" href="#biblio-rfc4122" title="A Universally Unique IDentifier (UUID) URN Namespace">[RFC4122]</a>.</p>
+   <p>or a unique key that can be represented as a string.</p>
+   <h4 class="heading settled" data-level="3.18.1" id="dt-id-json"><span class="secno">3.18.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-id-json"></a></h4>
+   <p>Each Id MUST be encoded as a JSON String, see <a href="#dt-string-json">§ 3.20.1 JSON Data Representation</a> for details.</p>
+   <p>Example JSON string value:</p>
+   <div class="example" id="example-3ff44a83">
+    <a class="self-link" href="#example-3ff44a83"></a> 
+<pre class="language-json highlight"><c- u>"f4b1225a-bd44-4c8e-861d-079e4e1dfd69"</c->
+</pre>
+   </div>
+   <h3 class="heading settled" data-level="3.19" id="dt-decimal"><span class="secno">3.19. </span><span class="content">Data Type: <dfn data-dfn-type="dfn" data-noexport id="decimal">Decimal<a class="self-link" href="#decimal"></a></dfn></span><a class="self-link" href="#dt-decimal"></a></h3>
    <p>A dotted-decimal number.</p>
    <p>Example values:</p>
    <div class="example" id="example-73d4ac86">
@@ -2995,25 +3007,25 @@ and only shared under a <a data-link-type="dfn" href="#dataspace" id="ref-for-da
       <p><code>-182.84</code></p>
     </ul>
    </div>
-   <h4 class="heading settled" data-level="3.18.1" id="dt-decimal-json"><span class="secno">3.18.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-decimal-json"></a></h4>
+   <h4 class="heading settled" data-level="3.19.1" id="dt-decimal-json"><span class="secno">3.19.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-decimal-json"></a></h4>
    <p>Each Decimal MUST be encoded as a JSON String.</p>
-   <h3 class="heading settled" data-level="3.19" id="dt-string"><span class="secno">3.19. </span><span class="content">Data Type: <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="string">String</dfn></span><a class="self-link" href="#dt-string"></a></h3>
+   <h3 class="heading settled" data-level="3.20" id="dt-string"><span class="secno">3.20. </span><span class="content">Data Type: <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="string">String</dfn></span><a class="self-link" href="#dt-string"></a></h3>
    <p>A regular UTF-8 String.</p>
-   <h4 class="heading settled" data-level="3.19.1" id="dt-string-json"><span class="secno">3.19.1. </span><span class="content">JSON Data Representation</span><a class="self-link" href="#dt-string-json"></a></h4>
+   <h4 class="heading settled" data-level="3.20.1" id="dt-string-json"><span class="secno">3.20.1. </span><span class="content">JSON Data Representation</span><a class="self-link" href="#dt-string-json"></a></h4>
    <p>Each <a data-link-type="dfn" href="#string" id="ref-for-string">String</a> MUST be encoded as a JSON String.</p>
-   <h3 class="heading settled" data-level="3.20" id="dt-grid"><span class="secno">3.20. </span><span class="content">Data Type: <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="grid">GRID</dfn></span><a class="self-link" href="#dt-grid"></a></h3>
+   <h3 class="heading settled" data-level="3.21" id="dt-grid"><span class="secno">3.21. </span><span class="content">Data Type: <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="grid">GRID</dfn></span><a class="self-link" href="#dt-grid"></a></h3>
    <p>A Unique 8 digit alphanumeric identifier. Omits [0/O | 1/I] to avoid ambiguity, case insensitive. Example: <code>R3AK.XF9B.24</code>,
  where part1 = R3AK and part2 = XF9B, separated by a dot. The postfix checksum is 24 separated by a dot.
  has a 2 digit numeric checksum, postfix, used to avoid typos in situations where the GRID is retyped.</p>
-   <h4 class="heading settled" data-level="3.20.1" id="dt-grid-json"><span class="secno">3.20.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-grid-json"></a></h4>
-   <p>Each GRID MUST be encoded as a JSON String, see <a href="#dt-string-json">§ 3.19.1 JSON Data Representation</a> for details.</p>
+   <h4 class="heading settled" data-level="3.21.1" id="dt-grid-json"><span class="secno">3.21.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-grid-json"></a></h4>
+   <p>Each GRID MUST be encoded as a JSON String, see <a href="#dt-string-json">§ 3.20.1 JSON Data Representation</a> for details.</p>
    <p>Example JSON string value:</p>
    <div class="example" id="example-30f9078a">
     <a class="self-link" href="#example-30f9078a"></a> 
 <pre class="language-json highlight"><c- u>"7PBR.R569.29"</c->
 </pre>
    </div>
-   <h3 class="heading settled" data-level="3.21" id="dt-report-format"><span class="secno">3.21. </span><span class="content">Data Type: <dfn class="dfn-paneled idl-code" data-dfn-type="enum" data-export id="enumdef-reportformat"><code>ReportFormat</code></dfn></span><a class="self-link" href="#dt-report-format"></a></h3>
+   <h3 class="heading settled" data-level="3.22" id="dt-report-format"><span class="secno">3.22. </span><span class="content">Data Type: <dfn class="dfn-paneled idl-code" data-dfn-type="enum" data-export id="enumdef-reportformat"><code>ReportFormat</code></dfn></span><a class="self-link" href="#dt-report-format"></a></h3>
    <p>The format of the report, this is a non-exhastive list and needs expanding. The value MUST be one of the following:</p>
    <dl>
     <dt data-md><dfn class="idl-code" data-dfn-for="ReportFormat" data-dfn-type="enum-value" data-export id="dom-reportformat-no_report_format"><code>NO_REPORT_FORMAT</code><a class="self-link" href="#dom-reportformat-no_report_format"></a></dfn>
@@ -3044,9 +3056,9 @@ and only shared under a <a data-link-type="dfn" href="#dataspace" id="ref-for-da
     <dd data-md>
      <p>for XBRL</p>
    </dl>
-   <h4 class="heading settled" data-level="3.21.1" id="dt-report-format-json"><span class="secno">3.21.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-report-format-json"></a></h4>
-   <p>Each ReportFormat MUST be encoded as a JSON String, see <a href="#dt-string">§ 3.19 Data Type: String</a> for details.</p>
-   <h3 class="heading settled" data-level="3.22" id="dt-reporting-standard"><span class="secno">3.22. </span><span class="content">Data Type: <dfn class="dfn-paneled idl-code" data-dfn-type="enum" data-export id="enumdef-reportingstandard"><code>ReportingStandard</code></dfn></span><a class="self-link" href="#dt-reporting-standard"></a></h3>
+   <h4 class="heading settled" data-level="3.22.1" id="dt-report-format-json"><span class="secno">3.22.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-report-format-json"></a></h4>
+   <p>Each ReportFormat MUST be encoded as a JSON String, see <a href="#dt-string">§ 3.20 Data Type: String</a> for details.</p>
+   <h3 class="heading settled" data-level="3.23" id="dt-reporting-standard"><span class="secno">3.23. </span><span class="content">Data Type: <dfn class="dfn-paneled idl-code" data-dfn-type="enum" data-export id="enumdef-reportingstandard"><code>ReportingStandard</code></dfn></span><a class="self-link" href="#dt-reporting-standard"></a></h3>
    <p>The reporting standard used for the report, this is a non-exhastive list and needs expanding. The value MUST be one of the following:</p>
    <dl>
     <dt data-md><dfn class="idl-code" data-dfn-for="ReportingStandard" data-dfn-type="enum-value" data-export id="dom-reportingstandard-no_reporting_standard"><code>NO_REPORTING_STANDARD</code><a class="self-link" href="#dom-reportingstandard-no_reporting_standard"></a></dfn>
@@ -3065,9 +3077,9 @@ and only shared under a <a data-link-type="dfn" href="#dataspace" id="ref-for-da
     <dd data-md>
      <p>for International Integrated Reporting Council</p>
    </dl>
-   <h4 class="heading settled" data-level="3.22.1" id="dt-reporting-standard-json"><span class="secno">3.22.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-reporting-standard-json"></a></h4>
-   <p>Each ReportingStandard MUST be encoded as a JSON String, see <a href="#dt-string">§ 3.19 Data Type: String</a> for details.</p>
-   <h3 class="heading settled" data-level="3.23" id="dt-report-type"><span class="secno">3.23. </span><span class="content">Data Type: <dfn class="dfn-paneled idl-code" data-dfn-type="enum" data-export id="enumdef-reporttype"><code>ReportType</code></dfn></span><a class="self-link" href="#dt-report-type"></a></h3>
+   <h4 class="heading settled" data-level="3.23.1" id="dt-reporting-standard-json"><span class="secno">3.23.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-reporting-standard-json"></a></h4>
+   <p>Each ReportingStandard MUST be encoded as a JSON String, see <a href="#dt-string">§ 3.20 Data Type: String</a> for details.</p>
+   <h3 class="heading settled" data-level="3.24" id="dt-report-type"><span class="secno">3.24. </span><span class="content">Data Type: <dfn class="dfn-paneled idl-code" data-dfn-type="enum" data-export id="enumdef-reporttype"><code>ReportType</code></dfn></span><a class="self-link" href="#dt-report-type"></a></h3>
    <p>The type of report, this is a non-exhastive list and needs expanding. The value MUST be one of the following:</p>
    <dl>
     <dt data-md><dfn class="idl-code" data-dfn-for="ReportType" data-dfn-type="enum-value" data-export id="dom-reporttype-no_report_type"><code>NO_REPORT_TYPE</code><a class="self-link" href="#dom-reporttype-no_report_type"></a></dfn>
@@ -3092,9 +3104,9 @@ and only shared under a <a data-link-type="dfn" href="#dataspace" id="ref-for-da
     <dd data-md>
      <p>for Sustainability Accounting Standards Board Report</p>
    </dl>
-   <h4 class="heading settled" data-level="3.23.1" id="dt-report-type-json"><span class="secno">3.23.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-report-type-json"></a></h4>
-   <p>Each <code class="idl"><a data-link-type="idl" href="#enumdef-reporttype" id="ref-for-enumdef-reporttype①">ReportType</a></code> MUST be encoded as a JSON String, see <a href="#dt-string">§ 3.19 Data Type: String</a> for details.</p>
-   <h3 class="heading settled" data-level="3.24" id="dt-methodology-type"><span class="secno">3.24. </span><span class="content">Data Type: <dfn class="dfn-paneled idl-code" data-dfn-type="enum" data-export id="enumdef-methodologytype"><code>MethodologyType</code></dfn></span><a class="self-link" href="#dt-methodology-type"></a></h3>
+   <h4 class="heading settled" data-level="3.24.1" id="dt-report-type-json"><span class="secno">3.24.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-report-type-json"></a></h4>
+   <p>Each <code class="idl"><a data-link-type="idl" href="#enumdef-reporttype" id="ref-for-enumdef-reporttype①">ReportType</a></code> MUST be encoded as a JSON String, see <a href="#dt-string">§ 3.20 Data Type: String</a> for details.</p>
+   <h3 class="heading settled" data-level="3.25" id="dt-methodology-type"><span class="secno">3.25. </span><span class="content">Data Type: <dfn class="dfn-paneled idl-code" data-dfn-type="enum" data-export id="enumdef-methodologytype"><code>MethodologyType</code></dfn></span><a class="self-link" href="#dt-methodology-type"></a></h3>
    <p>The methodology used for the report, this is a non-exhastive list and needs expanding. The value MUST be one of the following:</p>
    <dl>
     <dt data-md><dfn class="idl-code" data-dfn-for="MethodologyType" data-dfn-type="enum-value" data-export id="dom-methodologytype-unknown"><code>UNKNOWN</code><a class="self-link" href="#dom-methodologytype-unknown"></a></dfn>
@@ -3110,9 +3122,9 @@ and only shared under a <a data-link-type="dfn" href="#dataspace" id="ref-for-da
     <dd data-md>
      <p>for Other</p>
    </dl>
-   <h4 class="heading settled" data-level="3.24.1" id="dt-methodology-type-json"><span class="secno">3.24.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-methodology-type-json"></a></h4>
-   <p>Each <code class="idl"><a data-link-type="idl" href="#enumdef-methodologytype" id="ref-for-enumdef-methodologytype">MethodologyType</a></code> MUST be encoded as a JSON String, see <a href="#dt-string">§ 3.19 Data Type: String</a> for details.</p>
-   <h3 class="heading settled" data-level="3.25" id="dt-boundary-approach"><span class="secno">3.25. </span><span class="content">Data Type: <dfn class="dfn-paneled idl-code" data-dfn-type="enum" data-export id="enumdef-boundaryapproach"><code>BoundaryApproach</code></dfn></span><a class="self-link" href="#dt-boundary-approach"></a></h3>
+   <h4 class="heading settled" data-level="3.25.1" id="dt-methodology-type-json"><span class="secno">3.25.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-methodology-type-json"></a></h4>
+   <p>Each <code class="idl"><a data-link-type="idl" href="#enumdef-methodologytype" id="ref-for-enumdef-methodologytype">MethodologyType</a></code> MUST be encoded as a JSON String, see <a href="#dt-string">§ 3.20 Data Type: String</a> for details.</p>
+   <h3 class="heading settled" data-level="3.26" id="dt-boundary-approach"><span class="secno">3.26. </span><span class="content">Data Type: <dfn class="dfn-paneled idl-code" data-dfn-type="enum" data-export id="enumdef-boundaryapproach"><code>BoundaryApproach</code></dfn></span><a class="self-link" href="#dt-boundary-approach"></a></h3>
    <p>The boundary approach used for the report, this is a non-exhastive list and needs expanding. The value MUST be one of the following:</p>
    <dl>
     <dt data-md><dfn class="idl-code" data-dfn-for="BoundaryApproach" data-dfn-type="enum-value" data-export id="dom-boundaryapproach-operational_control"><code>OPERATIONAL_CONTROL</code><a class="self-link" href="#dom-boundaryapproach-operational_control"></a></dfn>
@@ -3125,9 +3137,9 @@ and only shared under a <a data-link-type="dfn" href="#dataspace" id="ref-for-da
     <dd data-md>
      <p>for Equity Share</p>
    </dl>
-   <h4 class="heading settled" data-level="3.25.1" id="dt-boundary-approach-json"><span class="secno">3.25.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-boundary-approach-json"></a></h4>
-   <p>Each <code class="idl"><a data-link-type="idl" href="#enumdef-boundaryapproach" id="ref-for-enumdef-boundaryapproach①">BoundaryApproach</a></code> MUST be encoded as a JSON String, see <a href="#dt-string">§ 3.19 Data Type: String</a> for details.</p>
-   <h3 class="heading settled" data-level="3.26" id="dt-unit"><span class="secno">3.26. </span><span class="content">Data Type: <dfn class="dfn-paneled idl-code" data-dfn-type="enum" data-export id="enumdef-unit"><code>Unit</code></dfn></span><a class="self-link" href="#dt-unit"></a></h3>
+   <h4 class="heading settled" data-level="3.26.1" id="dt-boundary-approach-json"><span class="secno">3.26.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-boundary-approach-json"></a></h4>
+   <p>Each <code class="idl"><a data-link-type="idl" href="#enumdef-boundaryapproach" id="ref-for-enumdef-boundaryapproach①">BoundaryApproach</a></code> MUST be encoded as a JSON String, see <a href="#dt-string">§ 3.20 Data Type: String</a> for details.</p>
+   <h3 class="heading settled" data-level="3.27" id="dt-unit"><span class="secno">3.27. </span><span class="content">Data Type: <dfn class="dfn-paneled idl-code" data-dfn-type="enum" data-export id="enumdef-unit"><code>Unit</code></dfn></span><a class="self-link" href="#dt-unit"></a></h3>
    <p>Unit is the enumeration of accepted declared units with values, not complete.</p>
    <dl>
     <dt data-md><dfn class="idl-code" data-dfn-for="Unit" data-dfn-type="enum-value" data-export id="dom-unit-liter"><code>liter</code><a class="self-link" href="#dom-unit-liter"></a></dfn>
@@ -3173,9 +3185,9 @@ and only shared under a <a data-link-type="dfn" href="#dataspace" id="ref-for-da
     <dd data-md>
      <p>for kilowatt hour</p>
    </dl>
-   <h4 class="heading settled" data-level="3.26.1" id="dt-unit-json"><span class="secno">3.26.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-unit-json"></a></h4>
-   <p>The value of each <code class="idl"><a data-link-type="idl" href="#enumdef-unit" id="ref-for-enumdef-unit③">Unit</a></code> MUST be encoded as a JSON String, see <a href="#dt-string">§ 3.19 Data Type: String</a> for details.</p>
-   <h3 class="heading settled" data-level="3.27" id="dt-factor-type"><span class="secno">3.27. </span><span class="content">Data Type: <dfn class="dfn-paneled idl-code" data-dfn-type="enum" data-export id="enumdef-factortype"><code>FactorType</code></dfn></span><a class="self-link" href="#dt-factor-type"></a></h3>
+   <h4 class="heading settled" data-level="3.27.1" id="dt-unit-json"><span class="secno">3.27.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-unit-json"></a></h4>
+   <p>The value of each <code class="idl"><a data-link-type="idl" href="#enumdef-unit" id="ref-for-enumdef-unit③">Unit</a></code> MUST be encoded as a JSON String, see <a href="#dt-string">§ 3.20 Data Type: String</a> for details.</p>
+   <h3 class="heading settled" data-level="3.28" id="dt-factor-type"><span class="secno">3.28. </span><span class="content">Data Type: <dfn class="dfn-paneled idl-code" data-dfn-type="enum" data-export id="enumdef-factortype"><code>FactorType</code></dfn></span><a class="self-link" href="#dt-factor-type"></a></h3>
    <p>FactorType is the enumeration of accepted declared factor types with values.</p>
    <dl>
     <dt data-md><dfn class="idl-code" data-dfn-for="FactorType" data-dfn-type="enum-value" data-export id="dom-factortype-unknown"><code>UNKNOWN</code><a class="self-link" href="#dom-factortype-unknown"></a></dfn>
@@ -3191,16 +3203,16 @@ and only shared under a <a data-link-type="dfn" href="#dataspace" id="ref-for-da
     <dd data-md>
      <p>for Measured</p>
    </dl>
-   <h4 class="heading settled" data-level="3.27.1" id="dt-factor-type-json"><span class="secno">3.27.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-factor-type-json"></a></h4>
-   <p>The value of each <code class="idl"><a data-link-type="idl" href="#enumdef-factortype" id="ref-for-enumdef-factortype①">FactorType</a></code> MUST be encoded as a JSON String, see <a href="#dt-string">§ 3.19 Data Type: String</a> for details.</p>
+   <h4 class="heading settled" data-level="3.28.1" id="dt-factor-type-json"><span class="secno">3.28.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-factor-type-json"></a></h4>
+   <p>The value of each <code class="idl"><a data-link-type="idl" href="#enumdef-factortype" id="ref-for-enumdef-factortype①">FactorType</a></code> MUST be encoded as a JSON String, see <a href="#dt-string">§ 3.20 Data Type: String</a> for details.</p>
    <h2 class="heading settled" data-level="4" id="samples"><span class="secno">4. </span><span class="content">Samples</span><a class="self-link" href="#samples"></a></h2>
    <h3 class="heading settled" data-level="4.1" id="sample-sustainability-report"><span class="secno">4.1. </span><span class="content">Sustainability Report</span><a class="self-link" href="#sample-sustainability-report"></a></h3>
-   <div class="example" id="example-f7447a95">
-    <a class="self-link" href="#example-f7447a95"></a> Sustainability Report: 
+   <div class="example" id="example-f32f8057">
+    <a class="self-link" href="#example-f32f8057"></a> Sustainability Report: 
 <pre class="include-code highlight"><c- p>{</c->
-  <c- f>"grid"</c-><c- p>:</c-> <c- u>"C8MA.E2WA.36"</c-><c- p>,</c->
+  <c- f>"grid"</c-><c- p>:</c-> <c- u>"JAAN.PMWZ.16"</c-><c- p>,</c->
   <c- f>"metadata"</c-><c- p>:</c-> <c- p>{</c->
-    <c- f>"grid"</c-><c- p>:</c-> <c- u>"C8MA.E2WA.36"</c-><c- p>,</c->
+    <c- f>"grid"</c-><c- p>:</c-> <c- u>"JAAN.PMWZ.16"</c-><c- p>,</c->
     <c- f>"organizationIdentifier"</c-><c- p>:</c-> <c- u>"LEI: 254900OPPU84GM83MG36"</c-><c- p>,</c->
     <c- f>"organizationName"</c-><c- p>:</c-> <c- u>"CarbonCall"</c-><c- p>,</c->
     <c- f>"domicile"</c-><c- p>:</c-> <c- u>"US"</c-><c- p>,</c->
@@ -3318,19 +3330,37 @@ and only shared under a <a data-link-type="dfn" href="#dataspace" id="ref-for-da
         <c- f>"data"</c-><c- p>:</c-> <c- u>"{'@context':'compliancemetrics.org','@type':'compliancemetrics.org/ComplianceMetric','name':'compliancemetrics.org/ComplianceMetric/1.0/1','jurisdiction':'eu','factorCompliance':0.5,'factorCompleteness':0.73,'factorCorrectness':0.9,'accessibility':100}"</c->
       <c- p>}</c->
     <c- p>],</c->
+    <c- f>"pfExtensions"</c-><c- p>:</c-> <c- p>[</c->
+      <c- p>{</c->
+        <c- f>"pfId"</c-><c- p>:</c-> <c- u>"bf69f1b4-5e46-48e1-b908-66b91c8364a6"</c-><c- p>,</c->
+        <c- f>"pcfPropertyData"</c-><c- p>:</c-> <c- p>[</c->
+          <c- p>{</c->
+            <c- f>"propertyName"</c-><c- p>:</c-> <c- u>"pcf/pCfExcludingBiogenic"</c-><c- p>,</c->
+            <c- f>"metatags"</c-><c- p>:</c-> <c- p>[</c->
+              <c- p>{</c->
+                <c- f>"key"</c-><c- p>:</c-> <c- u>"majorExcludingBiogenicSourcePCF_Id"</c-><c- p>,</c->
+                <c- f>"value"</c-><c- p>:</c-> <c- u>"e62c9705-c5cf-4f13-9227-ccfeefad410b"</c-><c- p>,</c->
+                <c- f>"relatedMetadata"</c-><c- p>:</c-> <c- p>[]</c->
+              <c- p>}</c->
+            <c- p>],</c->
+            <c- f>"relatedMetadata"</c-><c- p>:</c-> <c- p>[]</c->
+          <c- p>}</c->
+        <c- p>]</c->
+      <c- p>}</c->
+    <c- p>],</c->
     <c- f>"relatedReports"</c-><c- p>:</c-> <c- p>[</c->
       <c- u>"SDJQ.BPUN.15"</c-><c- p>,</c->
       <c- u>"ADCF.GPOM.16"</c->
     <c- p>]</c->
   <c- p>},</c->
-  <c- f>"report"</c-><c- p>:</c-> <c- u>"CgxDOE1BLkUyV0EuMzYSGUxFSTogMjU0OTAwT1BQVTg0R004M01HMzYaCkNhcmJvbkNhbGwg7AEqBewBLusBMgIAAjgCQgoyMDIxLTAxLTAxShgKCjIwMjAtMDEtMDESCjIwMjAtMTItMzFaK2h0dHBzOi8vY2FyYm9uY2FsbC5pby9yZXBvcnRGcm9tUGVyaW9kLmpzb25iBhIENjIwMWqsAXsnUGVyZjEnOnsnbmFtZSc6J1BlcmYxJywndHlwZSc6J3BlcmZvcm1hbmNlJywndmFsdWUnOjEyNzAwMCwndW5pdCc6J3RDTzJlJ30sJ1BlcmYyJzp7J25hbWUnOidQZXJmMicsJ3R5cGUnOidwZXJmb3JtYW5jZScsJ3ZhbHVlJzowLCdtaW4nOjAsJ21heCc6MTAwLCdzdGVwJzoxLCd1bml0JzonJSd9fSByFAoGUHVibGljGgpDYXJib25DYWxsegsIARIDMTAwGgI4MoABAYgBApIBFERFX0JhRklOOiAxMjM0NTY3ODkwogEnZGZ0YWFlMzI5N2k4OTc5OGFkc2RmODMyYWRmczkxMjIzMWF6c2RmqgH8AQoHSGVhdGluZxoGMTk4LjMxIhgKCjIwMjAtMDEtMDESCjIwMjAtMTItMzEqFEhlYXRpbmcgb2YgYnVpbGRpbmdzMhIKBzEyMy40NTYSBzAuMTIxMjM6bggCEA0aYGh0dHBzOi8vd3d3LmVwYS5nb3YvZW5lcmd5L2dyZWVuaG91c2UtZ2FzZXMtZXF1aXZhbGVuY2llcy1jYWxjdWxhdG9yLWNhbGN1bGF0aW9ucy1hbmQtcmVmZXJlbmNlcyIGCEYQFBgKQjUKM01ldGFkYXRhL0FjdGl2aXRpZXMvSGVhdGluZy9BY3Rpdml0eUZhY3RvckFuZFNvdXJjZbIBLQoUQXV0aG9yIENvbnRhY3QgRW1haWwSFXNvbWVvbmVAc29tZXdoZXJlLmNvbbIBJAoUQXV0aG9yIENvbnRhY3QgUGhvbmUSDDEyMy00NTYtNzg5MLoBKwoNU2VjdGlvbiAxLjIuMRIaChNDYXJib24gT2Zmc2V0IFJhdGlvEgMxLjK6ATYKDVNlY3Rpb24gMS4yLjISJQoYR0hHIEFkanVzdG1lbnQgRXhjZXB0aW9uEglHR1AtMV8yXzLCAYADCkBodHRwczovL2NhcmJvbmNhbGwuaW8vc2NoZW1hcy8yMDI0LzAxLzAxL0NhcmJvbkNhbGxNZXRhZGF0YS5qc29uEj1odHRwczovL2NhcmJvbmNhbGwuaW8vZG9jcy8yMDI0LzAxLzAxL0NhcmJvbkNhbGxNZXRhZGF0YS5odG1sGvwBeydAY29udGV4dCc6J2NvbXBsaWFuY2VtZXRyaWNzLm9yZycsJ0B0eXBlJzonY29tcGxpYW5jZW1ldHJpY3Mub3JnL0NvbXBsaWFuY2VNZXRyaWMnLCduYW1lJzonY29tcGxpYW5jZW1ldHJpY3Mub3JnL0NvbXBsaWFuY2VNZXRyaWMvMS4wLzEnLCdqdXJpc2RpY3Rpb24nOidldScsJ2ZhY3RvckNvbXBsaWFuY2UnOjAuNSwnZmFjdG9yQ29tcGxldGVuZXNzJzowLjczLCdmYWN0b3JDb3JyZWN0bmVzcyc6MC45LCdhY2Nlc3NpYmlsaXR5JzoxMDB9ygEMU0RKUS5CUFVOLjE1ygEMQURDRi5HUE9NLjE2"</c->
+  <c- f>"report"</c-><c- p>:</c-> <c- u>"CgxKQUFOLlBNV1ouMTYSGUxFSTogMjU0OTAwT1BQVTg0R004M01HMzYaCkNhcmJvbkNhbGwg7AEqBewBLusBMgIAAjgCQgoyMDIxLTAxLTAxShgKCjIwMjAtMDEtMDESCjIwMjAtMTItMzFaK2h0dHBzOi8vY2FyYm9uY2FsbC5pby9yZXBvcnRGcm9tUGVyaW9kLmpzb25iBhIENjIwMWqsAXsnUGVyZjEnOnsnbmFtZSc6J1BlcmYxJywndHlwZSc6J3BlcmZvcm1hbmNlJywndmFsdWUnOjEyNzAwMCwndW5pdCc6J3RDTzJlJ30sJ1BlcmYyJzp7J25hbWUnOidQZXJmMicsJ3R5cGUnOidwZXJmb3JtYW5jZScsJ3ZhbHVlJzowLCdtaW4nOjAsJ21heCc6MTAwLCdzdGVwJzoxLCd1bml0JzonJSd9fSByFAoGUHVibGljGgpDYXJib25DYWxsegsIARIDMTAwGgI4MoABAYgBApIBFERFX0JhRklOOiAxMjM0NTY3ODkwogEnZGZ0YWFlMzI5N2k4OTc5OGFkc2RmODMyYWRmczkxMjIzMWF6c2RmqgH8AQoHSGVhdGluZxoGMTk4LjMxIhgKCjIwMjAtMDEtMDESCjIwMjAtMTItMzEqFEhlYXRpbmcgb2YgYnVpbGRpbmdzMhIKBzEyMy40NTYSBzAuMTIxMjM6bggCEA0aYGh0dHBzOi8vd3d3LmVwYS5nb3YvZW5lcmd5L2dyZWVuaG91c2UtZ2FzZXMtZXF1aXZhbGVuY2llcy1jYWxjdWxhdG9yLWNhbGN1bGF0aW9ucy1hbmQtcmVmZXJlbmNlcyIGCEYQFBgKQjUKM01ldGFkYXRhL0FjdGl2aXRpZXMvSGVhdGluZy9BY3Rpdml0eUZhY3RvckFuZFNvdXJjZbIBLQoUQXV0aG9yIENvbnRhY3QgRW1haWwSFXNvbWVvbmVAc29tZXdoZXJlLmNvbbIBJAoUQXV0aG9yIENvbnRhY3QgUGhvbmUSDDEyMy00NTYtNzg5MLoBKwoNU2VjdGlvbiAxLjIuMRIaChNDYXJib24gT2Zmc2V0IFJhdGlvEgMxLjK6ATYKDVNlY3Rpb24gMS4yLjISJQoYR0hHIEFkanVzdG1lbnQgRXhjZXB0aW9uEglHR1AtMV8yXzLCAYADCkBodHRwczovL2NhcmJvbmNhbGwuaW8vc2NoZW1hcy8yMDI0LzAxLzAxL0NhcmJvbkNhbGxNZXRhZGF0YS5qc29uEj1odHRwczovL2NhcmJvbmNhbGwuaW8vZG9jcy8yMDI0LzAxLzAxL0NhcmJvbkNhbGxNZXRhZGF0YS5odG1sGvwBeydAY29udGV4dCc6J2NvbXBsaWFuY2VtZXRyaWNzLm9yZycsJ0B0eXBlJzonY29tcGxpYW5jZW1ldHJpY3Mub3JnL0NvbXBsaWFuY2VNZXRyaWMnLCduYW1lJzonY29tcGxpYW5jZW1ldHJpY3Mub3JnL0NvbXBsaWFuY2VNZXRyaWMvMS4wLzEnLCdqdXJpc2RpY3Rpb24nOidldScsJ2ZhY3RvckNvbXBsaWFuY2UnOjAuNSwnZmFjdG9yQ29tcGxldGVuZXNzJzowLjczLCdmYWN0b3JDb3JyZWN0bmVzcyc6MC45LCdhY2Nlc3NpYmlsaXR5JzoxMDB9ygGOAQokYmY2OWYxYjQtNWU0Ni00OGUxLWI5MDgtNjZiOTFjODM2NGE2EmYKGHBjZi9wQ2ZFeGNsdWRpbmdCaW9nZW5pYxJKCiJtYWpvckV4Y2x1ZGluZ0Jpb2dlbmljU291cmNlUENGX0lkEiRlNjJjOTcwNS1jNWNmLTRmMTMtOTIyNy1jY2ZlZWZhZDQxMGLSAQxTREpRLkJQVU4uMTXSAQxBRENGLkdQT00uMTY="</c->
 <c- p>}</c-></pre>
    </div>
    <h3 class="heading settled" data-level="4.2" id="sample-sustainability-report-metadata"><span class="secno">4.2. </span><span class="content">Sustainability Report Metadata</span><a class="self-link" href="#sample-sustainability-report-metadata"></a></h3>
-   <div class="example" id="example-9a777db1">
-    <a class="self-link" href="#example-9a777db1"></a> Sustainability Report Metadata: 
+   <div class="example" id="example-0f9acdd4">
+    <a class="self-link" href="#example-0f9acdd4"></a> Sustainability Report Metadata: 
 <pre class="include-code highlight"><c- p>{</c->
-  <c- f>"grid"</c-><c- p>:</c-> <c- u>"C8MA.E2WA.36"</c-><c- p>,</c->
+  <c- f>"grid"</c-><c- p>:</c-> <c- u>"JAAN.PMWZ.16"</c-><c- p>,</c->
   <c- f>"organizationIdentifier"</c-><c- p>:</c-> <c- u>"LEI: 254900OPPU84GM83MG36"</c-><c- p>,</c->
   <c- f>"organizationName"</c-><c- p>:</c-> <c- u>"CarbonCall"</c-><c- p>,</c->
   <c- f>"domicile"</c-><c- p>:</c-> <c- u>"US"</c-><c- p>,</c->
@@ -3448,6 +3478,24 @@ and only shared under a <a data-link-type="dfn" href="#dataspace" id="ref-for-da
       <c- f>"data"</c-><c- p>:</c-> <c- u>"{'@context':'compliancemetrics.org','@type':'compliancemetrics.org/ComplianceMetric','name':'compliancemetrics.org/ComplianceMetric/1.0/1','jurisdiction':'eu','factorCompliance':0.5,'factorCompleteness':0.73,'factorCorrectness':0.9,'accessibility':100}"</c->
     <c- p>}</c->
   <c- p>],</c->
+  <c- f>"pfExtensions"</c-><c- p>:</c-> <c- p>[</c->
+    <c- p>{</c->
+      <c- f>"pfId"</c-><c- p>:</c-> <c- u>"a8ecc17f-1f71-4fe9-8ae7-e5ee1d55731a"</c-><c- p>,</c->
+      <c- f>"pcfPropertyData"</c-><c- p>:</c-> <c- p>[</c->
+        <c- p>{</c->
+          <c- f>"propertyName"</c-><c- p>:</c-> <c- u>"pcf/pCfExcludingBiogenic"</c-><c- p>,</c->
+          <c- f>"metatags"</c-><c- p>:</c-> <c- p>[</c->
+            <c- p>{</c->
+              <c- f>"key"</c-><c- p>:</c-> <c- u>"majorExcludingBiogenicSourcePCF_Id"</c-><c- p>,</c->
+              <c- f>"value"</c-><c- p>:</c-> <c- u>"a3e7d705-a7d4-4b74-b968-c9de69c3f084"</c-><c- p>,</c->
+              <c- f>"relatedMetadata"</c-><c- p>:</c-> <c- p>[]</c->
+            <c- p>}</c->
+          <c- p>],</c->
+          <c- f>"relatedMetadata"</c-><c- p>:</c-> <c- p>[]</c->
+        <c- p>}</c->
+      <c- p>]</c->
+    <c- p>}</c->
+  <c- p>],</c->
   <c- f>"relatedReports"</c-><c- p>:</c-> <c- p>[</c->
     <c- u>"SDJQ.BPUN.15"</c-><c- p>,</c->
     <c- u>"ADCF.GPOM.16"</c->
@@ -3478,11 +3526,11 @@ SOFTWARE.</p>
    <h3 class="heading settled" id="changelog-1.0.20230627"><span class="content">Version 1.0.20230627 (June 27, 2023)</span><a class="self-link" href="#changelog-1.0.20230627"></a></h3>
    <ul>
     <li data-md>
-     <p>Adding <code>ReportType</code> enum, see <a href="#dt-report-type">§ 3.23 Data Type: ReportType</a> for details.</p>
+     <p>Adding <code>ReportType</code> enum, see <a href="#dt-report-type">§ 3.24 Data Type: ReportType</a> for details.</p>
     <li data-md>
      <p>Adding <code>reportContext</code> a collection of <a data-link-type="dfn" href="#metatag" id="ref-for-metatag⑤">Metatag</a> to <a data-link-type="dfn" href="#metadata" id="ref-for-metadata">Metadata</a>, see <a href="#dt-metadata-properties">§ 3.2.1 Properties</a> for details.</p>
     <li data-md>
-     <p>Adding <code>propertyContexts</code> a collection of <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext②">PropertyContext</a> to <a data-link-type="dfn" href="#metadata" id="ref-for-metadata①">Metadata</a>, see <a href="#dt-metadata-properties">§ 3.2.1 Properties</a> for details.</p>
+     <p>Adding <code>propertyContexts</code> a collection of <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext④">PropertyContext</a> to <a data-link-type="dfn" href="#metadata" id="ref-for-metadata①">Metadata</a>, see <a href="#dt-metadata-properties">§ 3.2.1 Properties</a> for details.</p>
     <li data-md>
      <p>Addition <code>relatedReports</code> to <a data-link-type="dfn" href="#metadata" id="ref-for-metadata②">Metadata</a>, see <a href="#dt-metadata-properties">§ 3.2.1 Properties</a> for details.</p>
    </ul>
@@ -3496,7 +3544,7 @@ SOFTWARE.</p>
     <li data-md>
      <p>Added data type <a data-link-type="dfn" href="#metalink" id="ref-for-metalink⑥">Metalink</a>, see <a href="#dt-metalink">§ 3.12 Data Type: Metalink</a> for details.</p>
     <li data-md>
-     <p>Added <code>Metalinks</code> to <a data-link-type="dfn" href="#activity" id="ref-for-activity②">Activity</a>, <a data-link-type="dfn" href="#metatag" id="ref-for-metatag⑥">MetaTag</a> and <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext③">PropertyContext</a>, see <a href="#dt-activity-properties">§ 3.5.1 Properties</a>, <a href="#dt-metatag-properties">§ 3.11.1 Properties</a> and <a href="#dt-property-context-properties">§ 3.13.1 Properties</a> for details.</p>
+     <p>Added <code>Metalinks</code> to <a data-link-type="dfn" href="#activity" id="ref-for-activity②">Activity</a>, <a data-link-type="dfn" href="#metatag" id="ref-for-metatag⑥">MetaTag</a> and <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext⑤">PropertyContext</a>, see <a href="#dt-activity-properties">§ 3.5.1 Properties</a>, <a href="#dt-metatag-properties">§ 3.11.1 Properties</a> and <a href="#dt-property-context-properties">§ 3.13.1 Properties</a> for details.</p>
     <li data-md>
      <p>Added data type <a data-link-type="dfn" href="#geographiclocation" id="ref-for-geographiclocation①">GeographicLocation</a>, see <a href="#dt-geographic-location">§ 3.9 Data Type: GeographicLocation</a> for details.</p>
     <li data-md>
@@ -3504,13 +3552,13 @@ SOFTWARE.</p>
     <li data-md>
      <p>Added <code>IntendedUse</code>, <code>RestrictedAccess</code> and <code>ReportOwner</code> to <a data-link-type="dfn" href="#governance" id="ref-for-governance①">Governance</a>, see <a href="#dt-governance-properties">§ 3.7.1 Properties</a> for details.</p>
     <li data-md>
-     <p>Added data type <code class="idl"><a data-link-type="idl" href="#enumdef-methodologytype" id="ref-for-enumdef-methodologytype①">MethodologyType</a></code>, see <a href="#dt-methodology-type">§ 3.24 Data Type: MethodologyType</a> for details.</p>
+     <p>Added data type <code class="idl"><a data-link-type="idl" href="#enumdef-methodologytype" id="ref-for-enumdef-methodologytype①">MethodologyType</a></code>, see <a href="#dt-methodology-type">§ 3.25 Data Type: MethodologyType</a> for details.</p>
     <li data-md>
-     <p>Added data type <code class="idl"><a data-link-type="idl" href="#enumdef-boundaryapproach" id="ref-for-enumdef-boundaryapproach②">BoundaryApproach</a></code>, see <a href="#dt-boundary-approach">§ 3.25 Data Type: BoundaryApproach</a> for details.</p>
+     <p>Added data type <code class="idl"><a data-link-type="idl" href="#enumdef-boundaryapproach" id="ref-for-enumdef-boundaryapproach②">BoundaryApproach</a></code>, see <a href="#dt-boundary-approach">§ 3.26 Data Type: BoundaryApproach</a> for details.</p>
     <li data-md>
-     <p>Added data type <code class="idl"><a data-link-type="idl" href="#enumdef-unit" id="ref-for-enumdef-unit④">Unit</a></code>, see <a href="#dt-unit">§ 3.26 Data Type: Unit</a> for details.</p>
+     <p>Added data type <code class="idl"><a data-link-type="idl" href="#enumdef-unit" id="ref-for-enumdef-unit④">Unit</a></code>, see <a href="#dt-unit">§ 3.27 Data Type: Unit</a> for details.</p>
     <li data-md>
-     <p>Added data type <code class="idl"><a data-link-type="idl" href="#enumdef-factortype" id="ref-for-enumdef-factortype②">FactorType</a></code>, see <a href="#dt-factor-type">§ 3.27 Data Type: FactorType</a> for details.</p>
+     <p>Added data type <code class="idl"><a data-link-type="idl" href="#enumdef-factortype" id="ref-for-enumdef-factortype②">FactorType</a></code>, see <a href="#dt-factor-type">§ 3.28 Data Type: FactorType</a> for details.</p>
     <li data-md>
      <p>Added data type <a data-link-type="dfn" href="#methodology" id="ref-for-methodology①">Methodology</a>, see <a href="#dt-methodology">§ 3.8 Data Type: Methodology</a> for details.</p>
     <li data-md>
@@ -3530,6 +3578,13 @@ SOFTWARE.</p>
      <p>Added <code>Dataspaces</code> to definitions.</p>
     <li data-md>
      <p>Placeholders for synchronization with the Pathfinder Framework and business case.</p>
+   </ul>
+   <h3 class="heading settled" id="changelog-1.0.230911"><span class="content">Version 1.0.230911 (September 11, 2023)</span><a class="self-link" href="#changelog-1.0.230911"></a></h3>
+   <ul>
+    <li data-md>
+     <p>Added <code>Id</code> to data type <a data-link-type="dfn" href="#productfootprintextension" id="ref-for-productfootprintextension②">ProductFootprintExtension</a>, see <a href="#dt-product-footprint-extension-properties">§ 3.17.1 Properties</a> for details.</p>
+    <li data-md>
+     <p>Added <code>pcfPropertyData</code> to data type <a data-link-type="dfn" href="#productfootprintextension" id="ref-for-productfootprintextension③">ProductFootprintExtension</a>, see <a href="#dt-product-footprint-extension-properties">§ 3.17.1 Properties</a> for details.</p>
    </ul>
   </main>
 <script>
@@ -3672,72 +3727,73 @@ SOFTWARE.</p>
    <li><a href="#element-attrdef-activity-activitylocation">activityLocation</a><span>, in § 3.5.1</span>
    <li><a href="#element-attrdef-activity-activityperiod">activityPeriod</a><span>, in § 3.5.1</span>
    <li><a href="#element-attrdef-activity-activitytype">activityType</a><span>, in § 3.5.1</span>
-   <li><a href="#dom-reporttype-annual_report">ANNUAL_REPORT</a><span>, in § 3.23</span>
+   <li><a href="#dom-reporttype-annual_report">ANNUAL_REPORT</a><span>, in § 3.24</span>
    <li><a href="#element-attrdef-metadata-assurance">assurance</a><span>, in § 3.2.1</span>
-   <li><a href="#enumdef-boundaryapproach">BoundaryApproach</a><span>, in § 3.25</span>
+   <li><a href="#enumdef-boundaryapproach">BoundaryApproach</a><span>, in § 3.26</span>
    <li><a href="#element-attrdef-industry-businessactivity">businessActivity</a><span>, in § 3.4.1</span>
    <li><a href="#carbon-call">Carbon Call</a><span>, in § 2</span>
    <li>
     CDP
     <ul>
-     <li><a href="#dom-reporttype-cdp">enum-value for ReportType</a><span>, in § 3.23</span>
-     <li><a href="#dom-reportingstandard-cdp">enum-value for ReportingStandard</a><span>, in § 3.22</span>
+     <li><a href="#dom-reporttype-cdp">enum-value for ReportType</a><span>, in § 3.24</span>
+     <li><a href="#dom-reportingstandard-cdp">enum-value for ReportingStandard</a><span>, in § 3.23</span>
     </ul>
    <li><a href="#context">Context</a><span>, in § 2</span>
-   <li><a href="#dom-reporttype-csrd_report">CSRD_REPORT</a><span>, in § 3.23</span>
-   <li><a href="#dom-reportformat-csv">CSV</a><span>, in § 3.21</span>
-   <li><a href="#dom-unit-cubic-meter">cubic meter</a><span>, in § 3.26</span>
+   <li><a href="#dom-reporttype-csrd_report">CSRD_REPORT</a><span>, in § 3.24</span>
+   <li><a href="#dom-reportformat-csv">CSV</a><span>, in § 3.22</span>
+   <li><a href="#dom-unit-cubic-meter">cubic meter</a><span>, in § 3.27</span>
    <li><a href="#dataspace">Dataspace</a><span>, in § 2</span>
-   <li><a href="#decimal">Decimal</a><span>, in § 3.18</span>
-   <li><a href="#dom-reportformat-docx">DOCX</a><span>, in § 3.21</span>
+   <li><a href="#decimal">Decimal</a><span>, in § 3.19</span>
+   <li><a href="#dom-reportformat-docx">DOCX</a><span>, in § 3.22</span>
    <li><a href="#element-attrdef-metadata-domicile">domicile</a><span>, in § 3.2.1</span>
    <li><a href="#element-attrdef-timeperiod-enddate">endDate</a><span>, in § 3.3.1</span>
-   <li><a href="#dom-boundaryapproach-equity_share">EQUITY_SHARE</a><span>, in § 3.25</span>
-   <li><a href="#dom-factortype-estimated">ESTIMATED</a><span>, in § 3.27</span>
+   <li><a href="#dom-boundaryapproach-equity_share">EQUITY_SHARE</a><span>, in § 3.26</span>
+   <li><a href="#dom-factortype-estimated">ESTIMATED</a><span>, in § 3.28</span>
    <li><a href="#extensiondocumentation">ExtensionDocumentation</a><span>, in § 3.16</span>
    <li><a href="#factorandsource">FactorAndSource</a><span>, in § 3.6</span>
-   <li><a href="#dom-factortype-factored">FACTORED</a><span>, in § 3.27</span>
+   <li><a href="#dom-factortype-factored">FACTORED</a><span>, in § 3.28</span>
    <li><a href="#element-attrdef-factorandsource-factorprecision">factorPrecision</a><span>, in § 3.6.1</span>
    <li><a href="#element-attrdef-factorandsource-factorsource">factorSource</a><span>, in § 3.6.1</span>
-   <li><a href="#enumdef-factortype">FactorType</a><span>, in § 3.27</span>
+   <li><a href="#enumdef-factortype">FactorType</a><span>, in § 3.28</span>
    <li><a href="#element-attrdef-factorandsource-factortype">factorType</a><span>, in § 3.6.1</span>
    <li><a href="#element-attrdef-factorandsource-factorunit">factorUnit</a><span>, in § 3.6.1</span>
-   <li><a href="#dom-boundaryapproach-financial_control">FINANCIAL_CONTROL</a><span>, in § 3.25</span>
-   <li><a href="#dom-reporttype-financial_report">FINANCIAL_REPORT</a><span>, in § 3.23</span>
+   <li><a href="#dom-boundaryapproach-financial_control">FINANCIAL_CONTROL</a><span>, in § 3.26</span>
+   <li><a href="#dom-reporttype-financial_report">FINANCIAL_REPORT</a><span>, in § 3.24</span>
    <li><a href="#geographiclocation">GeographicLocation</a><span>, in § 3.9</span>
    <li><a href="#element-attrdef-geographiclocation-geographiclocationfile">geographicLocationFile</a><span>, in § 3.9.1</span>
    <li><a href="#element-attrdef-geographiclocation-geojsonorkml">geoJsonOrKml</a><span>, in § 3.9.1</span>
-   <li><a href="#dom-methodologytype-ghg_protocol">GHG_PROTOCOL</a><span>, in § 3.24</span>
+   <li><a href="#dom-methodologytype-ghg_protocol">GHG_PROTOCOL</a><span>, in § 3.25</span>
    <li><a href="#global-report-identifier-grid">Global Report Identifier (GR.ID)</a><span>, in § 2</span>
    <li><a href="#governance">Governance</a><span>, in § 3.7</span>
    <li><a href="#element-attrdef-metadata-governance">governance</a><span>, in § 3.2.1</span>
-   <li><a href="#dom-reportingstandard-gri">GRI</a><span>, in § 3.22</span>
+   <li><a href="#dom-reportingstandard-gri">GRI</a><span>, in § 3.23</span>
    <li>
     GRID
     <ul>
-     <li><a href="#grid">definition of</a><span>, in § 3.20</span>
+     <li><a href="#grid">definition of</a><span>, in § 3.21</span>
      <li><a href="#element-attrdef-metadata-grid">element-attr for Metadata</a><span>, in § 3.2.1</span>
      <li><a href="#element-attrdef-sustainabilityreport-grid">element-attr for SustainabilityReport</a><span>, in § 3.1.1</span>
     </ul>
-   <li><a href="#dom-reportformat-html">HTML</a><span>, in § 3.21</span>
+   <li><a href="#dom-reportformat-html">HTML</a><span>, in § 3.22</span>
+   <li><a href="#id">Id</a><span>, in § 3.18</span>
    <li><a href="#industry">Industry</a><span>, in § 3.4</span>
    <li><a href="#element-attrdef-metadata-industry">industry</a><span>, in § 3.2.1</span>
    <li><a href="#element-attrdef-governance-intendeduse">intendedUse</a><span>, in § 3.7.1</span>
-   <li><a href="#dom-reportingstandard-ir">IR</a><span>, in § 3.22</span>
-   <li><a href="#dom-methodologytype-iso_14067">ISO_14067</a><span>, in § 3.24</span>
-   <li><a href="#dom-reportformat-json">JSON</a><span>, in § 3.21</span>
+   <li><a href="#dom-reportingstandard-ir">IR</a><span>, in § 3.23</span>
+   <li><a href="#dom-methodologytype-iso_14067">ISO_14067</a><span>, in § 3.25</span>
+   <li><a href="#dom-reportformat-json">JSON</a><span>, in § 3.22</span>
    <li><a href="#element-attrdef-metatag-key">key</a><span>, in § 3.11.1</span>
-   <li><a href="#dom-unit-kilogram">kilogram</a><span>, in § 3.26</span>
-   <li><a href="#dom-unit-kilowatt">kilowatt</a><span>, in § 3.26</span>
-   <li><a href="#dom-unit-kwh">KwH</a><span>, in § 3.26</span>
+   <li><a href="#dom-unit-kilogram">kilogram</a><span>, in § 3.27</span>
+   <li><a href="#dom-unit-kilowatt">kilowatt</a><span>, in § 3.27</span>
+   <li><a href="#dom-unit-kwh">KwH</a><span>, in § 3.27</span>
    <li><a href="#element-attrdef-metadata-languages">languages</a><span>, in § 3.2.1</span>
    <li><a href="#element-attrdef-geographiclocation-latitude">latitude</a><span>, in § 3.9.1</span>
-   <li><a href="#dom-unit-liter">liter</a><span>, in § 3.26</span>
+   <li><a href="#dom-unit-liter">liter</a><span>, in § 3.27</span>
    <li><a href="#element-attrdef-metadata-location">location</a><span>, in § 3.2.1</span>
    <li><a href="#element-attrdef-geographiclocation-longitude">longitude</a><span>, in § 3.9.1</span>
-   <li><a href="#dom-factortype-measured">MEASURED</a><span>, in § 3.27</span>
-   <li><a href="#dom-unit-megajoule">megajoule</a><span>, in § 3.26</span>
-   <li><a href="#dom-unit-megawatt">megawatt</a><span>, in § 3.26</span>
+   <li><a href="#dom-factortype-measured">MEASURED</a><span>, in § 3.28</span>
+   <li><a href="#dom-unit-megajoule">megajoule</a><span>, in § 3.27</span>
+   <li><a href="#dom-unit-megawatt">megawatt</a><span>, in § 3.27</span>
    <li><a href="#metadata">Metadata</a><span>, in § 2</span>
    <li><a href="#element-attrdef-sustainabilityreport-metadata">metadata</a><span>, in § 3.1.1</span>
    <li><a href="#metadataextension">MetadataExtension</a><span>, in § 3.14</span>
@@ -3747,18 +3803,18 @@ SOFTWARE.</p>
    <li><a href="#metatag">Metatag</a><span>, in § 3.11</span>
    <li><a href="#methodology">Methodology</a><span>, in § 3.8</span>
    <li><a href="#element-attrdef-metadata-methodology">methodology</a><span>, in § 3.2.1</span>
-   <li><a href="#enumdef-methodologytype">MethodologyType</a><span>, in § 3.24</span>
+   <li><a href="#enumdef-methodologytype">MethodologyType</a><span>, in § 3.25</span>
    <li><a href="#element-attrdef-methodology-methodologytype">methodologyType</a><span>, in § 3.8.1</span>
-   <li><a href="#dom-unit-mwh">MwH</a><span>, in § 3.26</span>
-   <li><a href="#dom-reportformat-no_report_format">NO_REPORT_FORMAT</a><span>, in § 3.21</span>
-   <li><a href="#dom-reportingstandard-no_reporting_standard">NO_REPORTING_STANDARD</a><span>, in § 3.22</span>
-   <li><a href="#dom-reporttype-no_report_type">NO_REPORT_TYPE</a><span>, in § 3.23</span>
+   <li><a href="#dom-unit-mwh">MwH</a><span>, in § 3.27</span>
+   <li><a href="#dom-reportformat-no_report_format">NO_REPORT_FORMAT</a><span>, in § 3.22</span>
+   <li><a href="#dom-reportingstandard-no_reporting_standard">NO_REPORTING_STANDARD</a><span>, in § 3.23</span>
+   <li><a href="#dom-reporttype-no_report_type">NO_REPORT_TYPE</a><span>, in § 3.24</span>
    <li><a href="#element-attrdef-metadata-operatingcountries">operatingCountries</a><span>, in § 3.2.1</span>
-   <li><a href="#dom-boundaryapproach-operational_control">OPERATIONAL_CONTROL</a><span>, in § 3.25</span>
+   <li><a href="#dom-boundaryapproach-operational_control">OPERATIONAL_CONTROL</a><span>, in § 3.26</span>
    <li><a href="#element-attrdef-metadata-organizationidentifier">organizationIdentifier</a><span>, in § 3.2.1</span>
    <li><a href="#element-attrdef-metadata-organizationname">organizationName</a><span>, in § 3.2.1</span>
-   <li><a href="#dom-methodologytype-other">OTHER</a><span>, in § 3.24</span>
-   <li><a href="#dom-reportformat-pdf">PDF</a><span>, in § 3.21</span>
+   <li><a href="#dom-methodologytype-other">OTHER</a><span>, in § 3.25</span>
+   <li><a href="#dom-reportformat-pdf">PDF</a><span>, in § 3.22</span>
    <li><a href="#element-attrdef-methodology-percentageofestimatedcalculations">percentageOfEstimatedCalculations</a><span>, in § 3.8.1</span>
    <li><a href="#element-attrdef-methodology-percentageoftotalportfolioreported">percentageOfTotalPortfolioReported</a><span>, in § 3.8.1</span>
    <li><a href="#element-attrdef-metadata-performance">performance</a><span>, in § 3.2.1</span>
@@ -3771,7 +3827,7 @@ SOFTWARE.</p>
    <li><a href="#property-context">Property Context</a><span>, in § 2</span>
    <li><a href="#propertycontext">PropertyContext</a><span>, in § 3.13</span>
    <li><a href="#element-attrdef-metadata-propertycontext">propertyContext</a><span>, in § 3.2.1</span>
-   <li><a href="#dom-reporttype-proxy_statement">PROXY_STATEMENT</a><span>, in § 3.23</span>
+   <li><a href="#dom-reporttype-proxy_statement">PROXY_STATEMENT</a><span>, in § 3.24</span>
    <li>
     relatedMetadata
     <ul>
@@ -3785,50 +3841,52 @@ SOFTWARE.</p>
    <li><a href="#element-attrdef-sustainabilityreport-report">report</a><span>, in § 3.1.1</span>
    <li><a href="#report-context">Report Context</a><span>, in § 2</span>
    <li><a href="#element-attrdef-metadata-reportcontext">reportContext</a><span>, in § 3.2.1</span>
-   <li><a href="#enumdef-reportformat">ReportFormat</a><span>, in § 3.21</span>
+   <li><a href="#enumdef-reportformat">ReportFormat</a><span>, in § 3.22</span>
    <li><a href="#element-attrdef-metadata-reporthash">reportHash</a><span>, in § 3.2.1</span>
    <li><a href="#element-attrdef-metadata-reportingperiod">reportingPeriod</a><span>, in § 3.2.1</span>
-   <li><a href="#enumdef-reportingstandard">ReportingStandard</a><span>, in § 3.22</span>
+   <li><a href="#enumdef-reportingstandard">ReportingStandard</a><span>, in § 3.23</span>
    <li><a href="#element-attrdef-metadata-reportissuedate">reportIssueDate</a><span>, in § 3.2.1</span>
    <li><a href="#report-metadata">Report Metadata</a><span>, in § 2</span>
    <li><a href="#element-attrdef-governance-reportowner">reportOwner</a><span>, in § 3.7.1</span>
    <li><a href="#element-attrdef-metadata-reportreplaces">reportReplaces</a><span>, in § 3.2.1</span>
-   <li><a href="#enumdef-reporttype">ReportType</a><span>, in § 3.23</span>
+   <li><a href="#enumdef-reporttype">ReportType</a><span>, in § 3.24</span>
    <li><a href="#element-attrdef-governance-restrictedaccess">restrictedAccess</a><span>, in § 3.7.1</span>
    <li>
     SASB
     <ul>
-     <li><a href="#dom-reporttype-sasb">enum-value for ReportType</a><span>, in § 3.23</span>
-     <li><a href="#dom-reportingstandard-sasb">enum-value for ReportingStandard</a><span>, in § 3.22</span>
+     <li><a href="#dom-reporttype-sasb">enum-value for ReportType</a><span>, in § 3.24</span>
+     <li><a href="#dom-reportingstandard-sasb">enum-value for ReportingStandard</a><span>, in § 3.23</span>
     </ul>
    <li><a href="#element-attrdef-industry-sector">sector</a><span>, in § 3.4.1</span>
-   <li><a href="#dom-unit-square-meter">square meter</a><span>, in § 3.26</span>
+   <li><a href="#dom-unit-square-meter">square meter</a><span>, in § 3.27</span>
    <li><a href="#element-attrdef-timeperiod-startdate">startDate</a><span>, in § 3.3.1</span>
-   <li><a href="#string">String</a><span>, in § 3.19</span>
+   <li><a href="#string">String</a><span>, in § 3.20</span>
    <li><a href="#timeperiod">TimePeriod</a><span>, in § 3.3</span>
-   <li><a href="#dom-unit-ton-kilometer">ton kilometer</a><span>, in § 3.26</span>
-   <li><a href="#dom-unit-tonne_ch4">TONNE_CH4</a><span>, in § 3.26</span>
-   <li><a href="#dom-unit-tonne_co2">TONNE_CO2</a><span>, in § 3.26</span>
-   <li><a href="#dom-unit-tonne_co2e">TONNE_CO2E</a><span>, in § 3.26</span>
-   <li><a href="#dom-unit-tonne_n2o">TONNE_N2O</a><span>, in § 3.26</span>
-   <li><a href="#enumdef-unit">Unit</a><span>, in § 3.26</span>
+   <li><a href="#dom-unit-ton-kilometer">ton kilometer</a><span>, in § 3.27</span>
+   <li><a href="#dom-unit-tonne_ch4">TONNE_CH4</a><span>, in § 3.27</span>
+   <li><a href="#dom-unit-tonne_co2">TONNE_CO2</a><span>, in § 3.27</span>
+   <li><a href="#dom-unit-tonne_co2e">TONNE_CO2E</a><span>, in § 3.27</span>
+   <li><a href="#dom-unit-tonne_n2o">TONNE_N2O</a><span>, in § 3.27</span>
+   <li><a href="#enumdef-unit">Unit</a><span>, in § 3.27</span>
    <li><a href="#element-attrdef-activity-unitofmeasure">unitOfMeasure</a><span>, in § 3.5.1</span>
    <li>
     UNKNOWN
     <ul>
-     <li><a href="#dom-factortype-unknown">enum-value for FactorType</a><span>, in § 3.27</span>
-     <li><a href="#dom-methodologytype-unknown">enum-value for MethodologyType</a><span>, in § 3.24</span>
+     <li><a href="#dom-factortype-unknown">enum-value for FactorType</a><span>, in § 3.28</span>
+     <li><a href="#dom-methodologytype-unknown">enum-value for MethodologyType</a><span>, in § 3.25</span>
     </ul>
    <li><a href="#element-attrdef-metatag-value">value</a><span>, in § 3.11.1</span>
-   <li><a href="#dom-reportformat-xbrl">XBRL</a><span>, in § 3.21</span>
-   <li><a href="#dom-reportformat-xlsx">XLSX</a><span>, in § 3.21</span>
-   <li><a href="#dom-reportformat-xml">XML</a><span>, in § 3.21</span>
+   <li><a href="#dom-reportformat-xbrl">XBRL</a><span>, in § 3.22</span>
+   <li><a href="#dom-reportformat-xlsx">XLSX</a><span>, in § 3.22</span>
+   <li><a href="#dom-reportformat-xml">XML</a><span>, in § 3.22</span>
   </ul>
   <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
   <h3 class="no-num no-ref heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
   <dl>
    <dt id="biblio-rfc3986">[RFC3986]
    <dd>T. Berners-Lee; R. Fielding; L. Masinter. <a href="https://www.rfc-editor.org/rfc/rfc3986"><cite>Uniform Resource Identifier (URI): Generic Syntax</cite></a>. January 2005. Internet Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc3986">https://www.rfc-editor.org/rfc/rfc3986</a>
+   <dt id="biblio-rfc4122">[RFC4122]
+   <dd>P. Leach; M. Mealling; R. Salz. <a href="https://www.rfc-editor.org/rfc/rfc4122"><cite>A Universally Unique IDentifier (UUID) URN Namespace</cite></a>. July 2005. Proposed Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc4122">https://www.rfc-editor.org/rfc/rfc4122</a>
    <dt id="biblio-semver">[SEMVER]
    <dd>Tom Preston-Werner. <a href="https://semver.org/spec/v2.0.0.html"><cite>Semantic Versioning</cite></a>. 1 January 2013. Informational. URL: <a href="https://semver.org/spec/v2.0.0.html">https://semver.org/spec/v2.0.0.html</a>
   </dl>
@@ -4003,18 +4061,19 @@ window.dfnpanelData['methodology'] = {"dfnID": "methodology", "url": "#methodolo
 window.dfnpanelData['geographiclocation'] = {"dfnID": "geographiclocation", "url": "#geographiclocation", "dfnText": "GeographicLocation", "refSections": [{"refs": [{"id": "ref-for-geographiclocation"}], "title": "3.5.1. Properties"}, {"refs": [{"id": "ref-for-geographiclocation\u2460"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
 window.dfnpanelData['metatag'] = {"dfnID": "metatag", "url": "#metatag", "dfnText": "Metatag", "refSections": [{"refs": [{"id": "ref-for-metatag"}], "title": "2. Terminology"}, {"refs": [{"id": "ref-for-metatag\u2460"}, {"id": "ref-for-metatag\u2461"}], "title": "3.2.1. Properties"}, {"refs": [{"id": "ref-for-metatag\u2462"}, {"id": "ref-for-metatag\u2463"}], "title": "3.13.1. Properties"}, {"refs": [{"id": "ref-for-metatag\u2464"}], "title": "Version 1.0.20230627 (June 27, 2023)"}, {"refs": [{"id": "ref-for-metatag\u2465"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
 window.dfnpanelData['metalink'] = {"dfnID": "metalink", "url": "#metalink", "dfnText": "Metalink", "refSections": [{"refs": [{"id": "ref-for-metalink"}, {"id": "ref-for-metalink\u2460"}], "title": "3.5.1. Properties"}, {"refs": [{"id": "ref-for-metalink\u2461"}, {"id": "ref-for-metalink\u2462"}], "title": "3.11.1. Properties"}, {"refs": [{"id": "ref-for-metalink\u2463"}, {"id": "ref-for-metalink\u2464"}], "title": "3.13.1. Properties"}, {"refs": [{"id": "ref-for-metalink\u2465"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
-window.dfnpanelData['propertycontext'] = {"dfnID": "propertycontext", "url": "#propertycontext", "dfnText": "PropertyContext", "refSections": [{"refs": [{"id": "ref-for-propertycontext"}, {"id": "ref-for-propertycontext\u2460"}], "title": "3.2.1. Properties"}, {"refs": [{"id": "ref-for-propertycontext\u2461"}], "title": "Version 1.0.20230627 (June 27, 2023)"}, {"refs": [{"id": "ref-for-propertycontext\u2462"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
+window.dfnpanelData['propertycontext'] = {"dfnID": "propertycontext", "url": "#propertycontext", "dfnText": "PropertyContext", "refSections": [{"refs": [{"id": "ref-for-propertycontext"}, {"id": "ref-for-propertycontext\u2460"}], "title": "3.2.1. Properties"}, {"refs": [{"id": "ref-for-propertycontext\u2461"}, {"id": "ref-for-propertycontext\u2462"}], "title": "3.17.1. Properties"}, {"refs": [{"id": "ref-for-propertycontext\u2463"}], "title": "Version 1.0.20230627 (June 27, 2023)"}, {"refs": [{"id": "ref-for-propertycontext\u2464"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
 window.dfnpanelData['metadataextension'] = {"dfnID": "metadataextension", "url": "#metadataextension", "dfnText": "MetadataExtension", "refSections": [{"refs": [{"id": "ref-for-metadataextension"}, {"id": "ref-for-metadataextension\u2460"}], "title": "3.2.1. Properties"}], "external": false};
-window.dfnpanelData['productfootprintextension'] = {"dfnID": "productfootprintextension", "url": "#productfootprintextension", "dfnText": "ProductFootprintExtension", "refSections": [{"refs": [{"id": "ref-for-productfootprintextension"}, {"id": "ref-for-productfootprintextension\u2460"}], "title": "3.2.1. Properties"}], "external": false};
-window.dfnpanelData['string'] = {"dfnID": "string", "url": "#string", "dfnText": "String", "refSections": [{"refs": [{"id": "ref-for-string"}], "title": "3.19.1. JSON Data Representation"}], "external": false};
+window.dfnpanelData['productfootprintextension'] = {"dfnID": "productfootprintextension", "url": "#productfootprintextension", "dfnText": "ProductFootprintExtension", "refSections": [{"refs": [{"id": "ref-for-productfootprintextension"}, {"id": "ref-for-productfootprintextension\u2460"}], "title": "3.2.1. Properties"}, {"refs": [{"id": "ref-for-productfootprintextension\u2461"}, {"id": "ref-for-productfootprintextension\u2462"}], "title": "Version 1.0.230911 (September 11, 2023)"}], "external": false};
+window.dfnpanelData['id'] = {"dfnID": "id", "url": "#id", "dfnText": "Id", "refSections": [{"refs": [{"id": "ref-for-id"}], "title": "3.17.1. Properties"}], "external": false};
+window.dfnpanelData['string'] = {"dfnID": "string", "url": "#string", "dfnText": "String", "refSections": [{"refs": [{"id": "ref-for-string"}], "title": "3.20.1. JSON Data Representation"}], "external": false};
 window.dfnpanelData['grid'] = {"dfnID": "grid", "url": "#grid", "dfnText": "GRID", "refSections": [{"refs": [{"id": "ref-for-grid"}], "title": "3.1.1. Properties"}, {"refs": [{"id": "ref-for-grid\u2460"}, {"id": "ref-for-grid\u2461"}, {"id": "ref-for-grid\u2462"}], "title": "3.2.1. Properties"}], "external": false};
 window.dfnpanelData['enumdef-reportformat'] = {"dfnID": "enumdef-reportformat", "url": "#enumdef-reportformat", "dfnText": "ReportFormat", "refSections": [{"refs": [{"id": "ref-for-enumdef-reportformat"}], "title": "3.2.1. Properties"}], "external": false};
 window.dfnpanelData['enumdef-reportingstandard'] = {"dfnID": "enumdef-reportingstandard", "url": "#enumdef-reportingstandard", "dfnText": "ReportingStandard", "refSections": [{"refs": [{"id": "ref-for-enumdef-reportingstandard"}], "title": "3.2.1. Properties"}], "external": false};
-window.dfnpanelData['enumdef-reporttype'] = {"dfnID": "enumdef-reporttype", "url": "#enumdef-reporttype", "dfnText": "ReportType", "refSections": [{"refs": [{"id": "ref-for-enumdef-reporttype"}], "title": "3.2.1. Properties"}, {"refs": [{"id": "ref-for-enumdef-reporttype\u2460"}], "title": "3.23.1. JSON Representation"}], "external": false};
-window.dfnpanelData['enumdef-methodologytype'] = {"dfnID": "enumdef-methodologytype", "url": "#enumdef-methodologytype", "dfnText": "MethodologyType", "refSections": [{"refs": [{"id": "ref-for-enumdef-methodologytype"}], "title": "3.24.1. JSON Representation"}, {"refs": [{"id": "ref-for-enumdef-methodologytype\u2460"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
-window.dfnpanelData['enumdef-boundaryapproach'] = {"dfnID": "enumdef-boundaryapproach", "url": "#enumdef-boundaryapproach", "dfnText": "BoundaryApproach", "refSections": [{"refs": [{"id": "ref-for-enumdef-boundaryapproach"}], "title": "3.8.1. Properties"}, {"refs": [{"id": "ref-for-enumdef-boundaryapproach\u2460"}], "title": "3.25.1. JSON Representation"}, {"refs": [{"id": "ref-for-enumdef-boundaryapproach\u2461"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
-window.dfnpanelData['enumdef-unit'] = {"dfnID": "enumdef-unit", "url": "#enumdef-unit", "dfnText": "Unit", "refSections": [{"refs": [{"id": "ref-for-enumdef-unit"}, {"id": "ref-for-enumdef-unit\u2460"}], "title": "3.5.1. Properties"}, {"refs": [{"id": "ref-for-enumdef-unit\u2461"}], "title": "3.6.1. Properties"}, {"refs": [{"id": "ref-for-enumdef-unit\u2462"}], "title": "3.26.1. JSON Representation"}, {"refs": [{"id": "ref-for-enumdef-unit\u2463"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
-window.dfnpanelData['enumdef-factortype'] = {"dfnID": "enumdef-factortype", "url": "#enumdef-factortype", "dfnText": "FactorType", "refSections": [{"refs": [{"id": "ref-for-enumdef-factortype"}], "title": "3.6.1. Properties"}, {"refs": [{"id": "ref-for-enumdef-factortype\u2460"}], "title": "3.27.1. JSON Representation"}, {"refs": [{"id": "ref-for-enumdef-factortype\u2461"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
+window.dfnpanelData['enumdef-reporttype'] = {"dfnID": "enumdef-reporttype", "url": "#enumdef-reporttype", "dfnText": "ReportType", "refSections": [{"refs": [{"id": "ref-for-enumdef-reporttype"}], "title": "3.2.1. Properties"}, {"refs": [{"id": "ref-for-enumdef-reporttype\u2460"}], "title": "3.24.1. JSON Representation"}], "external": false};
+window.dfnpanelData['enumdef-methodologytype'] = {"dfnID": "enumdef-methodologytype", "url": "#enumdef-methodologytype", "dfnText": "MethodologyType", "refSections": [{"refs": [{"id": "ref-for-enumdef-methodologytype"}], "title": "3.25.1. JSON Representation"}, {"refs": [{"id": "ref-for-enumdef-methodologytype\u2460"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
+window.dfnpanelData['enumdef-boundaryapproach'] = {"dfnID": "enumdef-boundaryapproach", "url": "#enumdef-boundaryapproach", "dfnText": "BoundaryApproach", "refSections": [{"refs": [{"id": "ref-for-enumdef-boundaryapproach"}], "title": "3.8.1. Properties"}, {"refs": [{"id": "ref-for-enumdef-boundaryapproach\u2460"}], "title": "3.26.1. JSON Representation"}, {"refs": [{"id": "ref-for-enumdef-boundaryapproach\u2461"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
+window.dfnpanelData['enumdef-unit'] = {"dfnID": "enumdef-unit", "url": "#enumdef-unit", "dfnText": "Unit", "refSections": [{"refs": [{"id": "ref-for-enumdef-unit"}, {"id": "ref-for-enumdef-unit\u2460"}], "title": "3.5.1. Properties"}, {"refs": [{"id": "ref-for-enumdef-unit\u2461"}], "title": "3.6.1. Properties"}, {"refs": [{"id": "ref-for-enumdef-unit\u2462"}], "title": "3.27.1. JSON Representation"}, {"refs": [{"id": "ref-for-enumdef-unit\u2463"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
+window.dfnpanelData['enumdef-factortype'] = {"dfnID": "enumdef-factortype", "url": "#enumdef-factortype", "dfnText": "FactorType", "refSections": [{"refs": [{"id": "ref-for-enumdef-factortype"}], "title": "3.6.1. Properties"}, {"refs": [{"id": "ref-for-enumdef-factortype\u2460"}], "title": "3.28.1. JSON Representation"}, {"refs": [{"id": "ref-for-enumdef-factortype\u2461"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
 </script>
 <script>/* Boilerplate: script-dom-helper */
 function query(sel) { return document.querySelector(sel); }

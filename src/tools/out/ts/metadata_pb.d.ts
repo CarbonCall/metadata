@@ -126,6 +126,11 @@ export class Metadata extends jspb.Message {
   setMetatdataExtensionsList(value: Array<MetadataExtension>): void;
   addMetatdataExtensions(value?: MetadataExtension, index?: number): MetadataExtension;
 
+  clearPFExtensionsList(): void;
+  getPFExtensionsList(): Array<ProductFootprintExtension>;
+  setPFExtensionsList(value: Array<ProductFootprintExtension>): void;
+  addPFExtensions(value?: ProductFootprintExtension, index?: number): ProductFootprintExtension;
+
   clearRelatedReportsList(): void;
   getRelatedReportsList(): Array<string>;
   setRelatedReportsList(value: Array<string>): void;
@@ -167,7 +172,34 @@ export namespace Metadata {
     reportContextList: Array<Metatag.AsObject>,
     propertyContextsList: Array<PropertyContext.AsObject>,
     metatdataExtensionsList: Array<MetadataExtension.AsObject>,
+    pFExtensionsList: Array<ProductFootprintExtension.AsObject>,
     relatedReportsList: Array<string>,
+  }
+}
+
+export class ProductFootprintExtension extends jspb.Message {
+  getPfid(): string;
+  setPfid(value: string): void;
+
+  clearPCFPropertyDataList(): void;
+  getPCFPropertyDataList(): Array<PropertyContext>;
+  setPCFPropertyDataList(value: Array<PropertyContext>): void;
+  addPCFPropertyData(value?: PropertyContext, index?: number): PropertyContext;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ProductFootprintExtension.AsObject;
+  static toObject(includeInstance: boolean, msg: ProductFootprintExtension): ProductFootprintExtension.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: ProductFootprintExtension, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ProductFootprintExtension;
+  static deserializeBinaryFromReader(message: ProductFootprintExtension, reader: jspb.BinaryReader): ProductFootprintExtension;
+}
+
+export namespace ProductFootprintExtension {
+  export type AsObject = {
+    pfid: string,
+    pCFPropertyDataList: Array<PropertyContext.AsObject>,
   }
 }
 

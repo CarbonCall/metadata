@@ -38,7 +38,13 @@ message Metadata{
     repeated Metatag report_context = 22; //Metatags that provide additional context for the report
     repeated PropertyContext property_contexts = 23; //Property contexts that provide additional context for the report, i.e., section metadata
     repeated MetadataExtension metatdata_extensions = 24; //Extensions to the metadata
-    repeated string related_reports = 25; //GR.IDs of related reports
+    repeated ProductFootprintExtension p_f_extensions = 25; //Extensions to any related product footprints in the report
+    repeated string related_reports = 26; //GR.IDs of related reports
+}
+
+message ProductFootprintExtension{
+    string pfId = 1; //Id of the product footprint
+    repeated PropertyContext p_c_f_property_data = 2; //Property contexts that provide additional context for the product footprint, i.e., section metadata
 }
 
 message Activity{

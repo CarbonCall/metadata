@@ -571,10 +571,54 @@ public interface MetadataOrBuilder extends
 
   /**
    * <pre>
+   *Extensions to any related product footprints in the report
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+   */
+  java.util.List<org.carboncall.metadata.ProductFootprintExtension> 
+      getPFExtensionsList();
+  /**
+   * <pre>
+   *Extensions to any related product footprints in the report
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+   */
+  org.carboncall.metadata.ProductFootprintExtension getPFExtensions(int index);
+  /**
+   * <pre>
+   *Extensions to any related product footprints in the report
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+   */
+  int getPFExtensionsCount();
+  /**
+   * <pre>
+   *Extensions to any related product footprints in the report
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+   */
+  java.util.List<? extends org.carboncall.metadata.ProductFootprintExtensionOrBuilder> 
+      getPFExtensionsOrBuilderList();
+  /**
+   * <pre>
+   *Extensions to any related product footprints in the report
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.ProductFootprintExtension p_f_extensions = 25;</code>
+   */
+  org.carboncall.metadata.ProductFootprintExtensionOrBuilder getPFExtensionsOrBuilder(
+      int index);
+
+  /**
+   * <pre>
    *GR.IDs of related reports
    * </pre>
    *
-   * <code>repeated string related_reports = 25;</code>
+   * <code>repeated string related_reports = 26;</code>
    * @return A list containing the relatedReports.
    */
   java.util.List<java.lang.String>
@@ -584,7 +628,7 @@ public interface MetadataOrBuilder extends
    *GR.IDs of related reports
    * </pre>
    *
-   * <code>repeated string related_reports = 25;</code>
+   * <code>repeated string related_reports = 26;</code>
    * @return The count of relatedReports.
    */
   int getRelatedReportsCount();
@@ -593,7 +637,7 @@ public interface MetadataOrBuilder extends
    *GR.IDs of related reports
    * </pre>
    *
-   * <code>repeated string related_reports = 25;</code>
+   * <code>repeated string related_reports = 26;</code>
    * @param index The index of the element to return.
    * @return The relatedReports at the given index.
    */
@@ -603,7 +647,7 @@ public interface MetadataOrBuilder extends
    *GR.IDs of related reports
    * </pre>
    *
-   * <code>repeated string related_reports = 25;</code>
+   * <code>repeated string related_reports = 26;</code>
    * @param index The index of the value to return.
    * @return The bytes of the relatedReports at the given index.
    */

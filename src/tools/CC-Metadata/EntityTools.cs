@@ -76,9 +76,32 @@ public static class EntityTools
             ReportContext = { GetReportMetaTags() },
             PropertyContexts = { GetPropertyContexts() },
             MetatdataExtensions = {  GetMetadataExtensions() },
+            PFExtensions = { GetPfExtensions() },
             RelatedReports = { "SDJQ.BPUN.15", "ADCF.GPOM.16" },
         };
         return m;
+    }
+
+    private static ProductFootprintExtension GetPfExtensions()
+    {
+        var pfEx = new ProductFootprintExtension
+        {
+            PfId = Guid.NewGuid().ToString(),
+            PCFPropertyData = { new PropertyContext
+                {
+                    PropertyName = "pcf/pCfExcludingBiogenic",
+                    Metatags =
+                    {
+                        new Metatag
+                        {
+                            Key = "majorExcludingBiogenicSourcePCF_Id",
+                            Value = Guid.NewGuid().ToString()
+                        }
+                    }
+                } 
+            }
+        };
+        return pfEx;
     }
 
     private static MetadataExtension GetMetadataExtensions()

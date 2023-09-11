@@ -1,5 +1,5 @@
 {
-  "grid": "C8MA.E2WA.36",
+  "grid": "JAAN.PMWZ.16",
   "organizationIdentifier": "LEI: 254900OPPU84GM83MG36",
   "organizationName": "CarbonCall",
   "domicile": "US",
@@ -115,6 +115,24 @@
       "dataSchema": "https://carboncall.io/schemas/2024/01/01/CarbonCallMetadata.json",
       "documentation": "https://carboncall.io/docs/2024/01/01/CarbonCallMetadata.html",
       "data": "{'@context':'compliancemetrics.org','@type':'compliancemetrics.org/ComplianceMetric','name':'compliancemetrics.org/ComplianceMetric/1.0/1','jurisdiction':'eu','factorCompliance':0.5,'factorCompleteness':0.73,'factorCorrectness':0.9,'accessibility':100}"
+    }
+  ],
+  "pfExtensions": [
+    {
+      "pfId": "a8ecc17f-1f71-4fe9-8ae7-e5ee1d55731a",
+      "pcfPropertyData": [
+        {
+          "propertyName": "pcf/pCfExcludingBiogenic",
+          "metatags": [
+            {
+              "key": "majorExcludingBiogenicSourcePCF_Id",
+              "value": "a3e7d705-a7d4-4b74-b968-c9de69c3f084",
+              "relatedMetadata": []
+            }
+          ],
+          "relatedMetadata": []
+        }
+      ]
     }
   ],
   "relatedReports": [

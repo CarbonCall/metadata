@@ -1,7 +1,7 @@
 {
-  "grid": "C8MA.E2WA.36",
+  "grid": "JAAN.PMWZ.16",
   "metadata": {
-    "grid": "C8MA.E2WA.36",
+    "grid": "JAAN.PMWZ.16",
     "organizationIdentifier": "LEI: 254900OPPU84GM83MG36",
     "organizationName": "CarbonCall",
     "domicile": "US",
@@ -119,10 +119,28 @@
         "data": "{'@context':'compliancemetrics.org','@type':'compliancemetrics.org/ComplianceMetric','name':'compliancemetrics.org/ComplianceMetric/1.0/1','jurisdiction':'eu','factorCompliance':0.5,'factorCompleteness':0.73,'factorCorrectness':0.9,'accessibility':100}"
       }
     ],
+    "pfExtensions": [
+      {
+        "pfId": "bf69f1b4-5e46-48e1-b908-66b91c8364a6",
+        "pcfPropertyData": [
+          {
+            "propertyName": "pcf/pCfExcludingBiogenic",
+            "metatags": [
+              {
+                "key": "majorExcludingBiogenicSourcePCF_Id",
+                "value": "e62c9705-c5cf-4f13-9227-ccfeefad410b",
+                "relatedMetadata": []
+              }
+            ],
+            "relatedMetadata": []
+          }
+        ]
+      }
+    ],
     "relatedReports": [
       "SDJQ.BPUN.15",
       "ADCF.GPOM.16"
     ]
   },
-  "report": "CgxDOE1BLkUyV0EuMzYSGUxFSTogMjU0OTAwT1BQVTg0R004M01HMzYaCkNhcmJvbkNhbGwg7AEqBewBLusBMgIAAjgCQgoyMDIxLTAxLTAxShgKCjIwMjAtMDEtMDESCjIwMjAtMTItMzFaK2h0dHBzOi8vY2FyYm9uY2FsbC5pby9yZXBvcnRGcm9tUGVyaW9kLmpzb25iBhIENjIwMWqsAXsnUGVyZjEnOnsnbmFtZSc6J1BlcmYxJywndHlwZSc6J3BlcmZvcm1hbmNlJywndmFsdWUnOjEyNzAwMCwndW5pdCc6J3RDTzJlJ30sJ1BlcmYyJzp7J25hbWUnOidQZXJmMicsJ3R5cGUnOidwZXJmb3JtYW5jZScsJ3ZhbHVlJzowLCdtaW4nOjAsJ21heCc6MTAwLCdzdGVwJzoxLCd1bml0JzonJSd9fSByFAoGUHVibGljGgpDYXJib25DYWxsegsIARIDMTAwGgI4MoABAYgBApIBFERFX0JhRklOOiAxMjM0NTY3ODkwogEnZGZ0YWFlMzI5N2k4OTc5OGFkc2RmODMyYWRmczkxMjIzMWF6c2RmqgH8AQoHSGVhdGluZxoGMTk4LjMxIhgKCjIwMjAtMDEtMDESCjIwMjAtMTItMzEqFEhlYXRpbmcgb2YgYnVpbGRpbmdzMhIKBzEyMy40NTYSBzAuMTIxMjM6bggCEA0aYGh0dHBzOi8vd3d3LmVwYS5nb3YvZW5lcmd5L2dyZWVuaG91c2UtZ2FzZXMtZXF1aXZhbGVuY2llcy1jYWxjdWxhdG9yLWNhbGN1bGF0aW9ucy1hbmQtcmVmZXJlbmNlcyIGCEYQFBgKQjUKM01ldGFkYXRhL0FjdGl2aXRpZXMvSGVhdGluZy9BY3Rpdml0eUZhY3RvckFuZFNvdXJjZbIBLQoUQXV0aG9yIENvbnRhY3QgRW1haWwSFXNvbWVvbmVAc29tZXdoZXJlLmNvbbIBJAoUQXV0aG9yIENvbnRhY3QgUGhvbmUSDDEyMy00NTYtNzg5MLoBKwoNU2VjdGlvbiAxLjIuMRIaChNDYXJib24gT2Zmc2V0IFJhdGlvEgMxLjK6ATYKDVNlY3Rpb24gMS4yLjISJQoYR0hHIEFkanVzdG1lbnQgRXhjZXB0aW9uEglHR1AtMV8yXzLCAYADCkBodHRwczovL2NhcmJvbmNhbGwuaW8vc2NoZW1hcy8yMDI0LzAxLzAxL0NhcmJvbkNhbGxNZXRhZGF0YS5qc29uEj1odHRwczovL2NhcmJvbmNhbGwuaW8vZG9jcy8yMDI0LzAxLzAxL0NhcmJvbkNhbGxNZXRhZGF0YS5odG1sGvwBeydAY29udGV4dCc6J2NvbXBsaWFuY2VtZXRyaWNzLm9yZycsJ0B0eXBlJzonY29tcGxpYW5jZW1ldHJpY3Mub3JnL0NvbXBsaWFuY2VNZXRyaWMnLCduYW1lJzonY29tcGxpYW5jZW1ldHJpY3Mub3JnL0NvbXBsaWFuY2VNZXRyaWMvMS4wLzEnLCdqdXJpc2RpY3Rpb24nOidldScsJ2ZhY3RvckNvbXBsaWFuY2UnOjAuNSwnZmFjdG9yQ29tcGxldGVuZXNzJzowLjczLCdmYWN0b3JDb3JyZWN0bmVzcyc6MC45LCdhY2Nlc3NpYmlsaXR5JzoxMDB9ygEMU0RKUS5CUFVOLjE1ygEMQURDRi5HUE9NLjE2"
+  "report": "CgxKQUFOLlBNV1ouMTYSGUxFSTogMjU0OTAwT1BQVTg0R004M01HMzYaCkNhcmJvbkNhbGwg7AEqBewBLusBMgIAAjgCQgoyMDIxLTAxLTAxShgKCjIwMjAtMDEtMDESCjIwMjAtMTItMzFaK2h0dHBzOi8vY2FyYm9uY2FsbC5pby9yZXBvcnRGcm9tUGVyaW9kLmpzb25iBhIENjIwMWqsAXsnUGVyZjEnOnsnbmFtZSc6J1BlcmYxJywndHlwZSc6J3BlcmZvcm1hbmNlJywndmFsdWUnOjEyNzAwMCwndW5pdCc6J3RDTzJlJ30sJ1BlcmYyJzp7J25hbWUnOidQZXJmMicsJ3R5cGUnOidwZXJmb3JtYW5jZScsJ3ZhbHVlJzowLCdtaW4nOjAsJ21heCc6MTAwLCdzdGVwJzoxLCd1bml0JzonJSd9fSByFAoGUHVibGljGgpDYXJib25DYWxsegsIARIDMTAwGgI4MoABAYgBApIBFERFX0JhRklOOiAxMjM0NTY3ODkwogEnZGZ0YWFlMzI5N2k4OTc5OGFkc2RmODMyYWRmczkxMjIzMWF6c2RmqgH8AQoHSGVhdGluZxoGMTk4LjMxIhgKCjIwMjAtMDEtMDESCjIwMjAtMTItMzEqFEhlYXRpbmcgb2YgYnVpbGRpbmdzMhIKBzEyMy40NTYSBzAuMTIxMjM6bggCEA0aYGh0dHBzOi8vd3d3LmVwYS5nb3YvZW5lcmd5L2dyZWVuaG91c2UtZ2FzZXMtZXF1aXZhbGVuY2llcy1jYWxjdWxhdG9yLWNhbGN1bGF0aW9ucy1hbmQtcmVmZXJlbmNlcyIGCEYQFBgKQjUKM01ldGFkYXRhL0FjdGl2aXRpZXMvSGVhdGluZy9BY3Rpdml0eUZhY3RvckFuZFNvdXJjZbIBLQoUQXV0aG9yIENvbnRhY3QgRW1haWwSFXNvbWVvbmVAc29tZXdoZXJlLmNvbbIBJAoUQXV0aG9yIENvbnRhY3QgUGhvbmUSDDEyMy00NTYtNzg5MLoBKwoNU2VjdGlvbiAxLjIuMRIaChNDYXJib24gT2Zmc2V0IFJhdGlvEgMxLjK6ATYKDVNlY3Rpb24gMS4yLjISJQoYR0hHIEFkanVzdG1lbnQgRXhjZXB0aW9uEglHR1AtMV8yXzLCAYADCkBodHRwczovL2NhcmJvbmNhbGwuaW8vc2NoZW1hcy8yMDI0LzAxLzAxL0NhcmJvbkNhbGxNZXRhZGF0YS5qc29uEj1odHRwczovL2NhcmJvbmNhbGwuaW8vZG9jcy8yMDI0LzAxLzAxL0NhcmJvbkNhbGxNZXRhZGF0YS5odG1sGvwBeydAY29udGV4dCc6J2NvbXBsaWFuY2VtZXRyaWNzLm9yZycsJ0B0eXBlJzonY29tcGxpYW5jZW1ldHJpY3Mub3JnL0NvbXBsaWFuY2VNZXRyaWMnLCduYW1lJzonY29tcGxpYW5jZW1ldHJpY3Mub3JnL0NvbXBsaWFuY2VNZXRyaWMvMS4wLzEnLCdqdXJpc2RpY3Rpb24nOidldScsJ2ZhY3RvckNvbXBsaWFuY2UnOjAuNSwnZmFjdG9yQ29tcGxldGVuZXNzJzowLjczLCdmYWN0b3JDb3JyZWN0bmVzcyc6MC45LCdhY2Nlc3NpYmlsaXR5JzoxMDB9ygGOAQokYmY2OWYxYjQtNWU0Ni00OGUxLWI5MDgtNjZiOTFjODM2NGE2EmYKGHBjZi9wQ2ZFeGNsdWRpbmdCaW9nZW5pYxJKCiJtYWpvckV4Y2x1ZGluZ0Jpb2dlbmljU291cmNlUENGX0lkEiRlNjJjOTcwNS1jNWNmLTRmMTMtOTIyNy1jY2ZlZWZhZDQxMGLSAQxTREpRLkJQVU4uMTXSAQxBRENGLkdQT00uMTY="
 }

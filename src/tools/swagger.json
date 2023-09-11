@@ -1,84 +1,42 @@
 {
-    "openapi": "3.0.1",
-    "info": {
-      "title": "Carbon Call Discoverable Data & Metadata - POC-1",
-      "description": "A proof of concept API for the Carbon Call expert working groups for discoverable data and metadata.",
-      "contact": {
-        "name": "Marley Gray",
-        "email": "marleyg@microsoft.com"
-      },
-      "license": {
-        "name": "MIT License",
-        "url": "https://opensource.org/licenses/MIT"
-      },
-      "version": "v1-Carbon Call DD-Metadata"
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Carbon Call Discoverable Data & Metadata - POC-1",
+    "description": "A proof of concept API for the Carbon Call expert working groups for discoverable data and metadata.",
+    "contact": {
+      "name": "Marley Gray",
+      "email": "marleyg@microsoft.com"
     },
-    "paths": {
-      "/Metadata/getReport": {
-        "get": {
-          "tags": [
-            "Metadata"
-          ],
-          "summary": "Get the sustainability report",
-          "responses": {
-            "200": {
-              "description": "Success",
-              "content": {
-                "text/plain": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SustainabilityReport"
-                  }
-                },
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SustainabilityReport"
-                  }
-                },
-                "text/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SustainabilityReport"
-                  }
+    "license": {
+      "name": "MIT License",
+      "url": "https://opensource.org/licenses/MIT"
+    },
+    "version": "v1-Carbon Call DD-Metadata"
+  },
+  "paths": {
+    "/Metadata/getReport": {
+      "get": {
+        "tags": [
+          "Metadata"
+        ],
+        "summary": "Get the sustainability report",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SustainabilityReport"
                 }
-              }
-            }
-          }
-        }
-      },
-      "/Metadata/getMetadata": {
-        "get": {
-          "tags": [
-            "Metadata"
-          ],
-          "summary": "Get the metadata",
-          "parameters": [
-            {
-              "name": "grid",
-              "in": "query",
-              "description": "",
-              "style": "form",
-              "schema": {
-                "type": "string"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "Success",
-              "content": {
-                "text/plain": {
-                  "schema": {
-                    "$ref": "#/components/schemas/Metadata"
-                  }
-                },
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/Metadata"
-                  }
-                },
-                "text/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/Metadata"
-                  }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SustainabilityReport"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SustainabilityReport"
                 }
               }
             }
@@ -86,509 +44,891 @@
         }
       }
     },
-    "components": {
-      "schemas": {
-        "ISO3166_CountryCode": {
-          "enum": [
-            "Unknown",
-            "AF",
-            "AX",
-            "AL",
-            "DZ",
-            "AS",
-            "AD",
-            "AO",
-            "AI",
-            "AQ",
-            "AG",
-            "AR",
-            "AM",
-            "AW",
-            "AU",
-            "AT",
-            "AZ",
-            "BS",
-            "BH",
-            "BD",
-            "BB",
-            "BY",
-            "BE",
-            "BZ",
-            "BJ",
-            "BM",
-            "BT",
-            "BO",
-            "BQ",
-            "BA",
-            "BW",
-            "BV",
-            "BR",
-            "IO",
-            "BN",
-            "BG",
-            "BF",
-            "BI",
-            "CV",
-            "KH",
-            "CM",
-            "CA",
-            "KY",
-            "CF",
-            "TD",
-            "CL",
-            "CN",
-            "CX",
-            "CC",
-            "CO",
-            "KM",
-            "CG",
-            "CD",
-            "CK",
-            "CR",
-            "CI",
-            "HR",
-            "CU",
-            "CW",
-            "CY",
-            "CZ",
-            "DK",
-            "DJ",
-            "DM",
-            "DO",
-            "EC",
-            "EG",
-            "SV",
-            "GQ",
-            "ER",
-            "EE",
-            "ET",
-            "FK",
-            "FO",
-            "FJ",
-            "FI",
-            "FR",
-            "GF",
-            "PF",
-            "TF",
-            "GA",
-            "GM",
-            "GE",
-            "DE",
-            "GH",
-            "GI",
-            "GR",
-            "GL",
-            "GD",
-            "GP",
-            "GU",
-            "GT",
-            "GG",
-            "GN",
-            "GW",
-            "GY",
-            "HT",
-            "HM",
-            "VA",
-            "HN",
-            "HK",
-            "HU",
-            "IS",
-            "IN",
-            "ID",
-            "IR",
-            "IQ",
-            "IE",
-            "IM",
-            "IL",
-            "IT",
-            "JM",
-            "JP",
-            "JE",
-            "JO",
-            "KZ",
-            "KE",
-            "KI",
-            "KP",
-            "KR",
-            "KW",
-            "KG",
-            "LA",
-            "LV",
-            "LB",
-            "LS",
-            "LR",
-            "LY",
-            "LI",
-            "LT",
-            "LU",
-            "MO",
-            "MK",
-            "MG",
-            "MW",
-            "MY",
-            "MV",
-            "ML",
-            "MT",
-            "MH",
-            "MQ",
-            "MR",
-            "MU",
-            "YT",
-            "MX",
-            "FM",
-            "MD",
-            "MC",
-            "MN",
-            "ME",
-            "MS",
-            "MA",
-            "MZ",
-            "MM",
-            "NA",
-            "NR",
-            "NP",
-            "NL",
-            "NC",
-            "NZ",
-            "NI",
-            "NE",
-            "NG",
-            "NU",
-            "NF",
-            "MP",
-            "NO",
-            "OM",
-            "PK",
-            "PW",
-            "PS",
-            "PA",
-            "PG",
-            "PY",
-            "PE",
-            "PH",
-            "PN",
-            "PL",
-            "PT",
-            "PR",
-            "QA",
-            "RE",
-            "RO",
-            "RU",
-            "RW",
-            "BL",
-            "SH",
-            "KN",
-            "LC",
-            "MF",
-            "PM",
-            "VC",
-            "WS",
-            "SM",
-            "ST",
-            "SA",
-            "SN",
-            "RS",
-            "SC",
-            "SL",
-            "SG",
-            "SX",
-            "SK",
-            "SI",
-            "SB",
-            "SO",
-            "ZA",
-            "GS",
-            "SS",
-            "ES",
-            "LK",
-            "SD",
-            "SR",
-            "SJ",
-            "SZ",
-            "SE",
-            "CH",
-            "SY",
-            "TW",
-            "TJ",
-            "TZ",
-            "TH",
-            "TL",
-            "TG",
-            "TK",
-            "TO",
-            "TT",
-            "TN",
-            "TR",
-            "TM",
-            "TC",
-            "TV",
-            "UG",
-            "UA",
-            "AE",
-            "GB",
-            "US",
-            "UM",
-            "UY",
-            "UZ",
-            "VU",
-            "VE",
-            "VN",
-            "VG",
-            "VI",
-            "WF",
-            "EH",
-            "YE",
-            "ZM",
-            "ZW"
-          ],
-          "type": "string",
-          "description": "ISO 3166-1 alpha-2 country codes"
-        },
-        "Industry": {
-          "type": "object",
-          "properties": {
-            "prefix": {
-              "$ref": "#/components/schemas/IndustryCodePrefix"
-            },
-            "code": {
-              "type": "string",
-              "nullable": true
+    "/Metadata/getMetadata": {
+      "get": {
+        "tags": [
+          "Metadata"
+        ],
+        "summary": "Get the metadata",
+        "parameters": [
+          {
+            "name": "grid",
+            "in": "query",
+            "description": "",
+            "style": "form",
+            "schema": {
+              "type": "string"
             }
-          },
-          "additionalProperties": false
-        },
-        "IndustryCodePrefix": {
-          "enum": [
-            "ISIC",
-            "NAICS",
-            "GICS",
-            "SIC"
-          ],
-          "type": "string",
-          "description": "Industry code prefix, i.e. ISIC"
-        },
-        "Language": {
-          "enum": [
-            "En",
-            "Es",
-            "Zh",
-            "Fr"
-          ],
-          "type": "string"
-        },
-        "Metadata": {
-          "type": "object",
-          "properties": {
-            "grid": {
-              "type": "string",
-              "nullable": true
-            },
-            "organizationIdentifier": {
-              "type": "string",
-              "description": "Includes a scheme prefix and the identity code used for the scheme.",
-              "nullable": true
-            },
-            "organizationName": {
-              "type": "string",
-              "nullable": true
-            },
-            "domicile": {
-              "$ref": "#/components/schemas/ISO3166_CountryCode"
-            },
-            "operatingCountries": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ISO3166_CountryCode"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Metadata"
+                }
               },
-              "nullable": true,
-              "readOnly": true
-            },
-            "languages": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/Language"
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Metadata"
+                }
               },
-              "nullable": true,
-              "readOnly": true
-            },
-            "reportType": {
-              "$ref": "#/components/schemas/ReportType"
-            },
-            "reportIssueDate": {
-              "type": "string",
-              "description": "ISO 8601 date format",
-              "nullable": true
-            },
-            "reportingPeriod": {
-              "$ref": "#/components/schemas/ReportingPeriod"
-            },
-            "reportReplaces": {
-              "type": "string",
-              "description": "GR.ID of the report this report replaces",
-              "nullable": true
-            },
-            "location": {
-              "type": "string",
-              "description": "URL or URI of the report",
-              "nullable": true
-            },
-            "industry": {
-              "$ref": "#/components/schemas/Industry"
-            },
-            "performance": {
-              "type": "string",
-              "description": "xBRL-JSON snippet that provides certain performance information.",
-              "nullable": true
-            },
-            "reportFormat": {
-              "$ref": "#/components/schemas/ReportFormat"
-            },
-            "reportingStandard": {
-              "$ref": "#/components/schemas/ReportingStandard"
-            },
-            "assurance": {
-              "type": "string",
-              "description": "Scheme prefix and identifier for the provider that conducted the assurance or audit.",
-              "nullable": true
-            },
-            "priorReport": {
-              "type": "string",
-              "description": "GR.ID of the report this report is based on",
-              "nullable": true
-            },
-            "reportHash": {
-              "type": "string",
-              "description": "SHA-256 hash of the report",
-              "nullable": true
-            },
-            "reportContext": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/Metatag"
-              },
-              "description": "Metatags that provide additional context for the report",
-              "nullable": true,
-              "readOnly": true
-            },
-            "propertyContexts": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/PropertyContext"
-              },
-              "description": "Property contexts that provide additional context for the report, i.e., section metadata",
-              "nullable": true,
-              "readOnly": true
-            },
-            "relatedReports": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              },
-              "description": "GR.IDs of related reports",
-              "nullable": true,
-              "readOnly": true
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Metadata"
+                }
+              }
             }
-          },
-          "additionalProperties": false
-        },
-        "Metatag": {
-          "type": "object",
-          "properties": {
-            "key": {
-              "type": "string",
-              "nullable": true
-            },
-            "value": {
-              "type": "string",
-              "nullable": true
-            }
-          },
-          "additionalProperties": false
-        },
-        "PropertyContext": {
-          "type": "object",
-          "properties": {
-            "property": {
-              "type": "string",
-              "nullable": true
-            },
-            "metatags": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/Metatag"
-              },
-              "nullable": true,
-              "readOnly": true
-            }
-          },
-          "additionalProperties": false
-        },
-        "ReportFormat": {
-          "enum": [
-            "PDF",
-            "IXBRL",
-            "OpenXml"
-          ],
-          "type": "string"
-        },
-        "ReportType": {
-          "enum": [
-            "IntegratedReport",
-            "FinancialReport",
-            "SustainabilityReport",
-            "AnnualReport",
-            "ProxyStatement",
-            "RegistrationStatement",
-            "QuarterlyReport",
-            "HalfYearlyReport",
-            "Other"
-          ],
-          "type": "string"
-        },
-        "ReportingPeriod": {
-          "type": "object",
-          "properties": {
-            "startDate": {
-              "type": "string",
-              "description": "ISO 8601 date format",
-              "nullable": true
-            },
-            "endDate": {
-              "type": "string",
-              "description": "ISO 8601 date format4",
-              "nullable": true
-            }
-          },
-          "additionalProperties": false
-        },
-        "ReportingStandard": {
-          "enum": [
-            "GAAP",
-            "IFRS",
-            "ISSB",
-            "EFRAG",
-            "GRI"
-          ],
-          "type": "string"
-        },
-        "SustainabilityReport": {
-          "type": "object",
-          "properties": {
-            "grid": {
-              "type": "string",
-              "nullable": true
-            },
-            "metadata": {
-              "$ref": "#/components/schemas/Metadata"
-            },
-            "report": {
-              "type": "string",
-              "description": "could be google.protobuf.Any or bytes",
-              "nullable": true
-            }
-          },
-          "additionalProperties": false
+          }
         }
       }
     }
+  },
+  "components": {
+    "schemas": {
+      "Activity": {
+        "type": "object",
+        "properties": {
+          "activityType": {
+            "type": "string",
+            "description": "an activity (heating, cooling, & lighting a facility, travel, transportation, purchase)",
+            "nullable": true
+          },
+          "unitOfMeasure": {
+            "$ref": "#/components/schemas/Unit"
+          },
+          "activityAmount": {
+            "type": "string",
+            "nullable": true
+          },
+          "activityPeriod": {
+            "$ref": "#/components/schemas/TimePeriod"
+          },
+          "activityDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "activityLocation": {
+            "$ref": "#/components/schemas/GeographicLocation"
+          },
+          "activityFactorAndSource": {
+            "$ref": "#/components/schemas/FactorAndSource"
+          },
+          "relatedMetadata": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Metalink"
+            },
+            "description": "links to related metadata",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BoundaryApproach": {
+        "enum": [
+          "OperationalControl",
+          "FinancialControl",
+          "EquityShare"
+        ],
+        "type": "string"
+      },
+      "FactorAndSource": {
+        "type": "object",
+        "properties": {
+          "factorType": {
+            "$ref": "#/components/schemas/FactorType"
+          },
+          "factorUnit": {
+            "$ref": "#/components/schemas/Unit"
+          },
+          "factorSource": {
+            "type": "string",
+            "nullable": true
+          },
+          "factorPrecision": {
+            "$ref": "#/components/schemas/PrecisionMix"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FactorType": {
+        "enum": [
+          "Unknown",
+          "Estimated",
+          "Factored",
+          "Measured"
+        ],
+        "type": "string"
+      },
+      "GeographicLocation": {
+        "type": "object",
+        "properties": {
+          "longitude": {
+            "type": "string",
+            "description": "longitude in Decimal Degrees (DD)",
+            "nullable": true
+          },
+          "latitude": {
+            "type": "string",
+            "description": "latitude in Decimal Degrees (DD)",
+            "nullable": true
+          },
+          "geoJsonOrKml": {
+            "type": "string",
+            "description": "geojson or kml",
+            "nullable": true
+          },
+          "geographicLocationFile": {
+            "type": "string",
+            "description": "link to a file containing geojson, kml or other geographic area data",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Includes GNSS and or GeographicArea as GeoJson, Kml as string or file"
+      },
+      "Goverance": {
+        "type": "object",
+        "properties": {
+          "intendedUse": {
+            "type": "string",
+            "description": "how the report is intended to be used",
+            "nullable": true
+          },
+          "restrictedAccess": {
+            "type": "boolean",
+            "description": "whether the report is restricted access"
+          },
+          "reportOwner": {
+            "type": "string",
+            "description": "Id of the report owner",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ISO3166_CountryCode": {
+        "enum": [
+          "Unknown",
+          "AF",
+          "AX",
+          "AL",
+          "DZ",
+          "AS",
+          "AD",
+          "AO",
+          "AI",
+          "AQ",
+          "AG",
+          "AR",
+          "AM",
+          "AW",
+          "AU",
+          "AT",
+          "AZ",
+          "BS",
+          "BH",
+          "BD",
+          "BB",
+          "BY",
+          "BE",
+          "BZ",
+          "BJ",
+          "BM",
+          "BT",
+          "BO",
+          "BQ",
+          "BA",
+          "BW",
+          "BV",
+          "BR",
+          "IO",
+          "BN",
+          "BG",
+          "BF",
+          "BI",
+          "CV",
+          "KH",
+          "CM",
+          "CA",
+          "KY",
+          "CF",
+          "TD",
+          "CL",
+          "CN",
+          "CX",
+          "CC",
+          "CO",
+          "KM",
+          "CG",
+          "CD",
+          "CK",
+          "CR",
+          "CI",
+          "HR",
+          "CU",
+          "CW",
+          "CY",
+          "CZ",
+          "DK",
+          "DJ",
+          "DM",
+          "DO",
+          "EC",
+          "EG",
+          "SV",
+          "GQ",
+          "ER",
+          "EE",
+          "ET",
+          "FK",
+          "FO",
+          "FJ",
+          "FI",
+          "FR",
+          "GF",
+          "PF",
+          "TF",
+          "GA",
+          "GM",
+          "GE",
+          "DE",
+          "GH",
+          "GI",
+          "GR",
+          "GL",
+          "GD",
+          "GP",
+          "GU",
+          "GT",
+          "GG",
+          "GN",
+          "GW",
+          "GY",
+          "HT",
+          "HM",
+          "VA",
+          "HN",
+          "HK",
+          "HU",
+          "IS",
+          "IN",
+          "ID",
+          "IR",
+          "IQ",
+          "IE",
+          "IM",
+          "IL",
+          "IT",
+          "JM",
+          "JP",
+          "JE",
+          "JO",
+          "KZ",
+          "KE",
+          "KI",
+          "KP",
+          "KR",
+          "KW",
+          "KG",
+          "LA",
+          "LV",
+          "LB",
+          "LS",
+          "LR",
+          "LY",
+          "LI",
+          "LT",
+          "LU",
+          "MO",
+          "MK",
+          "MG",
+          "MW",
+          "MY",
+          "MV",
+          "ML",
+          "MT",
+          "MH",
+          "MQ",
+          "MR",
+          "MU",
+          "YT",
+          "MX",
+          "FM",
+          "MD",
+          "MC",
+          "MN",
+          "ME",
+          "MS",
+          "MA",
+          "MZ",
+          "MM",
+          "NA",
+          "NR",
+          "NP",
+          "NL",
+          "NC",
+          "NZ",
+          "NI",
+          "NE",
+          "NG",
+          "NU",
+          "NF",
+          "MP",
+          "NO",
+          "OM",
+          "PK",
+          "PW",
+          "PS",
+          "PA",
+          "PG",
+          "PY",
+          "PE",
+          "PH",
+          "PN",
+          "PL",
+          "PT",
+          "PR",
+          "QA",
+          "RE",
+          "RO",
+          "RU",
+          "RW",
+          "BL",
+          "SH",
+          "KN",
+          "LC",
+          "MF",
+          "PM",
+          "VC",
+          "WS",
+          "SM",
+          "ST",
+          "SA",
+          "SN",
+          "RS",
+          "SC",
+          "SL",
+          "SG",
+          "SX",
+          "SK",
+          "SI",
+          "SB",
+          "SO",
+          "ZA",
+          "GS",
+          "SS",
+          "ES",
+          "LK",
+          "SD",
+          "SR",
+          "SJ",
+          "SZ",
+          "SE",
+          "CH",
+          "SY",
+          "TW",
+          "TJ",
+          "TZ",
+          "TH",
+          "TL",
+          "TG",
+          "TK",
+          "TO",
+          "TT",
+          "TN",
+          "TR",
+          "TM",
+          "TC",
+          "TV",
+          "UG",
+          "UA",
+          "AE",
+          "GB",
+          "US",
+          "UM",
+          "UY",
+          "UZ",
+          "VU",
+          "VE",
+          "VN",
+          "VG",
+          "VI",
+          "WF",
+          "EH",
+          "YE",
+          "ZM",
+          "ZW"
+        ],
+        "type": "string",
+        "description": "ISO 3166-1 alpha-2 country codes"
+      },
+      "Industry": {
+        "type": "object",
+        "properties": {
+          "prefix": {
+            "$ref": "#/components/schemas/IndustryCodePrefix"
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IndustryCodePrefix": {
+        "enum": [
+          "ISIC",
+          "NAICS",
+          "GICS",
+          "SIC"
+        ],
+        "type": "string",
+        "description": "Industry code prefix, i.e. ISIC"
+      },
+      "Language": {
+        "enum": [
+          "En",
+          "Es",
+          "Zh",
+          "Fr"
+        ],
+        "type": "string"
+      },
+      "Metadata": {
+        "type": "object",
+        "properties": {
+          "grid": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationIdentifier": {
+            "type": "string",
+            "description": "Includes a scheme prefix and the identity code used for the scheme.",
+            "nullable": true
+          },
+          "organizationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "domicile": {
+            "$ref": "#/components/schemas/ISO3166_CountryCode"
+          },
+          "operatingCountries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ISO3166_CountryCode"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "languages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Language"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "reportType": {
+            "$ref": "#/components/schemas/ReportType"
+          },
+          "reportIssueDate": {
+            "type": "string",
+            "description": "ISO 8601 date format",
+            "nullable": true
+          },
+          "reportingPeriod": {
+            "$ref": "#/components/schemas/TimePeriod"
+          },
+          "reportReplaces": {
+            "type": "string",
+            "description": "GR.ID of the report this report replaces",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "description": "URL or URI of the report",
+            "nullable": true
+          },
+          "industry": {
+            "$ref": "#/components/schemas/Industry"
+          },
+          "performance": {
+            "type": "string",
+            "description": "xBRL-JSON snippet that provides certain performance information.",
+            "nullable": true
+          },
+          "goverance": {
+            "$ref": "#/components/schemas/Goverance"
+          },
+          "methodology": {
+            "$ref": "#/components/schemas/Methodology"
+          },
+          "reportFormat": {
+            "$ref": "#/components/schemas/ReportFormat"
+          },
+          "reportingStandard": {
+            "$ref": "#/components/schemas/ReportingStandard"
+          },
+          "assurance": {
+            "type": "string",
+            "description": "Scheme prefix and identifier for the provider that conducted the assurance or audit.",
+            "nullable": true
+          },
+          "priorReport": {
+            "type": "string",
+            "description": "GR.ID of the report this report is based on",
+            "nullable": true
+          },
+          "reportHash": {
+            "type": "string",
+            "description": "SHA-256 hash of the report",
+            "nullable": true
+          },
+          "activities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Activity"
+            },
+            "description": "Activities that are reported on",
+            "nullable": true,
+            "readOnly": true
+          },
+          "reportContext": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Metatag"
+            },
+            "description": "Metatags that provide additional context for the report",
+            "nullable": true,
+            "readOnly": true
+          },
+          "propertyContexts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PropertyContext"
+            },
+            "description": "Property contexts that provide additional context for the report, i.e., section metadata",
+            "nullable": true,
+            "readOnly": true
+          },
+          "metatdataExtensions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MetadataExtension"
+            },
+            "description": "Extensions to the metadata",
+            "nullable": true,
+            "readOnly": true
+          },
+          "pfExtensions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProductFootprintExtension"
+            },
+            "description": "Extensions to any related product footprints in the report",
+            "nullable": true,
+            "readOnly": true
+          },
+          "relatedReports": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "GR.IDs of related reports",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MetadataExtension": {
+        "type": "object",
+        "properties": {
+          "dataSchema": {
+            "type": "string",
+            "description": "the URI/URL to the Json Schema for the extension",
+            "nullable": true
+          },
+          "documentation": {
+            "type": "string",
+            "description": "optional documentation url of the extension",
+            "nullable": true
+          },
+          "data": {
+            "type": "string",
+            "description": "the data of the extension, must be valid against the Json Schema",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A metadata extension that has a Json Schema"
+      },
+      "Metalink": {
+        "type": "object",
+        "properties": {
+          "relatedMetadataPath": {
+            "type": "string",
+            "description": "path in the metadata json tree to the related metadata",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "TODO: add more here about linking metadata with other data in other contexts"
+      },
+      "Metatag": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
+          "relatedMetadata": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Metalink"
+            },
+            "description": "links to related metadata",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Methodology": {
+        "type": "object",
+        "properties": {
+          "methodologyType": {
+            "$ref": "#/components/schemas/MethodologyType"
+          },
+          "percentageOfTotalPortfolioReported": {
+            "type": "string",
+            "description": "% of total portfolio scope 1, scope 2, and scope 3 emissions reported",
+            "nullable": true
+          },
+          "percentageOfEstimatedCalculations": {
+            "type": "string",
+            "description": "% of reported scope1, scope2, & scope3 emissions calculated based on actual data vs. estimated data",
+            "nullable": true
+          },
+          "boundaryApproach": {
+            "$ref": "#/components/schemas/BoundaryApproach"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MethodologyType": {
+        "enum": [
+          "Unknown",
+          "GhgProtocol",
+          "Iso14067",
+          "Other"
+        ],
+        "type": "string"
+      },
+      "PrecisionMix": {
+        "type": "object",
+        "properties": {
+          "low": {
+            "type": "integer",
+            "description": "percentage of estimated or factored precision, 10 = 10%",
+            "format": "int32"
+          },
+          "medium": {
+            "type": "integer",
+            "description": "percentage of indirect high quality precision, 20 = 20%",
+            "format": "int32"
+          },
+          "high": {
+            "type": "integer",
+            "description": "percentage of direct highly accurate measurements, typically from sensors, 50 = 50%",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductFootprintExtension": {
+        "type": "object",
+        "properties": {
+          "pfId": {
+            "type": "string",
+            "description": "Id of the product footprint",
+            "nullable": true
+          },
+          "pcfPropertyData": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PropertyContext"
+            },
+            "description": "Property contexts that provide additional context for the product footprint, i.e., section metadata",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PropertyContext": {
+        "type": "object",
+        "properties": {
+          "propertyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "metatags": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Metatag"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "relatedMetadata": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Metalink"
+            },
+            "description": "links to related metadata",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReportFormat": {
+        "enum": [
+          "PDF",
+          "IXBRL",
+          "OpenXml"
+        ],
+        "type": "string"
+      },
+      "ReportType": {
+        "enum": [
+          "IntegratedReport",
+          "FinancialReport",
+          "SustainabilityReport",
+          "AnnualReport",
+          "ProxyStatement",
+          "RegistrationStatement",
+          "QuarterlyReport",
+          "HalfYearlyReport",
+          "Other"
+        ],
+        "type": "string"
+      },
+      "ReportingStandard": {
+        "enum": [
+          "GAAP",
+          "IFRS",
+          "ISSB",
+          "EFRAG",
+          "GRI"
+        ],
+        "type": "string"
+      },
+      "SustainabilityReport": {
+        "type": "object",
+        "properties": {
+          "grid": {
+            "type": "string",
+            "nullable": true
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/Metadata"
+          },
+          "report": {
+            "type": "string",
+            "description": "could be google.protobuf.Any or bytes",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TimePeriod": {
+        "type": "object",
+        "properties": {
+          "startDate": {
+            "type": "string",
+            "description": "ISO 8601 date format",
+            "nullable": true
+          },
+          "endDate": {
+            "type": "string",
+            "description": "ISO 8601 date format",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Unit": {
+        "enum": [
+          "TonneCo2E",
+          "TonneCo2",
+          "TonneCh4",
+          "TonneN2O",
+          "TonneS",
+          "TonneNox",
+          "TonneSox",
+          "TonnePm10",
+          "TonnePm25",
+          "TonneVoc",
+          "TonneNh3",
+          "TonnePfc",
+          "TonneSf6",
+          "TonneHfc",
+          "TonneCfc",
+          "TonneHfc23",
+          "TonneHfc32",
+          "TonneHfc125",
+          "TonneHfc134A",
+          "TonneHfc143A",
+          "TonneHfc227Ea",
+          "TonneHfc245Fa",
+          "TonneHfc365Mfc",
+          "TonneHfc4310Mee",
+          "TonneC2F6",
+          "TonneC3F8",
+          "TonneC4F10",
+          "TonneC5F12",
+          "TonneC6F14",
+          "TonneC7F16",
+          "TonneC8F18",
+          "TonneC10F18",
+          "TonneC12F18",
+          "TonneC14F18",
+          "TonneC16F18",
+          "TonneC18F18",
+          "TonneC20F18",
+          "TonneC22F18",
+          "TonneC24F18",
+          "TonneC26F18",
+          "TonneC28F18",
+          "TonneC30F18",
+          "TonneC32F18",
+          "TonneC34F18",
+          "Liter",
+          "Kilogram",
+          "CubicMeter",
+          "Kilowatt",
+          "Megawatt",
+          "Megajuole",
+          "Kilometer",
+          "SquareMeter",
+          "Tonne",
+          "MwH",
+          "KwH"
+        ],
+        "type": "string"
+      }
+    }
   }
+}
