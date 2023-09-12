@@ -1,5 +1,5 @@
 <pre class='metadata'>
-Title: DRAFT Carbon Call - Discoverable Data & Metadata 
+Title: DRAFT Carbon Call - Discoverable Data & Metadata (1.0.230912)
 Shortname: CC-Discoverable Data - Metadata
 Level: 1
 Status: LD
@@ -23,6 +23,17 @@ Boilerplate: omit copyright, omit conformance
     "publisher": "",
     "id": "semver",
     "date": "1 January 2013"
+  },
+  "dataspaces": {
+    "href": "https://internationaldataspaces.org",
+    "title": "International Data Spaces",
+    "authors": [
+      "International Data Spaces Association"
+    ],
+    "status": "Informational",
+    "publisher": "",
+    "id": "dataspaces",
+    "date": "1 January 2021"
   }
 }
 </pre>
@@ -43,17 +54,35 @@ Carbon Call is working on establishing a common `smart dictionary` to help estab
 `what` data needs to be shared in a way that is extensible for industry sectors and different jurisdictions.  Common infrastructure for `how` to share data is also needed, which includes the ability to discover and control
 who can access the data.
 
-Direction of travel: what to share and how to share. Bring up initiatives like PACT, DPP and Dataspaces.
+This framework is primarily concerned with `what` to share, via a flexible data model that can allow for organizations to share `standard` reporting metadata as well as establish `context` or `defined` extensions
+ to support custom metadata between organizations or well understood vertical industry metadata.
 
-Issue: Add what to share: Public `WBCSD - PF/PCF` - Private `Metadata`, link to discovery
-Issue: Link to share: public -> discovery, private -> metadata/Dataspaces
+For example, the Metadata Framework would allow for one organization to request a custom set of metadata that is only relavent to their business relationship and would be meaningless to other parties. This `ad hoc`
+ metadata can then be added to the metadata messages passed between the organizations and be `machine` readable and understood without manual intervention. These are refered to as [=PropertyContext=] for individual properties
+  or [=MetaTag=] for the entire report, in the framework.
+
+For metadata that would be highly relavent for a certain industry vertical, like manufacturing or retail, a `defined` metadata extension can be established and reused by organizations in those verticals without
+ having to negotiate what the metadata messages would be up front. These are refered to as [=MetadataExtension=] extensions in the framework.
+
+Metadata produced in the framework follows the `discoverable` data identifier recommend and the metadata will `travel` with a report by having the same [=GRID=].  
+For consideration, would be the use this same framework for `non-reporting` data sharing between organizations. For example, the WBCSD:PACT initiative has defined the Pathfinder 2.0 Framework for the exchanging of 
+Product Footprint data, which includes the Product Carbon Footprint (PCF). It defines a data model or schema for what a Product Footprint looks like, or the `what to share`, as well as a way to establish [=MetadataExtension=].
+ It does not define a way to allow for organizations to define `ad hoc` requests for additional metadata.  This metadata framework could also support the ability for organizations to request additional metadata about 
+ portions of a PCF that could be `restricted` or not relavent to other organizations.
+
+`How` to share metadata can be more complex. It is recommended that for `public`, `non-restricted` metadata to travel alongside regular reporting channels with the enhanced discovery capabilities using [=GRID=].
+ For the sharing of `restricted` or `private` data where control of sharing is desired, it is recommended that the Carbon Call follow the emerging Data Spaces standards in development.  [[!DATASPACES|Data Spaces]] address broad 
+ requirements for establishing data sharing networks where organizations can control what data they share as well as discover data that is `available` by other parties using multi-layered policy and data sharing
+ contracts.  A 1.0 Data Space specification standard is expected to be completed by the Eclipse Foundation in early 2024 and interoperable vendor implementations are expected to follow to become more widely available. 
+  
+The Carbon Call Metadata Framework will be designed to be compatible with the Data Space specification and will be updated as the Data Space specification evolves.
 
 Advisement:
   This specification is a work in progress and is subject to change. It is not a final or otherwise published version.
 
 ## Status of this Document ## {#doc-status}
 
-Comments regarding the document are welcome, please file issues directly on [GitHub](https://github.com/marleyg/cc-metadata/index.bs).
+Comments regarding the document are welcome, please file issues directly on [GitHub](https://github.com/CarbonCall/metadata/blob/main/index.bs).
 
 
 ## Scope ## {#scope}
@@ -1188,3 +1217,7 @@ Here we will document changes in the specification as they are made.
 
 - Added `Id` to data type [=ProductFootprintExtension=], see [[#dt-product-footprint-extension-properties]] for details.
 - Added `pcfPropertyData` to data type [=ProductFootprintExtension=], see [[#dt-product-footprint-extension-properties]] for details.
+
+## Version 1.0.230912 (September 12, 2023) ## {#changelog-1.0.230912}
+
+- Synced overview with business case.

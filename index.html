@@ -1,7 +1,7 @@
 <!doctype html><html lang="en">
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <title>DRAFT Carbon Call - Discoverable Data &amp; Metadata</title>
+  <title>DRAFT Carbon Call - Discoverable Data &amp; Metadata (1.0.230912)</title>
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 <style data-fill-with="stylesheet">/******************************************************************************
  *                   Style sheet for the W3C specifications                   *
@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 5fcd28d6d, updated Tue May 30 13:12:11 2023 -0700" name="generator">
   <link href="https://carboncall.github.io/metadata/" rel="canonical">
-  <meta content="0066cc09d9c51346faf0e3289757953774c221ed" name="document-revision">
+  <meta content="70ad5accceddfae8e0475e9d6f83899716a85cbc" name="document-revision">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
     color: var(--a-normal-text);
@@ -2070,15 +2070,14 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"></p>
-   <h1 class="p-name no-ref" id="title">DRAFT Carbon Call - Discoverable Data &amp; Metadata</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document, <time class="dt-updated" datetime="2023-09-11">11 September 2023</time></span></h2>
+   <h1 class="p-name no-ref" id="title">DRAFT Carbon Call - Discoverable Data &amp; Metadata (1.0.230912)</h1>
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document, <time class="dt-updated" datetime="2023-09-12">12 September 2023</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
      <dd><a class="u-url" href="https://carboncall.github.io/metadata/">https://carboncall.github.io/metadata/</a>
      <dt>Issue Tracking:
      <dd><a href="https://github.com/CarbonCall/metadata/issues/">GitHub</a>
-     <dd><a href="#issues-index">Inline In Spec</a>
      <dt class="editor">Editors:
      <dd class="editor p-author h-card vcard"><a class="p-name fn u-url url" href="https://microsoft.com">Marley Gray (Microsoft)</a> <a class="u-email email" href="mailto:marleyg@microsoft.com">marleyg@microsoft.com</a>
      <dd class="editor p-author h-card vcard"><span class="p-name fn"></span>
@@ -2257,6 +2256,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
       <li><a href="#changelog-1.0.20230728"><span class="secno"></span> <span class="content">Version 1.0.20230728 (July 28, 2023)</span></a>
       <li><a href="#changelog-1.0.20230906"><span class="secno"></span> <span class="content">Version 1.0.20230906 (September 6, 2023)</span></a>
       <li><a href="#changelog-1.0.230911"><span class="secno"></span> <span class="content">Version 1.0.230911 (September 11, 2023)</span></a>
+      <li><a href="#changelog-1.0.230912"><span class="secno"></span> <span class="content">Version 1.0.230912 (September 12, 2023)</span></a>
      </ol>
     <li>
      <a href="#index"><span class="secno"></span> <span class="content">Index</span></a>
@@ -2268,7 +2268,6 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
      <ol class="toc">
       <li><a href="#normative"><span class="secno"></span> <span class="content">Normative References</span></a>
      </ol>
-    <li><a href="#issues-index"><span class="secno"></span> <span class="content">Issues Index</span></a>
    </ol>
   </nav>
   <main>
@@ -2286,12 +2285,25 @@ being designed in a way that will allow them to work together. This specificatio
 work together. Some basic capabilities need to be provided in order to effectively enable data sharing.</p>
    <p>Carbon Call is working on establishing a common <code>smart dictionary</code> to help establish a baseline of common terms and definitions so that parties can agree on the language of carbon accounting. We also need to establish <code>what</code> data needs to be shared in a way that is extensible for industry sectors and different jurisdictions.  Common infrastructure for <code>how</code> to share data is also needed, which includes the ability to discover and control
 who can access the data.</p>
-   <p>Direction of travel: what to share and how to share. Bring up initiatives like PACT, DPP and Dataspaces.</p>
-   <p class="issue" id="issue-0252e234"><a class="self-link" href="#issue-0252e234"></a> Add what to share: Public <code>WBCSD - PF/PCF</code> - Private <code>Metadata</code>, link to discovery
-Issue: Link to share: public -> discovery, private -> metadata/Dataspaces</p>
+   <p>This framework is primarily concerned with <code>what</code> to share, via a flexible data model that can allow for organizations to share <code>standard</code> reporting metadata as well as establish <code>context</code> or <code>defined</code> extensions
+ to support custom metadata between organizations or well understood vertical industry metadata.</p>
+   <p>For example, the Metadata Framework would allow for one organization to request a custom set of metadata that is only relavent to their business relationship and would be meaningless to other parties. This <code>ad hoc</code> metadata can then be added to the metadata messages passed between the organizations and be <code>machine</code> readable and understood without manual intervention. These are refered to as <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext">PropertyContext</a> for individual properties
+  or <a data-link-type="dfn" href="#metatag" id="ref-for-metatag">MetaTag</a> for the entire report, in the framework.</p>
+   <p>For metadata that would be highly relavent for a certain industry vertical, like manufacturing or retail, a <code>defined</code> metadata extension can be established and reused by organizations in those verticals without
+ having to negotiate what the metadata messages would be up front. These are refered to as <a data-link-type="dfn" href="#metadataextension" id="ref-for-metadataextension">MetadataExtension</a> extensions in the framework.</p>
+   <p>Metadata produced in the framework follows the <code>discoverable</code> data identifier recommend and the metadata will <code>travel</code> with a report by having the same <a data-link-type="dfn" href="#grid" id="ref-for-grid">GRID</a>.
+For consideration, would be the use this same framework for <code>non-reporting</code> data sharing between organizations. For example, the WBCSD:PACT initiative has defined the Pathfinder 2.0 Framework for the exchanging of 
+Product Footprint data, which includes the Product Carbon Footprint (PCF). It defines a data model or schema for what a Product Footprint looks like, or the <code>what to share</code>, as well as a way to establish <a data-link-type="dfn" href="#metadataextension" id="ref-for-metadataextension①">MetadataExtension</a>.
+ It does not define a way to allow for organizations to define <code>ad hoc</code> requests for additional metadata.  This metadata framework could also support the ability for organizations to request additional metadata about 
+ portions of a PCF that could be <code>restricted</code> or not relavent to other organizations.</p>
+   <p><code>How</code> to share metadata can be more complex. It is recommended that for <code>public</code>, <code>non-restricted</code> metadata to travel alongside regular reporting channels with the enhanced discovery capabilities using <a data-link-type="dfn" href="#grid" id="ref-for-grid①">GRID</a>.
+ For the sharing of <code>restricted</code> or <code>private</code> data where control of sharing is desired, it is recommended that the Carbon Call follow the emerging Data Spaces standards in development. <a data-link-type="biblio" href="#biblio-dataspaces" title="International Data Spaces">Data Spaces</a> address broad 
+ requirements for establishing data sharing networks where organizations can control what data they share as well as discover data that is <code>available</code> by other parties using multi-layered policy and data sharing
+ contracts.  A 1.0 Data Space specification standard is expected to be completed by the Eclipse Foundation in early 2024 and interoperable vendor implementations are expected to follow to become more widely available.</p>
+   <p>The Carbon Call Metadata Framework will be designed to be compatible with the Data Space specification and will be updated as the Data Space specification evolves.</p>
    <p><strong class="advisement"> This specification is a work in progress and is subject to change. It is not a final or otherwise published version.</strong></p>
    <h3 class="heading settled" data-level="1.1" id="doc-status"><span class="secno">1.1. </span><span class="content">Status of this Document</span><a class="self-link" href="#doc-status"></a></h3>
-   <p>Comments regarding the document are welcome, please file issues directly on <a href="https://github.com/marleyg/cc-metadata/index.bs">GitHub</a>.</p>
+   <p>Comments regarding the document are welcome, please file issues directly on <a href="https://github.com/CarbonCall/metadata/blob/main/index.bs">GitHub</a>.</p>
    <h3 class="heading settled" data-level="1.2" id="scope"><span class="secno">1.2. </span><span class="content">Scope</span><a class="self-link" href="#scope"></a></h3>
    <p>The scope of this document is to reach consensus on a Discoverable Sustainability Dat and Metadata.</p>
    <h3 class="heading settled" data-level="1.3" id="audience"><span class="secno">1.3. </span><span class="content">Intended Audience</span><a class="self-link" href="#audience"></a></h3>
@@ -2335,7 +2347,7 @@ This framework is interoperable with the Pathfinder network and provides footpri
     <dt data-md><dfn data-dfn-type="dfn" data-noexport id="report-metadata">Report Metadata<a class="self-link" href="#report-metadata"></a></dfn>
     <dd data-md>
      <p>A Sustainability Report Metadata is a set of metadata about a sustainability report that is used to discover, understand, and use the sustainability report.</p>
-    <dt data-md><a data-link-type="dfn" href="#metatag" id="ref-for-metatag">Metatag</a>
+    <dt data-md><a data-link-type="dfn" href="#metatag" id="ref-for-metatag①">Metatag</a>
     <dd data-md>
      <p>A simple name/value pair that is used to describe a piece of metadata.</p>
     <dt data-md><dfn data-dfn-type="dfn" data-noexport id="context">Context<a class="self-link" href="#context"></a></dfn>
@@ -2370,7 +2382,7 @@ the report.</p>
        <th>Specification 
      <tbody>
       <tr>
-       <td><dfn data-dfn-for="SustainabilityReport" data-dfn-type="element-attr" data-export id="element-attrdef-sustainabilityreport-grid"><code>GRID</code><a class="self-link" href="#element-attrdef-sustainabilityreport-grid"></a></dfn> : <a data-link-type="dfn" href="#grid" id="ref-for-grid">GRID</a> 
+       <td><dfn data-dfn-for="SustainabilityReport" data-dfn-type="element-attr" data-export id="element-attrdef-sustainabilityreport-grid"><code>GRID</code><a class="self-link" href="#element-attrdef-sustainabilityreport-grid"></a></dfn> : <a data-link-type="dfn" href="#grid" id="ref-for-grid②">GRID</a> 
        <td>String 
        <td>M 
        <td>The Sustainabilty Report global identifier, See <a href="#dt-grid">§ 3.21 Data Type: GRID</a> for details. 
@@ -2404,7 +2416,7 @@ the reporting period, the industry, the assurance provider, etc.</p>
        <th>Specification 
      <tbody>
       <tr>
-       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-grid"><code>GRID</code><a class="self-link" href="#element-attrdef-metadata-grid"></a></dfn> <a data-link-type="dfn" href="#grid" id="ref-for-grid①">GRID</a> 
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-grid"><code>GRID</code><a class="self-link" href="#element-attrdef-metadata-grid"></a></dfn> <a data-link-type="dfn" href="#grid" id="ref-for-grid③">GRID</a> 
        <td>String 
        <td>M 
        <td>The GRID of the report that the metadata is about, see <a href="#dt-grid">§ 3.21 Data Type: GRID</a> for details. 
@@ -2509,21 +2521,21 @@ the reporting period, the industry, the assurance provider, etc.</p>
        <td>O 
        <td>A collection of activities, by <a data-link-type="dfn" href="#activity" id="ref-for-activity①">Activity</a>. See <a href="#dt-activity">§ 3.5 Data Type: Activity</a> for details. 
       <tr>
-       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-reportcontext"><code>reportContext</code><a class="self-link" href="#element-attrdef-metadata-reportcontext"></a></dfn>: <a data-link-type="dfn" href="#metatag" id="ref-for-metatag①">Metatag</a> 
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-reportcontext"><code>reportContext</code><a class="self-link" href="#element-attrdef-metadata-reportcontext"></a></dfn>: <a data-link-type="dfn" href="#metatag" id="ref-for-metatag②">Metatag</a> 
        <td>Array 
        <td>O 
-       <td>A collection of <a data-link-type="dfn" href="#metatag" id="ref-for-metatag②">Metatag</a> for the report context. See <a href="#dt-metatag">§ 3.11 Data Type: Metatag</a> for details. 
+       <td>A collection of <a data-link-type="dfn" href="#metatag" id="ref-for-metatag③">Metatag</a> for the report context. See <a href="#dt-metatag">§ 3.11 Data Type: Metatag</a> for details. 
       <tr>
-       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-propertycontext"><code>propertyContext</code><a class="self-link" href="#element-attrdef-metadata-propertycontext"></a></dfn>: <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext">PropertyContext</a> 
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-propertycontext"><code>propertyContext</code><a class="self-link" href="#element-attrdef-metadata-propertycontext"></a></dfn>: <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext①">PropertyContext</a> 
        <td>Array 
        <td>O 
-       <td>A collection of Report Property Context metadata using <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext①">PropertyContext</a>. See <a href="#dt-property-context">§ 3.13 Data Type: PropertyContext</a> for details.
+       <td>A collection of Report Property Context metadata using <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext②">PropertyContext</a>. See <a href="#dt-property-context">§ 3.13 Data Type: PropertyContext</a> for details.
       |
       <tr>
-       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-metadataextensions"><code>metadataExtensions</code><a class="self-link" href="#element-attrdef-metadata-metadataextensions"></a></dfn>: <a data-link-type="dfn" href="#metadataextension" id="ref-for-metadataextension">MetadataExtension</a> 
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-metadataextensions"><code>metadataExtensions</code><a class="self-link" href="#element-attrdef-metadata-metadataextensions"></a></dfn>: <a data-link-type="dfn" href="#metadataextension" id="ref-for-metadataextension②">MetadataExtension</a> 
        <td>Array 
        <td>O 
-       <td>A collection of metadata extensions using <a data-link-type="dfn" href="#metadataextension" id="ref-for-metadataextension①">MetadataExtension</a>. See <a href="#dt-metadata-extension">§ 3.14 Data Type: MetadataExtension</a> for details.
+       <td>A collection of metadata extensions using <a data-link-type="dfn" href="#metadataextension" id="ref-for-metadataextension③">MetadataExtension</a>. See <a href="#dt-metadata-extension">§ 3.14 Data Type: MetadataExtension</a> for details.
             |
       <tr>
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-pfextensions"><code>pfExtensions</code><a class="self-link" href="#element-attrdef-metadata-pfextensions"></a></dfn>: <a data-link-type="dfn" href="#productfootprintextension" id="ref-for-productfootprintextension">ProductFootprintExtension</a> 
@@ -2531,10 +2543,10 @@ the reporting period, the industry, the assurance provider, etc.</p>
        <td>O 
        <td>A collection of product footprint extensions using <a data-link-type="dfn" href="#productfootprintextension" id="ref-for-productfootprintextension①">ProductFootprintExtension</a>. See <a href="#dt-product-footprint-extension">§ 3.17 Data Type: ProductFootprintExtension</a> for details. 
       <tr>
-       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-relatedreports"><code>relatedReports</code><a class="self-link" href="#element-attrdef-metadata-relatedreports"></a></dfn> : <a data-link-type="dfn" href="#grid" id="ref-for-grid②">GRID</a> 
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-relatedreports"><code>relatedReports</code><a class="self-link" href="#element-attrdef-metadata-relatedreports"></a></dfn> : <a data-link-type="dfn" href="#grid" id="ref-for-grid④">GRID</a> 
        <td>Array 
        <td>O 
-       <td>A collection of related reports, by <a data-link-type="dfn" href="#grid" id="ref-for-grid③">GRID</a>. For example, a reference to a financial disclosure, etc. See <a href="#dt-grid">§ 3.21 Data Type: GRID</a> for details. 
+       <td>A collection of related reports, by <a data-link-type="dfn" href="#grid" id="ref-for-grid⑤">GRID</a>. For example, a reference to a financial disclosure, etc. See <a href="#dt-grid">§ 3.21 Data Type: GRID</a> for details. 
     </table>
     <figcaption>Properties of a Metadata Object</figcaption>
    </figure>
@@ -2888,10 +2900,10 @@ indicator, or a specific aspect.</p>
        <td>M 
        <td>The property name for the context. The property MUST be the normative name for the property for the report’s specification. For example, the property name can be <code>section 1.1.1</code>, etc. 
       <tr>
-       <td>metatags : <a data-link-type="dfn" href="#metatag" id="ref-for-metatag③">Metatag</a> 
+       <td>metatags : <a data-link-type="dfn" href="#metatag" id="ref-for-metatag④">Metatag</a> 
        <td>Array 
        <td>M 
-       <td>A collection of metatags using <a data-link-type="dfn" href="#metatag" id="ref-for-metatag④">Metatag</a>s. See <a href="#dt-metatag">§ 3.11 Data Type: Metatag</a> for details. 
+       <td>A collection of metatags using <a data-link-type="dfn" href="#metatag" id="ref-for-metatag⑤">Metatag</a>s. See <a href="#dt-metatag">§ 3.11 Data Type: Metatag</a> for details. 
       <tr>
        <td><dfn data-dfn-for="PropertyContext" data-dfn-type="element-attr" data-export id="element-attrdef-propertycontext-relatedmetadata"><code>relatedMetadata</code><a class="self-link" href="#element-attrdef-propertycontext-relatedmetadata"></a></dfn> : <a data-link-type="dfn" href="#metalink" id="ref-for-metalink④">Metalink</a> 
        <td>Array 
@@ -2974,10 +2986,10 @@ and only shared under a <a data-link-type="dfn" href="#dataspace" id="ref-for-da
        <td>M 
        <td>The Id of the Product Footprint, see <a href="#dt-id">§ 3.18 Data Type: Id</a> for details. 
       <tr>
-       <td>pcfPropertyData: <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext②">PropertyContext</a> 
+       <td>pcfPropertyData: <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext③">PropertyContext</a> 
        <td>Array 
        <td>M 
-       <td>A collection of Product Footprint Property Context metadata using <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext③">PropertyContext</a>. Can be added for specific properties in a Product Footprint to add additional metadata about the value in the footprint.
+       <td>A collection of Product Footprint Property Context metadata using <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext④">PropertyContext</a>. Can be added for specific properties in a Product Footprint to add additional metadata about the value in the footprint.
          See <a href="#dt-property-context">§ 3.13 Data Type: PropertyContext</a> for details. 
     </table>
     <figcaption>Properties of data type ProductFootprintExtension</figcaption>
@@ -3505,7 +3517,7 @@ and only shared under a <a data-link-type="dfn" href="#dataspace" id="ref-for-da
    </div>
    <h2 class="heading settled" id="license"><span class="content">Appendix A: License</span><a class="self-link" href="#license"></a></h2>
    <p>MIT License</p>
-   <p>Copyright (c) 2023 Marley Gray</p>
+   <p>Copyright (c) 2023 Carbon Call</p>
    <p>Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -3528,9 +3540,9 @@ SOFTWARE.</p>
     <li data-md>
      <p>Adding <code>ReportType</code> enum, see <a href="#dt-report-type">§ 3.24 Data Type: ReportType</a> for details.</p>
     <li data-md>
-     <p>Adding <code>reportContext</code> a collection of <a data-link-type="dfn" href="#metatag" id="ref-for-metatag⑤">Metatag</a> to <a data-link-type="dfn" href="#metadata" id="ref-for-metadata">Metadata</a>, see <a href="#dt-metadata-properties">§ 3.2.1 Properties</a> for details.</p>
+     <p>Adding <code>reportContext</code> a collection of <a data-link-type="dfn" href="#metatag" id="ref-for-metatag⑥">Metatag</a> to <a data-link-type="dfn" href="#metadata" id="ref-for-metadata">Metadata</a>, see <a href="#dt-metadata-properties">§ 3.2.1 Properties</a> for details.</p>
     <li data-md>
-     <p>Adding <code>propertyContexts</code> a collection of <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext④">PropertyContext</a> to <a data-link-type="dfn" href="#metadata" id="ref-for-metadata①">Metadata</a>, see <a href="#dt-metadata-properties">§ 3.2.1 Properties</a> for details.</p>
+     <p>Adding <code>propertyContexts</code> a collection of <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext⑤">PropertyContext</a> to <a data-link-type="dfn" href="#metadata" id="ref-for-metadata①">Metadata</a>, see <a href="#dt-metadata-properties">§ 3.2.1 Properties</a> for details.</p>
     <li data-md>
      <p>Addition <code>relatedReports</code> to <a data-link-type="dfn" href="#metadata" id="ref-for-metadata②">Metadata</a>, see <a href="#dt-metadata-properties">§ 3.2.1 Properties</a> for details.</p>
    </ul>
@@ -3544,7 +3556,7 @@ SOFTWARE.</p>
     <li data-md>
      <p>Added data type <a data-link-type="dfn" href="#metalink" id="ref-for-metalink⑥">Metalink</a>, see <a href="#dt-metalink">§ 3.12 Data Type: Metalink</a> for details.</p>
     <li data-md>
-     <p>Added <code>Metalinks</code> to <a data-link-type="dfn" href="#activity" id="ref-for-activity②">Activity</a>, <a data-link-type="dfn" href="#metatag" id="ref-for-metatag⑥">MetaTag</a> and <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext⑤">PropertyContext</a>, see <a href="#dt-activity-properties">§ 3.5.1 Properties</a>, <a href="#dt-metatag-properties">§ 3.11.1 Properties</a> and <a href="#dt-property-context-properties">§ 3.13.1 Properties</a> for details.</p>
+     <p>Added <code>Metalinks</code> to <a data-link-type="dfn" href="#activity" id="ref-for-activity②">Activity</a>, <a data-link-type="dfn" href="#metatag" id="ref-for-metatag⑦">MetaTag</a> and <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext⑥">PropertyContext</a>, see <a href="#dt-activity-properties">§ 3.5.1 Properties</a>, <a href="#dt-metatag-properties">§ 3.11.1 Properties</a> and <a href="#dt-property-context-properties">§ 3.13.1 Properties</a> for details.</p>
     <li data-md>
      <p>Added data type <a data-link-type="dfn" href="#geographiclocation" id="ref-for-geographiclocation①">GeographicLocation</a>, see <a href="#dt-geographic-location">§ 3.9 Data Type: GeographicLocation</a> for details.</p>
     <li data-md>
@@ -3585,6 +3597,11 @@ SOFTWARE.</p>
      <p>Added <code>Id</code> to data type <a data-link-type="dfn" href="#productfootprintextension" id="ref-for-productfootprintextension②">ProductFootprintExtension</a>, see <a href="#dt-product-footprint-extension-properties">§ 3.17.1 Properties</a> for details.</p>
     <li data-md>
      <p>Added <code>pcfPropertyData</code> to data type <a data-link-type="dfn" href="#productfootprintextension" id="ref-for-productfootprintextension③">ProductFootprintExtension</a>, see <a href="#dt-product-footprint-extension-properties">§ 3.17.1 Properties</a> for details.</p>
+   </ul>
+   <h3 class="heading settled" id="changelog-1.0.230912"><span class="content">Version 1.0.230912 (September 12, 2023)</span><a class="self-link" href="#changelog-1.0.230912"></a></h3>
+   <ul>
+    <li data-md>
+     <p>Synced overview with business case.</p>
    </ul>
   </main>
 <script>
@@ -3883,6 +3900,8 @@ SOFTWARE.</p>
   <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
   <h3 class="no-num no-ref heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
   <dl>
+   <dt id="biblio-dataspaces">[DATASPACES]
+   <dd>International Data Spaces Association. <a href="https://internationaldataspaces.org"><cite>International Data Spaces</cite></a>. 1 January 2021. Informational. URL: <a href="https://internationaldataspaces.org">https://internationaldataspaces.org</a>
    <dt id="biblio-rfc3986">[RFC3986]
    <dd>T. Berners-Lee; R. Fielding; L. Masinter. <a href="https://www.rfc-editor.org/rfc/rfc3986"><cite>Uniform Resource Identifier (URI): Generic Syntax</cite></a>. January 2005. Internet Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc3986">https://www.rfc-editor.org/rfc/rfc3986</a>
    <dt id="biblio-rfc4122">[RFC4122]
@@ -3890,11 +3909,6 @@ SOFTWARE.</p>
    <dt id="biblio-semver">[SEMVER]
    <dd>Tom Preston-Werner. <a href="https://semver.org/spec/v2.0.0.html"><cite>Semantic Versioning</cite></a>. 1 January 2013. Informational. URL: <a href="https://semver.org/spec/v2.0.0.html">https://semver.org/spec/v2.0.0.html</a>
   </dl>
-  <h2 class="no-num no-ref heading settled" id="issues-index"><span class="content">Issues Index</span><a class="self-link" href="#issues-index"></a></h2>
-  <div style="counter-reset:issue">
-   <div class="issue"> Add what to share: Public <code>WBCSD - PF/PCF</code> - Private <code>Metadata</code>, link to discovery
-Issue: Link to share: public -> discovery, private -> metadata/Dataspaces <a class="issue-return" href="#issue-0252e234" title="Jump to section">↵</a></div>
-  </div>
 <script>/* Boilerplate: script-dfn-panel */
 "use strict";
 {
@@ -4059,14 +4073,14 @@ window.dfnpanelData['factorandsource'] = {"dfnID": "factorandsource", "url": "#f
 window.dfnpanelData['governance'] = {"dfnID": "governance", "url": "#governance", "dfnText": "Governance", "refSections": [{"refs": [{"id": "ref-for-governance"}], "title": "3.2.1. Properties"}, {"refs": [{"id": "ref-for-governance\u2460"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
 window.dfnpanelData['methodology'] = {"dfnID": "methodology", "url": "#methodology", "dfnText": "Methodology", "refSections": [{"refs": [{"id": "ref-for-methodology"}], "title": "3.2.1. Properties"}, {"refs": [{"id": "ref-for-methodology\u2460"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
 window.dfnpanelData['geographiclocation'] = {"dfnID": "geographiclocation", "url": "#geographiclocation", "dfnText": "GeographicLocation", "refSections": [{"refs": [{"id": "ref-for-geographiclocation"}], "title": "3.5.1. Properties"}, {"refs": [{"id": "ref-for-geographiclocation\u2460"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
-window.dfnpanelData['metatag'] = {"dfnID": "metatag", "url": "#metatag", "dfnText": "Metatag", "refSections": [{"refs": [{"id": "ref-for-metatag"}], "title": "2. Terminology"}, {"refs": [{"id": "ref-for-metatag\u2460"}, {"id": "ref-for-metatag\u2461"}], "title": "3.2.1. Properties"}, {"refs": [{"id": "ref-for-metatag\u2462"}, {"id": "ref-for-metatag\u2463"}], "title": "3.13.1. Properties"}, {"refs": [{"id": "ref-for-metatag\u2464"}], "title": "Version 1.0.20230627 (June 27, 2023)"}, {"refs": [{"id": "ref-for-metatag\u2465"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
+window.dfnpanelData['metatag'] = {"dfnID": "metatag", "url": "#metatag", "dfnText": "Metatag", "refSections": [{"refs": [{"id": "ref-for-metatag"}], "title": "1. Introduction"}, {"refs": [{"id": "ref-for-metatag\u2460"}], "title": "2. Terminology"}, {"refs": [{"id": "ref-for-metatag\u2461"}, {"id": "ref-for-metatag\u2462"}], "title": "3.2.1. Properties"}, {"refs": [{"id": "ref-for-metatag\u2463"}, {"id": "ref-for-metatag\u2464"}], "title": "3.13.1. Properties"}, {"refs": [{"id": "ref-for-metatag\u2465"}], "title": "Version 1.0.20230627 (June 27, 2023)"}, {"refs": [{"id": "ref-for-metatag\u2466"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
 window.dfnpanelData['metalink'] = {"dfnID": "metalink", "url": "#metalink", "dfnText": "Metalink", "refSections": [{"refs": [{"id": "ref-for-metalink"}, {"id": "ref-for-metalink\u2460"}], "title": "3.5.1. Properties"}, {"refs": [{"id": "ref-for-metalink\u2461"}, {"id": "ref-for-metalink\u2462"}], "title": "3.11.1. Properties"}, {"refs": [{"id": "ref-for-metalink\u2463"}, {"id": "ref-for-metalink\u2464"}], "title": "3.13.1. Properties"}, {"refs": [{"id": "ref-for-metalink\u2465"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
-window.dfnpanelData['propertycontext'] = {"dfnID": "propertycontext", "url": "#propertycontext", "dfnText": "PropertyContext", "refSections": [{"refs": [{"id": "ref-for-propertycontext"}, {"id": "ref-for-propertycontext\u2460"}], "title": "3.2.1. Properties"}, {"refs": [{"id": "ref-for-propertycontext\u2461"}, {"id": "ref-for-propertycontext\u2462"}], "title": "3.17.1. Properties"}, {"refs": [{"id": "ref-for-propertycontext\u2463"}], "title": "Version 1.0.20230627 (June 27, 2023)"}, {"refs": [{"id": "ref-for-propertycontext\u2464"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
-window.dfnpanelData['metadataextension'] = {"dfnID": "metadataextension", "url": "#metadataextension", "dfnText": "MetadataExtension", "refSections": [{"refs": [{"id": "ref-for-metadataextension"}, {"id": "ref-for-metadataextension\u2460"}], "title": "3.2.1. Properties"}], "external": false};
+window.dfnpanelData['propertycontext'] = {"dfnID": "propertycontext", "url": "#propertycontext", "dfnText": "PropertyContext", "refSections": [{"refs": [{"id": "ref-for-propertycontext"}], "title": "1. Introduction"}, {"refs": [{"id": "ref-for-propertycontext\u2460"}, {"id": "ref-for-propertycontext\u2461"}], "title": "3.2.1. Properties"}, {"refs": [{"id": "ref-for-propertycontext\u2462"}, {"id": "ref-for-propertycontext\u2463"}], "title": "3.17.1. Properties"}, {"refs": [{"id": "ref-for-propertycontext\u2464"}], "title": "Version 1.0.20230627 (June 27, 2023)"}, {"refs": [{"id": "ref-for-propertycontext\u2465"}], "title": "Version 1.0.20230728 (July 28, 2023)"}], "external": false};
+window.dfnpanelData['metadataextension'] = {"dfnID": "metadataextension", "url": "#metadataextension", "dfnText": "MetadataExtension", "refSections": [{"refs": [{"id": "ref-for-metadataextension"}, {"id": "ref-for-metadataextension\u2460"}], "title": "1. Introduction"}, {"refs": [{"id": "ref-for-metadataextension\u2461"}, {"id": "ref-for-metadataextension\u2462"}], "title": "3.2.1. Properties"}], "external": false};
 window.dfnpanelData['productfootprintextension'] = {"dfnID": "productfootprintextension", "url": "#productfootprintextension", "dfnText": "ProductFootprintExtension", "refSections": [{"refs": [{"id": "ref-for-productfootprintextension"}, {"id": "ref-for-productfootprintextension\u2460"}], "title": "3.2.1. Properties"}, {"refs": [{"id": "ref-for-productfootprintextension\u2461"}, {"id": "ref-for-productfootprintextension\u2462"}], "title": "Version 1.0.230911 (September 11, 2023)"}], "external": false};
 window.dfnpanelData['id'] = {"dfnID": "id", "url": "#id", "dfnText": "Id", "refSections": [{"refs": [{"id": "ref-for-id"}], "title": "3.17.1. Properties"}], "external": false};
 window.dfnpanelData['string'] = {"dfnID": "string", "url": "#string", "dfnText": "String", "refSections": [{"refs": [{"id": "ref-for-string"}], "title": "3.20.1. JSON Data Representation"}], "external": false};
-window.dfnpanelData['grid'] = {"dfnID": "grid", "url": "#grid", "dfnText": "GRID", "refSections": [{"refs": [{"id": "ref-for-grid"}], "title": "3.1.1. Properties"}, {"refs": [{"id": "ref-for-grid\u2460"}, {"id": "ref-for-grid\u2461"}, {"id": "ref-for-grid\u2462"}], "title": "3.2.1. Properties"}], "external": false};
+window.dfnpanelData['grid'] = {"dfnID": "grid", "url": "#grid", "dfnText": "GRID", "refSections": [{"refs": [{"id": "ref-for-grid"}, {"id": "ref-for-grid\u2460"}], "title": "1. Introduction"}, {"refs": [{"id": "ref-for-grid\u2461"}], "title": "3.1.1. Properties"}, {"refs": [{"id": "ref-for-grid\u2462"}, {"id": "ref-for-grid\u2463"}, {"id": "ref-for-grid\u2464"}], "title": "3.2.1. Properties"}], "external": false};
 window.dfnpanelData['enumdef-reportformat'] = {"dfnID": "enumdef-reportformat", "url": "#enumdef-reportformat", "dfnText": "ReportFormat", "refSections": [{"refs": [{"id": "ref-for-enumdef-reportformat"}], "title": "3.2.1. Properties"}], "external": false};
 window.dfnpanelData['enumdef-reportingstandard'] = {"dfnID": "enumdef-reportingstandard", "url": "#enumdef-reportingstandard", "dfnText": "ReportingStandard", "refSections": [{"refs": [{"id": "ref-for-enumdef-reportingstandard"}], "title": "3.2.1. Properties"}], "external": false};
 window.dfnpanelData['enumdef-reporttype'] = {"dfnID": "enumdef-reporttype", "url": "#enumdef-reporttype", "dfnText": "ReportType", "refSections": [{"refs": [{"id": "ref-for-enumdef-reporttype"}], "title": "3.2.1. Properties"}, {"refs": [{"id": "ref-for-enumdef-reporttype\u2460"}], "title": "3.24.1. JSON Representation"}], "external": false};
