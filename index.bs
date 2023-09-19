@@ -1221,3 +1221,7 @@ Here we will document changes in the specification as they are made.
 ## Version 1.0.230912 (September 12, 2023) ## {#changelog-1.0.230912}
 
 - Synced overview with business case.
+
+## Version 1.0.230919 (September 19, 2023) ## {#changelog-1.0.230919}
+
+- Renamed `PropertyContext` to `PropertyContextExtension, see [[#dt-property-context-extension]] for details.
