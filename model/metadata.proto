@@ -35,16 +35,16 @@ message Metadata{
     string prior_report = 19; //GR.ID of the report this report is based on
     string report_hash = 20; //SHA-256 hash of the report
     repeated Activity activities = 21; //Activities that are reported on
-    repeated Metatag report_context = 22; //Metatags that provide additional context for the report
-    repeated PropertyContext property_contexts = 23; //Property contexts that provide additional context for the report, i.e., section metadata
-    repeated MetadataExtension metatdata_extensions = 24; //Extensions to the metadata
+    repeated Metatag report_context_extensions = 22; //Metatag extensions that provide additional context for the report
+    repeated PropertyContextExtension property_context_extensions = 23; //Property context extensions, untyped or ad hoc, that provide additional context for the report, i.e., section metadata
+    repeated MetadataExtension metatdata_extensions = 24; //Defined or typed extension to metadata
     repeated ProductFootprintExtension p_f_extensions = 25; //Extensions to any related product footprints in the report
     repeated string related_reports = 26; //GR.IDs of related reports
 }
 
 message ProductFootprintExtension{
     string pfId = 1; //Id of the product footprint
-    repeated PropertyContext p_c_f_property_data = 2; //Property contexts that provide additional context for the product footprint, i.e., section metadata
+    repeated PropertyContextExtension p_c_f_property_data = 2; //Property contexts that provide additional context for the product footprint, i.e., section metadata
 }
 
 message Activity{
@@ -119,7 +119,7 @@ message Metatag{
     repeated Metalink related_metadata = 3; //links to related metadata
 }
 
-message PropertyContext{
+message PropertyContextExtension{
     string property_name = 1;
     repeated Metatag metatags = 2;
     repeated Metalink related_metadata = 3; //links to related metadata

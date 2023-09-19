@@ -73,8 +73,8 @@ public static class EntityTools
             PriorReport = "",
             ReportHash = "dftaae3297i89798adsdf832adfs912231azsdf",
             Activities = { GetActivities() },
-            ReportContext = { GetReportMetaTags() },
-            PropertyContexts = { GetPropertyContexts() },
+            ReportContextExtensions = {  GetReportMetaTags() },
+            PropertyContextExtensions = { GetPropertyContexts() },
             MetatdataExtensions = {  GetMetadataExtensions() },
             PFExtensions = { GetPfExtensions() },
             RelatedReports = { "SDJQ.BPUN.15", "ADCF.GPOM.16" },
@@ -87,7 +87,7 @@ public static class EntityTools
         var pfEx = new ProductFootprintExtension
         {
             PfId = Guid.NewGuid().ToString(),
-            PCFPropertyData = { new PropertyContext
+            PCFPropertyData = { new PropertyContextExtension
                 {
                     PropertyName = "pcf/pCfExcludingBiogenic",
                     Metatags =
@@ -167,11 +167,11 @@ public static class EntityTools
         };
     }
 
-    private static IEnumerable<PropertyContext> GetPropertyContexts()
+    private static IEnumerable<PropertyContextExtension> GetPropertyContexts()
     {
-        var retVal = new List<PropertyContext>();
+        var retVal = new List<PropertyContextExtension>();
 
-        var prop1 = new PropertyContext
+        var prop1 = new PropertyContextExtension
         {
             PropertyName = "Section 1.2.1",
             Metatags =
@@ -184,7 +184,7 @@ public static class EntityTools
             }
         };
         
-        var prop2 = new PropertyContext
+        var prop2 = new PropertyContextExtension
         {
             PropertyName = "Section 1.2.2",
             Metatags =

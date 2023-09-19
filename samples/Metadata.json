@@ -1,5 +1,5 @@
 {
-  "grid": "JAAN.PMWZ.16",
+  "grid": "7DT6.R5BF.32",
   "organizationIdentifier": "LEI: 254900OPPU84GM83MG36",
   "organizationName": "CarbonCall",
   "domicile": "US",
@@ -74,7 +74,7 @@
       ]
     }
   ],
-  "reportContext": [
+  "reportContextExtensions": [
     {
       "key": "Author Contact Email",
       "value": "someone@somewhere.com",
@@ -86,7 +86,7 @@
       "relatedMetadata": []
     }
   ],
-  "propertyContexts": [
+  "propertyContextExtensions": [
     {
       "propertyName": "Section 1.2.1",
       "metatags": [
@@ -119,14 +119,14 @@
   ],
   "pfExtensions": [
     {
-      "pfId": "a8ecc17f-1f71-4fe9-8ae7-e5ee1d55731a",
+      "pfId": "21f9e79a-1239-4080-8151-08cd1ecbfaf8",
       "pcfPropertyData": [
         {
           "propertyName": "pcf/pCfExcludingBiogenic",
           "metatags": [
             {
               "key": "majorExcludingBiogenicSourcePCF_Id",
-              "value": "a3e7d705-a7d4-4b74-b968-c9de69c3f084",
+              "value": "8237be0b-b059-4829-83d8-ebb938cae092",
               "relatedMetadata": []
             }
           ],
@@ -140,3 +140,6 @@
     "ADCF.GPOM.16"
   ]
 }
+Response headers
+ content-type: application/json; charset=utf-8 
+ date: Tue,19 Sep 2023 14:37:34 G

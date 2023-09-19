@@ -58,7 +58,7 @@ This framework is primarily concerned with `what` to share, via a flexible data 
  to support custom metadata between organizations or well understood vertical industry metadata.
 
 For example, the Metadata Framework would allow for one organization to request a custom set of metadata that is only relavent to their business relationship and would be meaningless to other parties. This `ad hoc`
- metadata can then be added to the metadata messages passed between the organizations and be `machine` readable and understood without manual intervention. These are refered to as [=PropertyContext=] for individual properties
+ metadata can then be added to the metadata messages passed between the organizations and be `machine` readable and understood without manual intervention. These are refered to as [=PropertyContextExtension=] for individual properties
   or [=MetaTag=] for the entire report, in the framework.
 
 For metadata that would be highly relavent for a certain industry vertical, like manufacturing or retail, a `defined` metadata extension can be established and reused by organizations in those verticals without
@@ -331,15 +331,15 @@ A metadata object has the following properties:
         <td>O
         <td>A collection of activities, by [=Activity=]. See [[#dt-activity]] for details.
       <tr>
-        <td><dfn>reportContext</dfn>: [=Metatag=]
+        <td><dfn>reportContextExtension</dfn>: [=Metatag=]
         <td>Array
         <td>O
-        <td>A collection of [=Metatag=] for the report context. See [[#dt-metatag]] for details.
+        <td>A collection of [=Metatag=] for the report context, grouped into an extension. See [[#dt-metatag]] for details.
       <tr>
-        <td><dfn>propertyContext</dfn>: [=PropertyContext=]
+        <td><dfn>propertyContextExtension</dfn>: [=PropertyContextExtension=]
         <td>Array
         <td>O
-        <td>A collection of Report Property Context metadata using [=PropertyContext=]. See [[#dt-property-context]] for details.
+        <td>A collection of Report Property Context metadata using [=PropertyContextExtension=], grouped into an extension. See [[#dt-property-context]] for details.
       |<tr>
         <td><dfn>metadataExtensions</dfn>: [=MetadataExtension=]
         <td>Array
@@ -736,16 +736,16 @@ Metalink has the following properties:
   <figcaption>Properties of a Metalink</figcaption>
   </figure>
 
-## Data Type: <dfn>PropertyContext</dfn> ## {#dt-property-context}
+## Data Type: <dfn>PropertyContextExtension</dfn> ## {#dt-property-context-extension}
 
 A property context allows for a grouping of metatags that are associated with a specific property. For example, a property context may be used to group metatags that are associated with a specific
 indicator, or a specific aspect.
 
-### Properties ### {#dt-property-context-properties}
+### Properties ### {#dt-property-context-extension-properties}
 
-PropertyContext has the following properties:
+PropertyContextExtension has the following properties:
 
-<figure id="property-context-properties-table" dfn-type="element-attr" dfn-for="PropertyContext">
+<figure id="property-context-extension-properties-table" dfn-type="element-attr" dfn-for="PropertyContextExtension">
   <table class="data">
     <thead>
       <tr>
@@ -804,10 +804,10 @@ PropertyContext has the following properties:
             <td>M
             <td>A Json object that contains the data for the extension, see [[#metadata-extension-definition]] for details.
       </table>
-    <figcaption>Properties of data type TypedExtension</figcaption>
+    <figcaption>Properties of data type MetadataExtension</figcaption>
     </figure>
     
-    ## Typed Extension Schema File: <dfn>MetadataExtensionDefinition</dfn> ## {#metadata-extension-definition}
+    ## Metadata Extension Schema File: <dfn>MetadataExtensionDefinition</dfn> ## {#metadata-extension-definition}
 
       Every extension MUST define a [valid JSON Schema document according to the JSON Schema specification](https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-01).
       The extension schema file defines the data encoding and syntactical data validation details.
@@ -856,10 +856,10 @@ A Product Footprint Extension has the following properties:
         <td>M
         <td>The Id of the Product Footprint, see [[#dt-id]] for details.
       <tr>
-        <td>pcfPropertyData: [=PropertyContext=]
+        <td>pcfPropertyData: [=PropertyContextExtension=]
         <td>Array
         <td>M
-        <td>A collection of Product Footprint Property Context metadata using [=PropertyContext=]. Can be added for specific properties in a Product Footprint to add additional metadata about the value in the footprint.
+        <td>A collection of Product Footprint Property Context metadata using [=PropertyContextExtension=]. Can be added for specific properties in a Product Footprint to add additional metadata about the value in the footprint.
          See [[#dt-property-context]] for details.
   </table>
   <figcaption>Properties of data type ProductFootprintExtension</figcaption>
@@ -1182,8 +1182,8 @@ Here we will document changes in the specification as they are made.
 ## Version 1.0.20230627 (June 27, 2023) ## {#changelog-1.0.20230627}
 
 - Adding `ReportType` enum, see [[#dt-report-type]] for details.
-- Adding `reportContext` a collection of [=Metatag=] to [=Metadata=], see [[#dt-metadata-properties]] for details.
-- Adding `propertyContexts` a collection of [=PropertyContext=] to [=Metadata=], see [[#dt-metadata-properties]] for details.
+- Adding `reportContextExtension` a collection of [=Metatag=] to [=Metadata=], see [[#dt-metadata-properties]] for details.
+- Adding `propertyContexts` a collection of [=PropertyContextExtension=] to [=Metadata=], see [[#dt-metadata-properties]] for details.
 - Addition `relatedReports` to [=Metadata=], see [[#dt-metadata-properties]] for details.
 
 ## Version 1.0.20230725 (July 25, 2023) ## {#changelog-1.0.20230725}
@@ -1193,7 +1193,7 @@ Here we will document changes in the specification as they are made.
 ## Version 1.0.20230728 (July 28, 2023) ## {#changelog-1.0.20230728}
 
 - Added data type [=Metalink=], see [[#dt-metalink]] for details.
-- Added `Metalinks` to [=Activity=], [=MetaTag=] and [=PropertyContext=], see [[#dt-activity-properties]], [[#dt-metatag-properties]] and [[#dt-property-context-properties]] for details.
+- Added `Metalinks` to [=Activity=], [=MetaTag=] and [=PropertyContextExtension=], see [[#dt-activity-properties]], [[#dt-metatag-properties]] and [[#dt-property-context-properties]] for details.
 - Added data type [=GeographicLocation=], see [[#dt-geographic-location]] for details.
 - Changed `ReportingPeriod` to `TimePeriod` for reuse.
 - Added `IntendedUse`, `RestrictedAccess` and `ReportOwner` to [=Governance=], see [[#dt-governance-properties]] for details.
