@@ -151,7 +151,7 @@ The license can be found in [[#license]].
 :: 
     Metadata that applies to the entire report.
 
-: <dfn>Property Context</dfn>
+: <dfn>Property Context Extension</dfn>
 :: 
     Metadata that applies to a property of the report, e.g., a section or an individual property. 
 
@@ -339,7 +339,7 @@ A metadata object has the following properties:
         <td><dfn>propertyContextExtension</dfn>: [=PropertyContextExtension=]
         <td>Array
         <td>O
-        <td>A collection of Report Property Context metadata using [=PropertyContextExtension=], grouped into an extension. See [[#dt-property-context]] for details.
+        <td>A collection of Report Property Context Extension metadata using [=PropertyContextExtension=], grouped into an extension. See [[#dt-property-context-extension]] for details.
       |<tr>
         <td><dfn>metadataExtensions</dfn>: [=MetadataExtension=]
         <td>Array
@@ -770,7 +770,7 @@ PropertyContextExtension has the following properties:
         <td>O
         <td>An optional collection of related metadata, by [=Metalink=]. See [[#dt-metalink]] for details.
   </table>
-  <figcaption>Properties of a Property Context</figcaption>
+  <figcaption>Properties of a Property Context Extension</figcaption>
 </figure>
 
 ## Data Type: <dfn>MetadataExtension</dfn> ## {#dt-metadata-extension}
@@ -859,8 +859,8 @@ A Product Footprint Extension has the following properties:
         <td>pcfPropertyData: [=PropertyContextExtension=]
         <td>Array
         <td>M
-        <td>A collection of Product Footprint Property Context metadata using [=PropertyContextExtension=]. Can be added for specific properties in a Product Footprint to add additional metadata about the value in the footprint.
-         See [[#dt-property-context]] for details.
+        <td>A collection of Product Footprint Property Context Extension metadata using [=PropertyContextExtension=]. Can be added for specific properties in a Product Footprint to add additional metadata about the value in the footprint.
+         See [[#dt-property-context-extension]] for details.
   </table>
   <figcaption>Properties of data type ProductFootprintExtension</figcaption>
   </figure>
@@ -1193,7 +1193,7 @@ Here we will document changes in the specification as they are made.
 ## Version 1.0.20230728 (July 28, 2023) ## {#changelog-1.0.20230728}
 
 - Added data type [=Metalink=], see [[#dt-metalink]] for details.
-- Added `Metalinks` to [=Activity=], [=MetaTag=] and [=PropertyContextExtension=], see [[#dt-activity-properties]], [[#dt-metatag-properties]] and [[#dt-property-context-properties]] for details.
+- Added `Metalinks` to [=Activity=], [=MetaTag=] and [=PropertyContextExtension=], see [[#dt-activity-properties]], [[#dt-metatag-properties]] and [[#dt-property-context-extension-properties]] for details.
 - Added data type [=GeographicLocation=], see [[#dt-geographic-location]] for details.
 - Changed `ReportingPeriod` to `TimePeriod` for reuse.
 - Added `IntendedUse`, `RestrictedAccess` and `ReportOwner` to [=Governance=], see [[#dt-governance-properties]] for details.
