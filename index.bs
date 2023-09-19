@@ -1,5 +1,5 @@
 <pre class='metadata'>
-Title: DRAFT Carbon Call - Discoverable Data & Metadata (1.0.230912)
+Title: DRAFT Carbon Call - Discoverable Data & Metadata (v1.0.230919)
 Shortname: CC-Discoverable Data - Metadata
 Level: 1
 Status: LD
