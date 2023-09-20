@@ -50,29 +50,29 @@ Within each category, there are major subcategories like data discoverability an
 being designed in a way that will allow them to work together. This specification will help connect these initiatives and provide a framework for future initiatives to be designed in a way that will allow them to
 work together. Some basic capabilities need to be provided in order to effectively enable data sharing. 
 
-Carbon Call is working on establishing a common `smart dictionary` to help establish a baseline of common terms and definitions so that parties can agree on the language of carbon accounting. We also need to establish
-`what` data needs to be shared in a way that is extensible for industry sectors and different jurisdictions.  Common infrastructure for `how` to share data is also needed, which includes the ability to discover and control
+Carbon Call is working on establishing a common *smart dictionary* to help establish a baseline of common terms and definitions so that parties can agree on the language of carbon accounting. We also need to establish
+*what* data needs to be shared in a way that is extensible for industry sectors and different jurisdictions.  Common infrastructure for *how* to share data is also needed, which includes the ability to discover and control
 who can access the data.
 
-This framework is primarily concerned with `what` to share, via a flexible data model that can allow for organizations to share `standard` reporting metadata as well as establish `context` or `defined` extensions
+This framework is primarily concerned with *what* to share, via a flexible data model that can allow for organizations to share *standard* reporting metadata as well as establish *context* or *defined* extensions
  to support custom metadata between organizations or well understood vertical industry metadata.
 
-For example, the Metadata Framework would allow for one organization to request a custom set of metadata that is only relavent to their business relationship and would be meaningless to other parties. This `ad hoc`
- metadata can then be added to the metadata messages passed between the organizations and be `machine` readable and understood without manual intervention. These are refered to as [=PropertyContextExtension=] for individual properties
+For example, the Metadata Framework would allow for one organization to request a custom set of metadata that is only relavent to their business relationship and would be meaningless to other parties. This *ad hoc*
+ metadata can then be added to the metadata messages passed between the organizations and be *machine* readable and understood without manual intervention. These are refered to as [=PropertyContextExtension=] for individual properties
   or [=MetaTag=] for the entire report, in the framework.
 
-For metadata that would be highly relavent for a certain industry vertical, like manufacturing or retail, a `defined` metadata extension can be established and reused by organizations in those verticals without
+For metadata that would be highly relavent for a certain industry vertical, like manufacturing or retail, a *defined* metadata extension can be established and reused by organizations in those verticals without
  having to negotiate what the metadata messages would be up front. These are refered to as [=MetadataExtension=] extensions in the framework.
 
-Metadata produced in the framework follows the `discoverable` data identifier recommend and the metadata will `travel` with a report by having the same [=GRID=].  
-For consideration, would be the use this same framework for `non-reporting` data sharing between organizations. For example, the WBCSD:PACT initiative has defined the Pathfinder 2.0 Framework for the exchanging of 
-Product Footprint data, which includes the Product Carbon Footprint (PCF). It defines a data model or schema for what a Product Footprint looks like, or the `what to share`, as well as a way to establish [=MetadataExtension=].
- It does not define a way to allow for organizations to define `ad hoc` requests for additional metadata.  This metadata framework could also support the ability for organizations to request additional metadata about 
- portions of a PCF that could be `restricted` or not relavent to other organizations.
+Metadata produced in the framework follows the *discoverable* data identifier recommend and the metadata will *travel* with a report by having the same [=GRID=].  
+For consideration, would be the use this same framework for *non-reporting* data sharing between organizations. For example, the WBCSD:PACT initiative has defined the Pathfinder 2.0 Framework for the exchanging of 
+Product Footprint data, which includes the Product Carbon Footprint (PCF). It defines a data model or schema for what a Product Footprint looks like, or the *what to share*, as well as a way to establish [=MetadataExtension=].
+ It does not define a way to allow for organizations to define *ad hoc* requests for additional metadata.  This metadata framework could also support the ability for organizations to request additional metadata about 
+ portions of a PCF that could be *restricted* or not relavent to other organizations.
 
-`How` to share metadata can be more complex. It is recommended that for `public`, `non-restricted` metadata to travel alongside regular reporting channels with the enhanced discovery capabilities using [=GRID=].
- For the sharing of `restricted` or `private` data where control of sharing is desired, it is recommended that the Carbon Call follow the emerging Data Spaces standards in development.  [[!DATASPACES|Data Spaces]] address broad 
- requirements for establishing data sharing networks where organizations can control what data they share as well as discover data that is `available` by other parties using multi-layered policy and data sharing
+*How* to share metadata can be more complex. It is recommended that for *public*, *non-restricted* metadata to travel alongside regular reporting channels with the enhanced discovery capabilities using [=GRID=].
+ For the sharing of *restricted* or *private* data where control of sharing is desired, it is recommended that the Carbon Call follow the emerging Data Spaces standards in development.  [[!DATASPACES|Data Spaces]] address broad 
+ requirements for establishing data sharing networks where organizations can control what data they share as well as discover data that is *available* by other parties using multi-layered policy and data sharing
  contracts.  A 1.0 Data Space specification standard is expected to be completed by the Eclipse Foundation in early 2024 and interoperable vendor implementations are expected to follow to become more widely available. 
   
 The Carbon Call Metadata Framework will be designed to be compatible with the Data Space specification and will be updated as the Data Space specification evolves.
@@ -145,7 +145,7 @@ The license can be found in [[#license]].
 
 : <dfn>Context</dfn>
 :: 
-    Metadata is applied to a `context`, i.e., a report, a section of a report, a property, etc. The context is the thing that the metadata is describing.
+    Metadata is applied to a *context*, i.e., a report, a section of a report, a property, etc. The context is the thing that the metadata is describing.
 
 : <dfn>Report Context</dfn>
 :: 
@@ -210,7 +210,7 @@ Report Metadata contains non-normative information about the targeted report and
 and the metadata will provide information about the report that is not covered by the standard. For example, the metadata may contain information about the organization that produced the report, 
 the reporting period, the industry, the assurance provider, etc.
 
-Here we have defined a set of `normative` metadata tags and also provide a mechanism for adding `non-normative` metadata tags that can be attached to a report or property context. See [[#dt-metatag]] for details.
+Here we have defined a set of *normative* metadata tags and also provide a mechanism for adding *non-normative* metadata tags that can be attached to a report or property context. See [[#dt-metatag]] for details.
 
 ### Properties ### {#dt-metadata-properties}
 
@@ -758,7 +758,7 @@ PropertyContextExtension has the following properties:
         <td><dfn>property</dfn>
         <td>String
         <td>M
-        <td>The property name for the context. The property MUST be the normative name for the property for the report's specification. For example, the property name can be `section 1.1.1`, etc.
+        <td>The property name for the context. The property MUST be the normative name for the property for the report's specification. For example, the property name can be *section 1.1.1*, etc.
       <tr>
         <td>metatags : [=Metatag=]
         <td>Array
@@ -824,7 +824,7 @@ PropertyContextExtension has the following properties:
 
       The documentation MUST include:
 
-      1. Version of the extension and the document. The value MUST be a string in the format `major.minor.patch` as defined in [[!SEMVER|Semantic Versioning 2.0.0]].
+      1. Version of the extension and the document. The value MUST be a string in the format *major.minor.patch* as defined in [[!SEMVER|Semantic Versioning 2.0.0]].
       2. If the extension was updated, the document MUST include a changelog. The changelog MUST contain a summary of the changes between subsequent versions.
       2. A description of the extension, including the business case addressed by the extension and the business value gained by extending the Pathfinder Data Model.
           2.1 This includes methodological alignment of the extension, especially covering the alignment with the Pathfinder Framework if applicable.
@@ -879,9 +879,9 @@ Each Id MUST be encoded as a JSON String, see [[#dt-string-json]] for details.
 Example JSON string value: 
 
 <div class=example>
-```json
+***json
 "f4b1225a-bd44-4c8e-861d-079e4e1dfd69"
-```
+***
 </div>
 
 ## Data Type: <dfn>Decimal</dfn> ## {#dt-decimal}
@@ -890,9 +890,9 @@ A dotted-decimal number.
 
 Example values:
 <div class=example>
-    - `10`
-    - `42.12`
-    - `-182.84`
+    - *10*
+    - *42.12*
+    - *-182.84*
 </div>
 
 ### JSON Representation ### {#dt-decimal-json}
@@ -909,7 +909,7 @@ Each [=String=] MUST be encoded as a JSON String.
 
 ## Data Type: <dfn>GRID</dfn> ## {#dt-grid}
 
- A Unique 8 digit alphanumeric identifier. Omits [0/O | 1/I] to avoid ambiguity, case insensitive. Example: `R3AK.XF9B.24`,
+ A Unique 8 digit alphanumeric identifier. Omits [0/O | 1/I] to avoid ambiguity, case insensitive. Example: *R3AK.XF9B.24*,
  where part1 = R3AK and part2 = XF9B, separated by a dot. The postfix checksum is 24 separated by a dot.
  has a 2 digit numeric checksum, postfix, used to avoid typos in situations where the GRID is retyped.
 
@@ -920,9 +920,9 @@ Each GRID MUST be encoded as a JSON String, see [[#dt-string-json]] for details.
 Example JSON string value: 
 
 <div class=example>
-```json
+***json
 "7PBR.R569.29"
-```
+***
 </div>
 
 ## Data Type: <dfn enum>ReportFormat</dfn> ## {#dt-report-format}
@@ -1181,22 +1181,22 @@ Here we will document changes in the specification as they are made.
 
 ## Version 1.0.20230627 (June 27, 2023) ## {#changelog-1.0.20230627}
 
-- Adding `ReportType` enum, see [[#dt-report-type]] for details.
-- Adding `reportContextExtension` a collection of [=Metatag=] to [=Metadata=], see [[#dt-metadata-properties]] for details.
-- Adding `propertyContexts` a collection of [=PropertyContextExtension=] to [=Metadata=], see [[#dt-metadata-properties]] for details.
-- Addition `relatedReports` to [=Metadata=], see [[#dt-metadata-properties]] for details.
+- Adding *ReportType* enum, see [[#dt-report-type]] for details.
+- Adding *reportContextExtension* a collection of [=Metatag=] to [=Metadata=], see [[#dt-metadata-properties]] for details.
+- Adding *propertyContexts* a collection of [=PropertyContextExtension=] to [=Metadata=], see [[#dt-metadata-properties]] for details.
+- Addition *relatedReports* to [=Metadata=], see [[#dt-metadata-properties]] for details.
 
 ## Version 1.0.20230725 (July 25, 2023) ## {#changelog-1.0.20230725}
 
-- Adding `Goverance` type, see [[#dt-governance]] for details.
+- Adding *Goverance* type, see [[#dt-governance]] for details.
 
 ## Version 1.0.20230728 (July 28, 2023) ## {#changelog-1.0.20230728}
 
 - Added data type [=Metalink=], see [[#dt-metalink]] for details.
-- Added `Metalinks` to [=Activity=], [=MetaTag=] and [=PropertyContextExtension=], see [[#dt-activity-properties]], [[#dt-metatag-properties]] and [[#dt-property-context-extension-properties]] for details.
+- Added *Metalinks* to [=Activity=], [=MetaTag=] and [=PropertyContextExtension=], see [[#dt-activity-properties]], [[#dt-metatag-properties]] and [[#dt-property-context-extension-properties]] for details.
 - Added data type [=GeographicLocation=], see [[#dt-geographic-location]] for details.
-- Changed `ReportingPeriod` to `TimePeriod` for reuse.
-- Added `IntendedUse`, `RestrictedAccess` and `ReportOwner` to [=Governance=], see [[#dt-governance-properties]] for details.
+- Changed *ReportingPeriod* to *TimePeriod* for reuse.
+- Added *IntendedUse*, *RestrictedAccess* and *ReportOwner* to [=Governance=], see [[#dt-governance-properties]] for details.
 - Added data type {{MethodologyType}}, see [[#dt-methodology-type]] for details.
 - Added data type {{BoundaryApproach}}, see [[#dt-boundary-approach]] for details.
 - Added data type {{Unit}}, see [[#dt-unit]] for details.
@@ -1208,15 +1208,15 @@ Here we will document changes in the specification as they are made.
 
 ## Version 1.0.20230906 (September 6, 2023) ## {#changelog-1.0.20230906}
 
-- Moved to `CarbonCall` GitHub organization.
-- Added `ProductFootprintExtension` data type, see [[#dt-product-footprint-extension]] for details.
-- Added `Dataspaces` to definitions.
+- Moved to *CarbonCall* GitHub organization.
+- Added *ProductFootprintExtension* data type, see [[#dt-product-footprint-extension]] for details.
+- Added *Dataspaces* to definitions.
 - Placeholders for synchronization with the Pathfinder Framework and business case.
 
 ## Version 1.0.230911 (September 11, 2023) ## {#changelog-1.0.230911}
 
-- Added `Id` to data type [=ProductFootprintExtension=], see [[#dt-product-footprint-extension-properties]] for details.
-- Added `pcfPropertyData` to data type [=ProductFootprintExtension=], see [[#dt-product-footprint-extension-properties]] for details.
+- Added *Id* to data type [=ProductFootprintExtension=], see [[#dt-product-footprint-extension-properties]] for details.
+- Added *pcfPropertyData* to data type [=ProductFootprintExtension=], see [[#dt-product-footprint-extension-properties]] for details.
 
 ## Version 1.0.230912 (September 12, 2023) ## {#changelog-1.0.230912}
 
@@ -1224,4 +1224,4 @@ Here we will document changes in the specification as they are made.
 
 ## Version 1.0.230919 (September 19, 2023) ## {#changelog-1.0.230919}
 
-- Renamed `PropertyContext` to `PropertyContextExtension, see [[#dt-property-context-extension]] for details.
+- Renamed *PropertyContext* to *PropertyContextExtension, see [[#dt-property-context-extension]] for details.
