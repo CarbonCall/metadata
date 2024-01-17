@@ -17,7 +17,7 @@ message SustainabilityReport{
     string report_replaces = 8; //GR.ID of the report this report replaces
     string location = 9; //URL or URI of the report
     string performance = 10; //xBRL-JSON snippet that provides certain performance information.
-    Goverance goverance = 11; //goverance properties of the report
+    Governance governance = 11; //governance properties of the report
     Methodology methodology = 12; //methodology used for the report
     ReportFormat report_format = 13; //Format of the report
     ReportingStandard reporting_standard = 14; //Reporting standard used for the report
@@ -96,7 +96,7 @@ message Methodology{
     BoundaryApproach boundary_approach = 4;
 }
 
-message Goverance{
+message Governance{
     string intended_use = 1; //how the report is intended to be used
     bool restricted_access = 2; //whether the report is restricted access
     string report_owner = 3; //Id of the report owner
