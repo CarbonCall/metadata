@@ -8,9 +8,25 @@ option java_multiple_files = true;
 
 message SustainabilityReport{
     string g_r_i_d = 1;
-    Metadata metadata = 2;
+    string organization_name = 2;
+    string report_name = 3;
+    repeated Language languages = 4;
+    ReportType report_type = 5;
+    string report_issue_date = 6; //ISO 8601 date format
+    TimePeriod reporting_period = 7;
+    string report_replaces = 8; //GR.ID of the report this report replaces
+    string location = 9; //URL or URI of the report
+    string performance = 10; //xBRL-JSON snippet that provides certain performance information.
+    Goverance goverance = 11; //goverance properties of the report
+    Methodology methodology = 12; //methodology used for the report
+    ReportFormat report_format = 13; //Format of the report
+    ReportingStandard reporting_standard = 14; //Reporting standard used for the report
+    string assurance = 15; //Scheme prefix and identifier for the provider that conducted the assurance or audit.
+    string prior_report = 16; //GR.ID of the report this report is based on
+    string report_hash = 17; //SHA-256 hash of the report
+    Metadata metadata = 49;
     //could be google.protobuf.Any or bytes
-    string report = 3; //xBRL-JSON or other format in base64
+    string report = 50; //xBRL-JSON or other format in base64
 }
 
 message Metadata{
@@ -19,27 +35,13 @@ message Metadata{
     string organization_name = 3;
     ISO3166_CountryCode domicile = 4;
     repeated ISO3166_CountryCode operating_countries = 5;
-    repeated Language languages = 6;
-    ReportType report_type = 7;
-    string report_issue_date = 8; //ISO 8601 date format
-    TimePeriod reporting_period = 9;
-    string report_replaces = 10; //GR.ID of the report this report replaces
-    string location = 11; //URL or URI of the report
-    Industry industry = 12;
-    string performance = 13; //xBRL-JSON snippet that provides certain performance information.
-    Goverance goverance = 14; //goverance properties of the report
-    Methodology methodology = 15; //methodology used for the report
-    ReportFormat report_format = 16; //Format of the report
-    ReportingStandard reporting_standard = 17; //Reporting standard used for the report
-    string assurance = 18; //Scheme prefix and identifier for the provider that conducted the assurance or audit.
-    string prior_report = 19; //GR.ID of the report this report is based on
-    string report_hash = 20; //SHA-256 hash of the report
-    repeated Activity activities = 21; //Activities that are reported on
-    repeated Metatag report_context_extensions = 22; //Metatag extensions that provide additional context for the report
-    repeated PropertyContextExtension property_context_extensions = 23; //Property context extensions, untyped or ad hoc, that provide additional context for the report, i.e., section metadata
-    repeated MetadataExtension metatdata_extensions = 24; //Defined or typed extension to metadata
-    repeated ProductFootprintExtension p_f_extensions = 25; //Extensions to any related product footprints in the report
-    repeated string related_reports = 26; //GR.IDs of related reports
+    Industry industry = 6;
+    repeated Activity activities = 7; //Activities that are reported on
+    repeated Metatag report_context_extensions = 8; //Metatag extensions that provide additional context for the report
+    repeated PropertyContextExtension property_context_extensions = 9; //Property context extensions, untyped or ad hoc, that provide additional context for the report, i.e., section metadata
+    repeated MetadataExtension metatdata_extensions = 10; //Defined or typed extension to metadata
+    repeated ProductFootprintExtension p_f_extensions = 11; //Extensions to any related product footprints in the report
+    repeated string related_reports = 12; //GR.IDs of related reports
 }
 
 message ProductFootprintExtension{
@@ -425,12 +427,12 @@ message Industry{
     string code = 2;
 }
 
-enum ReportFormat{
-    P_D_F = 0;
-    i_X_B_R_L = 1;
-    OPEN_XML = 2;
-    //TODO: add more
-}
+    enum ReportFormat{
+        P_D_F = 0;
+        i_X_B_R_L = 1;
+        OPEN_XML = 2;
+        //TODO: add more
+    }
 
 enum ReportingStandard{
     G_A_A_P = 0;
